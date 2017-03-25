@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: "Vollkorn", "serif";
+}
+
+h1, h2, p {
+  text-align: center;
+}
+
+body {
+  font-family: "Open Sans", Verdana, "sans-serif";
+
+  .container {
+    margin: 10px auto;
+    width: 700px;
+
+    nav {
+      height: auto;
+      margin-bottom: 50px;
+      width: auto;
+
+      ul {
+        border: 1px solid transparent;
+        height: auto;
+        list-style-type: none;
+        margin: 10px auto 0;
+        padding: 0;
+        width: auto;
+
+        li {
+          float: left;
+          margin-right: 30px;
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          a {
+            color: black;
+            font-family: "Josefin Slab", "sans-serif";
+            font-size: 120%;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}

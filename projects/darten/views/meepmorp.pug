@@ -1,0 +1,13 @@
+extends base
+
+block vars
+  -var title = "Geheim"
+
+block body
+  h1 Account voor wachtwoord voor de site
+  form(method="post")
+    input(type="hidden", name="_csrf", value=csrfToken)
+    input(type="hidden", name="userName", value="darten")
+    input(type="text", name="password", required=true)
+    br
+    input(type="submit")

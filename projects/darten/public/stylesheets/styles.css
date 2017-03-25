@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: "Vollkorn", "serif";
+}
+
+h1, h2, p {
+  text-align: center;
+}
+
+body {
+  font-family: "Open Sans", Verdana, "sans-serif";
+}
+body .container {
+  margin: 10px auto;
+  width: 700px;
+}
+body .container nav {
+  height: auto;
+  margin-bottom: 50px;
+  width: auto;
+}
+body .container nav ul {
+  border: 1px solid transparent;
+  height: auto;
+  list-style-type: none;
+  margin: 10px auto 0;
+  padding: 0;
+  width: auto;
+}
+body .container nav ul li {
+  float: left;
+  margin-right: 30px;
+}
+body .container nav ul li:last-child {
+  margin-right: 0;
+}
+body .container nav ul li a {
+  color: black;
+  font-family: "Josefin Slab", "sans-serif";
+  font-size: 120%;
+  text-decoration: none;
+}
