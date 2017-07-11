@@ -1,18 +1,18 @@
 extends base
 
 block vars
-  -var title = "Spelers aanmaken"
+    -var title = "Spelers aanmaken"
 
 block body
-  button.addPlayer Speler toevoegen
-  form(method="post")
-    input(type="hidden", name="_csrf", value=csrfToken)
-    span Player 1:
-    br
-    input(type="text", name="player1", required=true)
-    br
-    span Aantal spelers!
-    br
-    input.numberOP(type="number", name="numberOfPlayers", value="1")
-    br
-    input(type="submit")
+    button.addPlayer Speler toevoegen
+    form(method="post")
+        input(type="hidden", name="_csrf", value=csrfToken)
+        span Player 1:
+        br
+        input(type="text", name="player1", required=true)
+        br
+        span Aantal spelers!
+        br
+        input.numberOP(type="number", name="numberOfPlayers", value="1")
+        br
+        input(type="submit")
