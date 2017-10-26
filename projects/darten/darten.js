@@ -32,6 +32,7 @@ var Players = mongoose.model("Players", new Schema({
 mongoose.connect(url);
 
 app.set("view engine", "pug");
+app.set("views", path.join(__dirname, "views"));
 app.locals.pretty = true;
 app.use(express.static(path.join(__dirname, "public")));
 
