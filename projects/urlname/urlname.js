@@ -15,7 +15,7 @@ app.disable("x-powered-by");
 
 // Set up some extra mongodb && mongoose stuff
 const MongoClient = mongodb.MongoClient;
-const url = "mongodb://192.168.1.90:27017/urlname";
+const url = "mongodb://localhost:27017/urlname";
 const schema = mongoose.Schema;
 const ObjectId = schema.ObjectId;
 

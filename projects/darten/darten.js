@@ -10,7 +10,7 @@ var clientsessions = require("client-sessions");
 
 // Setting up imports and other requirements
 var app = express();
-var url = "mongodb://192.168.1.90:27017/darten";
+var url = "mongodb://localhost:27017/darten";
 var MongoClient = mongodb.MongoClient;
 var Schema = mongoose.Schema;
 var ObjectId = Schema.ObjectId;
