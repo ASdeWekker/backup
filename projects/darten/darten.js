@@ -29,7 +29,9 @@ var Players = mongoose.model("Players", new Schema({
 }));
 
 // Let mongoose connect to the database
-mongoose.connect(url);
+mongoose.connect(url, {
+    useMongoClient: true
+});
 
 app.set("view engine", "pug");
 app.set("views", path.join(__dirname, "views"));
