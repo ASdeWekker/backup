@@ -17,3 +17,4 @@ data
 *.log
 logs
 node_modules
+arduino/sketches/libraries
