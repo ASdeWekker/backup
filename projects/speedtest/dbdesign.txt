@@ -1,0 +1,19 @@
+{
+    ping: [19, 416],
+    down: [46, 90],
+    uplo: [23, 65]
+}
+
+{
+    date : new Date(),
+    resu : {
+        ping : [ 19, 416 ],
+        down : [ 46, 90 ],
+        uplo : [ 23, 65 ]
+    }
+}
+
+
+{date:new Date(),resu:{ping:[19,416],down:[46,90],uplo:[23,65]}}
+
+location ding.lloll
