@@ -34,4 +34,4 @@
     }
 })""
 
-location ding.lloll
+location speedtest.testresults
