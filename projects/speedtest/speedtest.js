@@ -57,7 +57,7 @@ app.get("/", function(req, res) {
 
 // 404 page
 app.get("*", function(req, res) {
-    res.render("404");
+    res.render("error/404");
 });
 
 // -------------------- PORT CONFIG ---------------------
