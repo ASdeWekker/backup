@@ -118,7 +118,7 @@ app.use(function(err, req, res, next) {
 
 // Open the port for the app to work on
 app.listen(3008, function() {
-    console.log("UrlName is listening on port 3000");
+    console.log("UrlName is listening on port 3008");
 });
 
 // ----------  ----------
