@@ -18,3 +18,4 @@ data
 logs
 node_modules
 arduino/sketches/libraries
+.directory
