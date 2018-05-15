@@ -48,3 +48,6 @@ body .container nav ul li a {
   font-size: 120%;
   text-decoration: none;
 }
+body .container .userName {
+  display: none;
+}

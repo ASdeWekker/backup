@@ -11,9 +11,7 @@ block body
 
     form(method="post")
         input(type="hidden", name="_csrf", value=csrfToken)
-        input(type="hidden", name="userName", value="darten")
+        input.userName(type="text", name="userName", value="darten")
         span Wachtwoord:
-        br
         input(type="password", name="password", required=true)
-        br
         input(type="submit")

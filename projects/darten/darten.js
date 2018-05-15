@@ -10,8 +10,19 @@ var clientsessions = require("client-sessions");
 
 // Setting up imports and other requirements
 var app = express();
-var url = "mongodb://localhost:27017/darten";
+var port = "3007";
+
 var MongoClient = mongodb.MongoClient;
+var user = process.env.MONGODB_RWU;
+var ww = process.env.MONGODB_RWP;
+var ip = "192.168.1.90";
+var mongoport = "27017";
+var db = "darten";
+var colu = "users";
+var colp = "player_count";
+
+var url = "mongodb://" + user + ":" + ww + "@" + ip + ":" + port + "/" + db;
+
 var Schema = mongoose.Schema;
 var ObjectId = Schema.ObjectId;
 
@@ -21,7 +32,7 @@ var User = mongoose.model("User", new Schema({
     userName: { type: String, unique: true },
     password: String
 }));
-// Set up a mongoose schema for entering the players
+// Set up a mongoose schema for entering the number of players
 var Players = mongoose.model("Players", new Schema({
     id: ObjectId,
     player1: String,
@@ -29,9 +40,7 @@ var Players = mongoose.model("Players", new Schema({
 }));
 
 // Let mongoose connect to the database
-mongoose.connect(url, {
-    useMongoClient: true
-});
+mongoose.connect(url, { useMongoClient: true });
 
 app.set("view engine", "pug");
 app.set("views", path.join(__dirname, "views"));
@@ -40,7 +49,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // Middleware
 // Figure out what this does
-app.use(bodyparser.urlencoded({extended: true}));
+app.use(bodyparser.urlencoded({extended:true}));
 
 // Set up cookie sessions
 app.use(clientsessions({
@@ -83,11 +92,16 @@ function requireLogin(req, res, next) {
     }
 }
 
+// function to easily get a simple page.
+function getPage(url, view, title) {
+    app.get(url, function(req, res) {
+        res.render(view, { title : title });
+    });
+}
+
 // Routes
 // Get the homepage
-app.get("/", function(req, res) {
-    res.render("index");
-});
+getPage("/", "index", "Home");
 
 // GET and POST for the user creation page
 // which should take darten as a username
@@ -104,9 +118,10 @@ app.post("/meepmorp", function(req, res) {
     });
     user.save(function(err) {
         if (err) {
-            var err = "Dat heb je mooi verneukt";
+            var error = "Dat heb je mooi verneukt";
             if (err.code === 11000) {
                 error = "That username is already taken";
+                console.log(err);
             }
             res.render("meepmorp", { error: error });
         } else {
@@ -164,8 +179,9 @@ app.get("/joe", function(req, res) {
 });
 
 // Rest of the pages shouldn't exist so they get a 404
-app.get("*", function(req, res) {
-    res.render("404");
-});
+getPage("*", "404", "Joe");
 
-app.listen(3007);
+
+app.listen(port, function() {
+    console.log(db.toUpperCase() + " is now listening on port: " + port);
+});
