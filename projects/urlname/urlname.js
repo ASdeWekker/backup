@@ -1,3 +1,9 @@
+// -------------- TO DO --------------
+// Change from scss to sass.
+// Change folder style to use numbers.
+// Debug photo styling issue chrome mobile.
+
+
 // ---------- SET UP STUFF ----------
 
 // Required packages
