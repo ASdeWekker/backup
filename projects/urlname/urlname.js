@@ -48,16 +48,13 @@ app.use("/bootstrap", express.static(__dirname + "/node_modules/bootstrap/dist/"
 
 // A simple getPage function.
 function getPage(url, view, title) {
-    app.get(url, (res, req) => {
+    app.get(url, (req, res) => {
         res.render(view, { title : title });
     });
 }
 
 // Home page
-//getPage("/", "index", "Home");
-app.get("/", (req, res) => {
-    res.render("index", { title : "Home" });
-});
+getPage("/", "index", "Home");
 
 // The second index page.
 getPage("/index2", "index2", "Home2");
