@@ -9,13 +9,19 @@ const mongoose = require("mongoose");
 
 // Declare the app
 const app = express();
+const port = "3008";
 
 // Make sure nothing about the server is put in the header
 app.disable("x-powered-by");
 
 // Set up some extra mongodb && mongoose stuff
 const MongoClient = mongodb.MongoClient;
-const url = "mongodb://localhost:27017/urlname";
+const user = process.env.MONGODB_RWU;
+const ww = process.env.MONGODB_RWP;
+const ip = "192.168.1.90";
+const mongoport = "27017";
+const db = "urlname";
+const url = "mongodb://" + user + ":" + ww + "@" + ip + ":" + mongoport + "/" + db;
 const schema = mongoose.Schema;
 const ObjectId = schema.ObjectId;
 
@@ -34,33 +40,37 @@ app.use(express.static(path.join(__dirname, "public")));
 //app.use(favicon(path.join(__dirname, "public", "favicon.ico")));
     
 // Set up jQuery & Bootstrap
+// Also move these to the public folder for use with sublime.
 app.use("/jquery", express.static(__dirname + "/node_modules/jquery/dist/"));
 app.use("/bootstrap", express.static(__dirname + "/node_modules/bootstrap/dist/"));
 
 // ---------- GET PAGES ----------
 
-// Home page
-app.get("/", function(req, res) {
-    res.render("index", {
-        title : "Home"
+// A simple getPage function.
+function getPage(url, view, title) {
+    app.get(url, (res, req) => {
+        res.render(view, { title : title });
     });
+}
+
+// Home page
+//getPage("/", "index", "Home");
+app.get("/", (req, res) => {
+    res.render("index", { title : "Home" });
 });
 
-app.get("/index2", function(req, res) {
-    res.render("index2", {
-        title : "Home"
-    });
-});
+// The second index page.
+getPage("/index2", "index2", "Home2");
 
 // Check if the dababase works
-app.get("/database", function(req, res) {
-    MongoClient.connect(url, function(err, db) {
+app.get("/database", (req, res) => {
+    MongoClient.connect(url, (err, db) => {
         if (err) {
             console.log("Unable to connect to the server", err);
         } else {
             console.log("Connection established");
             var collection = db.collection("test");
-            collection.find({}).toArray(function(err, result) {
+            collection.find({}).toArray((err, result) => {
                 if (err) {
                     res.render("error", {
                         error : err
@@ -87,15 +97,14 @@ app.post("/dbtest", function(req, res) {
 
 // ---------- ERROR HANDLING ----------
 
-// 404 page
-app.get("*", function(req, res) {
-    res.render("404");
-})
+// 404 page.
+// Change the view to add a title.
+getPage("*", "404", "404 Not found");
 
 // Development error handler
 // Will print stacktrace, whatever that is
 if (app.get("env") === "development") {
-    app.use(function(err, req, res, next) {
+    app.use((err, req, res, next) => {
         res.status(err.status || 500);
         res.render("error", {
             message: err.message,
@@ -106,7 +115,7 @@ if (app.get("env") === "development") {
 
 // Production error handler
 // No stacktraces(???) leaked to user
-app.use(function(err, req, res, next) {
+app.use((err, req, res, next) => {
     res.status(err.status || 500);
     res.render("error", {
         message: err.message,
@@ -117,8 +126,8 @@ app.use(function(err, req, res, next) {
 // ---------- PORT CONFIGURATION ----------
 
 // Open the port for the app to work on
-app.listen(3008, function() {
-    console.log("UrlName is listening on port 3008");
+app.listen(port, () => {
+    console.log(db.toUpperCase() + " is now listening on port: " + port);
 });
 
 // ----------  ----------
