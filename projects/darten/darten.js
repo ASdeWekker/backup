@@ -10,13 +10,13 @@ var clientsessions = require("client-sessions");
 
 // Setting up imports and other requirements
 var app = express();
-var port = "3007";
+var port = 3007;
 
 var MongoClient = mongodb.MongoClient;
 var user = process.env.MONGODB_RWU;
 var ww = process.env.MONGODB_RWP;
 var ip = "192.168.1.90";
-var mongoport = "27017";
+var mongoport = 27017;
 var db = "darten";
 var colu = "users";
 var colp = "player_count";
@@ -183,5 +183,5 @@ getPage("*", "404", "Joe");
 
 
 app.listen(port, function() {
-    console.log(db.toUpperCase() + " is now listening on port: " + port);
+    console.log("            " + db.toUpperCase() + " is now listening on port: " + port);
 });

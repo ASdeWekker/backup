@@ -18,7 +18,7 @@ const path = require("path");
 
 // Declare the app
 const app = express();
-const port = "3009";
+const port = 3009;
 
 // Make sure nothing about the server is put in the header
 app.disable("x-powered-by");
@@ -28,7 +28,7 @@ const MongoClient = mongodb.MongoClient;
 const user = process.env.MONGODB_RWU;
 const ww = process.env.MONGODB_RWP;
 const ip = "192.168.1.90";
-const mongoport = "27017";
+const mongoport = 27017;
 const db = "speedtest";
 const url = "mongodb://" + user + ":" + ww + "@" + ip + ":" + port + "/" + db;
 
@@ -84,7 +84,7 @@ getPage("*", "404", "Page not found.");
 
 // Open the port for the app to work on
 app.listen(port, () => {
-    console.log(db.toUpperCase() + " is listening on port: " + port);
+    console.log("      " + db.toUpperCase() + " is now listening on port: " + port);
 });
 
 // -------------------- ============ --------------------

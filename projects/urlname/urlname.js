@@ -14,7 +14,7 @@ const mongoose = require("mongoose");
 
 // Declare the app
 const app = express();
-const port = "3008";
+const port = 3008;
 
 // Make sure nothing about the server is put in the header
 app.disable("x-powered-by");
@@ -24,9 +24,10 @@ const MongoClient = mongodb.MongoClient;
 const user = process.env.MONGODB_RWU;
 const ww = process.env.MONGODB_RWP;
 const ip = "192.168.1.90";
-const mongoport = "27017";
+const mongoport = 27017;
 const db = "urlname";
 const url = "mongodb://" + user + ":" + ww + "@" + ip + ":" + mongoport + "/" + db;
+
 const schema = mongoose.Schema;
 const ObjectId = schema.ObjectId;
 
@@ -129,7 +130,7 @@ app.use((err, req, res, next) => {
 
 // Open the port for the app to work on
 app.listen(port, () => {
-    console.log(db.toUpperCase() + " is now listening on port: " + port);
+    console.log("          " + db.toUpperCase() + " is now listening on port: " + port);
 });
 
 // ----------  ----------
