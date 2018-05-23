@@ -2,8 +2,9 @@
 // ----------------------- TO DO ------------------------
 // ----------------------- TO DO ------------------------
 //
-// Debug photo styling issue chrome mobile.
+// DONE == Debug photo styling issue chrome mobile.
 // Add some test info from the db.
+// html height is bigger, set no scroll and change body height.
 
 
 // -------------------- SET UP STUFF --------------------
