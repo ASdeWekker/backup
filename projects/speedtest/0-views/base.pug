@@ -3,7 +3,9 @@ html
     include ./part/header
     body
         div.container
-            h1 #{text}
-            block content
+            div.imgdiv
+            div.child-container
+                h1 #{text}
+                block content
         script(src="js/jquery.min.js", type="text/javascript")
         script(src="js/jquery.js",  type="text/javascript")
