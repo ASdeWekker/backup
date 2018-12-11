@@ -1,38 +1,21 @@
 #!/bin/node
 
 const { Client, Pool } = require("pg")
-const { execFile } = require("child_process")
-
+const { exec } = require("child_process")
 const user = process.env.PSQLU
 const ww = process.env.PSQLW
-const host = "localhost"
-const psqlport = 5432
-const db = "test1"
-const connStr = "postgresql://" + user + ":" + ww + "@" + host + ":" + psqlport + "/" + db
-
 const pool = new Pool({
-    connectionString: connStr
+    connectionString: connStr = "postgresql://" + user + ":" + ww + "@192.168.1.90:5432/speedtest"
 })
-// const pool = new Pool({
-//     user: user,
-//     host: host,
-//     database: db,
-//     password: ww,
-//     port: psqlport,
-// })
-//client.connect()
-
-const query = "select * from things"
-
-pool.query(query, (err, res) => {
-    if (err) {
-        console.log(err)
-    }
-    // console.log(res.rows[0].id)
-    for (let i = 0;i < 3;i++) {
-        console.log(res.rows[i].id)
-        console.log(res.rows[i].name)
-        console.log(res.rows[i].number)
-    }
-    pool.end()
+exec("speedtest-cli --simple | grep -o '[0-9]*'", (err, stdout, stderr) => {
+    if (err) console.error(error)
+    if (stderr) console.log(stderr)
+    var output = stdout.split("\n")
+    const query = "insert into hourly_tests (date, ping, down, uplo) values ( \
+        now(), '{\"" + output[0] + "\",\"" + output[1] + "\"}', '{\"" + output[2] + "\",\"" + output[3] + "\"}', '{\"" + output[4] + "\",\"" + output[5] + "\"}')"
+    pool.query(query, (err, res) => {
+        if (err) console.log(err)
+        console.log(res)
+        pool.end()
+    })
 })
