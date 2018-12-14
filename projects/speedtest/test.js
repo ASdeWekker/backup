@@ -1,10 +1,7 @@
 #!/bin/node
-
 const { Client, Pool } = require("pg")
 const { exec } = require("child_process")
-const user = process.env.PSQLU
-const ww = process.env.PSQLW
-const pool = new Pool({ connectionString: connStr = "postgresql://" + user + ":" + ww + "@192.168.1.90:5432/speedtest" })
+const pool = new Pool({ connectionString: connStr = "postgresql://" + process.env.PSQLU + ":" + process.env.PSQLW + "@192.168.1.90:5432/speedtest" })
 exec("speedtest-cli --simple | grep -o '[0-9]*'", (err, stdout, stderr) => {
     if (err) console.error(error)
     if (stderr) console.log(stderr)
