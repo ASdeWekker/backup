@@ -1,0 +1,10 @@
+doctype html
+html
+    include ./part/header
+    body
+        main.container
+            div.clearfix
+            h1 #{text}
+            block content
+        script(defer src="https://code.jquery.com/jquery-3.3.1.min.js", type="text/javascript" crossorigin="anonymous")
+        script(src="javascripts/jquery.js",  type="text/javascript")

@@ -1,0 +1,87 @@
+/* line 12, styles.sass */
+* {
+  box-sizing: border-box;
+}
+
+/* line 15, styles.sass */
+html, body, .container {
+  background: none;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* line 22, styles.sass */
+h1, h3, p, a {
+  text-align: center;
+}
+
+/* line 25, styles.sass */
+html {
+  background: #fff url(/images/rotterdam.jpg) no-repeat center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 29, styles.sass */
+html body {
+  color: #eee;
+  font-family: arial, "sans-serif";
+}
+/* line 34, styles.sass */
+html body .container .clearfix {
+  background: none;
+  clear: both;
+  display: block;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+/* line 46, styles.sass */
+html body .container .content {
+  background: red;
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  width: 2px;
+}
+/* line 53, styles.sass */
+html body .container .child-container {
+  background: none;
+  bottom: 0;
+  height: 122px;
+  position: fixed;
+  width: 100%;
+}
+/* line 60, styles.sass */
+html body .container .child-container a {
+  color: #eee;
+  display: block;
+  margin: 10px auto;
+  text-decoration: none;
+  width: 120px;
+}
+/* line 67, styles.sass */
+html body .container .child-container a:before {
+  content: "| ";
+}
+/* line 70, styles.sass */
+html body .container .child-container a:after {
+  content: " |";
+}
+/* line 73, styles.sass */
+html body .container .child-container a:hover {
+  text-decoration: underline;
+}
+/* line 76, styles.sass */
+html body .container .child-container a:hover:before {
+  content: "";
+}
+/* line 79, styles.sass */
+html body .container .child-container a:hover:after {
+  content: "";
+}

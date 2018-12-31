@@ -1,0 +1,80 @@
+$bg-color: #fff
+$text-color: #eee
+
+=background-size($size)
+    -webkit-background-size:    $size
+    -moz-background-size:       $size
+    -ms-background-size:        $size
+    -o-background-size:         $size
+    background-size:            $size
+
+
+*
+    box-sizing: border-box
+
+html, body, .container
+    background: none
+    height: 100%
+    margin: 0
+    padding: 0
+    width: 100%
+
+h1, h3, p, a
+    text-align: center
+
+html
+    background: $bg-color url(/images/rotterdam.jpg) no-repeat center fixed
+    +background-size(cover)
+
+    body
+        color: $text-color
+        font-family: arial, "sans-serif"
+
+        .container
+            .clearfix
+                background: none
+                clear: both
+                display: block
+                height: 1px
+                margin: 0
+                padding: 0
+                width: 100%
+
+            h1
+                //font-size:
+
+            .content
+                background: red
+                display: block
+                height: auto
+                margin: 0 auto
+                width: 2px
+
+            .child-container
+                background: none
+                bottom: 0
+                height: 122px
+                position: fixed
+                width: 100%
+
+                a
+                    color: #eee
+                    display: block
+                    margin: 10px auto
+                    text-decoration: none
+                    width: 120px
+
+                    &:before
+                        content: "| "
+
+                    &:after
+                        content: " |"
+
+                    &:hover
+                        text-decoration: underline
+
+                        &:before
+                            content: ""
+
+                        &:after
+                            content: ""
