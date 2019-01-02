@@ -16,9 +16,19 @@ const mongodb = require("mongodb")
 const path = require("path")
 const router = express.Router()
 
-/* GET home page. */
-router.get("/", function(req, res, next) {
-  res.render("index", { title: "Express" })
-});
+// -------------------- GET PAGES -----------------------
+
+// A simple getPage function.
+function getPage(url, view, text) {
+    router.get(url, (req, res) => {
+        res.render(view, { text : text })
+    });
+}
+
+// The homepage.
+getPage("/", "index", "Welcome to SpeedTest.")
+
+// The temporary results page.
+getPage("/results", "results", "Here are some results.")
 
 module.exports = router
