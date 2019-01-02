@@ -25,7 +25,7 @@ const query = "select * from projects"
 
 // A simple getPage function.
 function getPage(url, view, title) {
-    router.get(url, (req, res) => {
+    router.get(url, (req, res, next) => {
         res.render(view, { title : title });
     });
 }
@@ -37,6 +37,13 @@ getPage("/", "index", "Home")
 getPage("/index2", "index2", "Home2")
 
 // Check if the dababase works
-router.get("/database")
+router.get("/database", (req, res, next) => {
+    client.query(query)
+        .then(data => res.render("sql", {
+            title : "SQL",
+            data : data
+        }))
+        .catch(e => console.error(e.stack))
+})
 
 module.exports = router
