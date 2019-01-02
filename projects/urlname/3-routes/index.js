@@ -1,6 +1,7 @@
 const express = require("express")
 const { Client } = require("pg")
 const router = express.Router()
+require("dotenv").config({ path: "/var/www/html/backup/projects/urlname/1-public" })
 
 // ---------- MIDDLEWARE ----------
 
