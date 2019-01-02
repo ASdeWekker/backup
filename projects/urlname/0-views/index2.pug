@@ -1,0 +1,12 @@
+extends base
+
+block title
+    -var title = "Home";
+
+block content
+    div.index
+        form.searchform(role="search", method="get")
+            span.titlespan What will be your name?
+            br
+            input.searchinput(type="text", name="searchfield", require=true)
+            button(type="submit") Find it!

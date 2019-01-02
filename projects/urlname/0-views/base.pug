@@ -1,0 +1,18 @@
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        meta(name="theme-color", content="#360940")
+        block title
+        title UrlName
+        link(rel="stylesheet", href="/stylesheets/styles.css", type="text/css")
+    body
+        a(href="/database").dblink Database checken enzo!
+        a(href="/index2").layoutlink Check de echt layout pagina!
+        div.container
+            include ./part/header
+            block content
+            include ./part/footer
+

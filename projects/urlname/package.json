@@ -1,18 +1,20 @@
 {
-    "name": "UrlName",
-    "version": "0.0.1",
-    "private": true,
-    "scripts": {
-        "start": "node ./urlname.js"
-    },
-    "dependencies": {
-        "bootstrap": "^3.3.7",
-        "express": "^4.16.2",
-        "jquery": "^3.2.1",
-        "mongodb": "^2.2.33",
-        "mongoose": "^4.13.6",
-        "path": "^0.12.7",
-        "pug": "^2.0.0-rc.4",
-        "serve-favicon": "^2.4.5"
-    }
+  "name": "UrlName",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "supervisor ./2-bin/urlname"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "mongodb": "^3.1.10",
+    "mongoose": "^5.4.1",
+    "morgan": "~1.9.0",
+    "pg": "^7.7.1",
+    "pug": "2.0.0-beta11",
+    "supervisor": "^0.12.0"
+  }
 }

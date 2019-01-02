@@ -1,0 +1,41 @@
+.container {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: fit-content;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+}
+.container h1 {
+  margin-bottom: 10px;
+}
+.container button {
+  margin: 13px 0;
+}
+.container h1, .container h2, .container p, .container button {
+  text-align: center;
+}
+.container h1, .container h2, .container p, .container a {
+  color: #eee;
+}
+
+footer {
+  width: 100%;
+}
+
+header {
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: radial-gradient(#f05f57, #360940) #5efce8;
+}
