@@ -12,7 +12,6 @@
 
 const express = require("express")
 const favicon = require("serve-favicon")
-const mongodb = require("mongodb")
 const path = require("path")
 const router = express.Router()
 
