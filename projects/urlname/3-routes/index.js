@@ -1,26 +1,26 @@
 const express = require("express")
-const { Client } = require("pg")
+//const { Client } = require("pg")
 const router = express.Router()
-require("dotenv").config({ path: "/var/www/html/backup/projects/urlname/1-public" })
+//require("dotenv").config({ path: "/var/www/html/backup/projects/urlname/1-public" })
 
 // ---------- MIDDLEWARE ----------
 
 // Set up the postgres connect url.
-const user = process.env.PSQLU
-const ww = process.env.PSQLW
-const host = "192.168.1.90"
-const psqlport = 5432
-const db = "dekelder"
-const connStr = "postgresql://" + user + ":" + ww + "@" + host + ":" + psqlport + "/" + db
+//const user = process.env.PSQLU
+//const ww = process.env.PSQLW
+//const host = "192.168.1.90"
+//const psqlport = 5432
+//const db = "dekelder"
+//const connStr = "postgresql://" + user + ":" + ww + "@" + host + ":" + psqlport + "/" + db
 
 // Create a new client.
-const client = new Client({
-    connectionString: connStr
-})
-client.connect()
+//const client = new Client({
+//    connectionString: connStr
+//})
+//client.connect()
 
 // Make a query.
-const query = "select * from projects"
+//const query = "select * from projects"
 
 // ---------- GET PAGES ----------
 
