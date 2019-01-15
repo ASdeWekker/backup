@@ -2,7 +2,7 @@ module.exports = {
   apps : [{
     name: 'SpeedTest',
     script: '2-bin/speedtest',
-
+    kill_timeout: 1600,
     // Options reference: https://pm2.io/doc/en/runtime/reference/ecosystem-file/
     args: 'one two',
     instances: 1,
