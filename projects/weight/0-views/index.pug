@@ -1,0 +1,10 @@
+extends layout
+
+block content
+	header.header
+		h1.header--title Gewicht
+	section.body
+		each key in data.rows
+			.body--item
+				p #{key.weight}
+				p #{key.date}
