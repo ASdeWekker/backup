@@ -1,0 +1,20 @@
+{
+	"name": "weight",
+	"version": "0.1.0",
+	"private": true,
+	"description": "To log my weight",
+	"scripts": {
+		"start": "supervisor ./2-bin/weight"
+	},
+	"dependencies": {
+		"body-parser": "^1.18.3",
+		"debug": "^4.1.0",
+		"dotenv": "^6.2.0",
+		"express": "^4.16.4",
+		"http-errors": "^1.7.1",
+		"morgan": "^1.9.1",
+		"pg": "^7.6.1",
+		"pug": "^2.0.3",
+		"supervisor": "^0.12.0"
+	}
+}
