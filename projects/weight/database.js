@@ -2,9 +2,9 @@ const { Client } = require("pg")
 require("dotenv").config({ path: "/var/www/html/backup/projects/weight/1-public/.env" })
 const query = `
 create table if not exists weight (
-	id serial primary key not null
-	weight varchar(5) not null
-	date varchar(10) not null
+	id serial primary key not null,
+	weight varchar(5) not null,
+	date varchar(10) not null,
 	notes varchar(255))
 `
 
