@@ -5,7 +5,7 @@ createError = require("http-errors")
 express = require("express")
 const path = require("path")
 const logger = require("morgan")
-const bodyparser = require("bodyparser")
+const bodyparser = require("body-parser")
 
 // Declare the route(s)
 const indexRouter = require("./3-routes/index")
