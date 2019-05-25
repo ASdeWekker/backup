@@ -1,14 +1,60 @@
+$bg: darken(#fff, 3%)
+$bg-odd: lighten($bg, 100%)
+$bg-even: darken($bg, 10%)
+$text: lighten(#000,10%)
+
 *, *:before, *:after
 	box-sizing: inherit
+	color: $text
+	font-family: Verdana, Arial, sans-serif
 
-html, body
+html, body, .container
+	background: $bg
+	height: 100%
 	margin: 0
 	padding: 0
+	width: 100%
 
 html
 	body
 		.container
 			.header
+				background: tomato
+				border-bottom: 3px solid darken(tomato, 3%)
+				box-shadow: 0 -3px 12px 03px $text
+				width: 100%
+
 				&--title
+					margin: 0
+					height: 50px
+					line-height: 50px
+					text-align: center
+					width: 100%
+
 			.body
 				&--item
+					background: $bg-odd
+					border: 1px solid darken($bg, 20%)
+					border-radius: 5px
+					box-shadow: 4px 4px 12px -3px $text
+					display: block
+					margin: 20px 8%
+					width: 84%
+
+					&--weight, &--date
+						color: lighten($text, 20%)
+						float: left
+						font-size: 167%
+						margin: 7px 3%
+						width: 44%
+
+					&--weight
+						text-decoration: underline
+
+					&--date
+						text-align: right
+
+					&--notes
+						clear: both
+						margin: 10px
+						text-align: center

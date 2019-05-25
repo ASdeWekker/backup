@@ -14,6 +14,6 @@ block content
 	section.body
 		each key in data.rows
 			.body--item
-				p #{key.weight} kg
-				p #{key.date}
-				p #{key.notes}
+				h1.body--item--weight #{key.weight} kg
+				h1.body--item--date #{key.date}
+				p.body--item--notes #{key.notes}
