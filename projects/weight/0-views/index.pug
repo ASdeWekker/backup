@@ -7,13 +7,13 @@ block content
 			label(for="weight").header--input--label.weight
 			input(type="text", name="weight", required, maxlength="5", placeholder="gewicht...")#weight.header--input--weight
 			label(for="date").header--input--label.date
-			input(type="date", name="date", required)#date.header--input--date
+			input(type="date", name="date", required, min="2019-05-17")#date.header--input--date
 			label(for="notes").header--input--label.notes
 			input(type="text", name="notes", maxlength="255", placeholder="opmerkingen...")#notes.header--input--notes
 			button(type="submit").header--input--submit Toevoegen
 	section.body
 		each key in data.rows
 			.body--item
-				p #{key.weight}
+				p #{key.weight} kg
 				p #{key.date}
 				p #{key.notes}

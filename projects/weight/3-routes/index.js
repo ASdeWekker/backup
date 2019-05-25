@@ -19,7 +19,7 @@ const postQuery = "insert into weight (weight, date, note) values ($1, $2, $3)"
 
 // Home page.
 router.get("/", (req, res, next) => {
-	pool.query(query).then(data => {
+	pool.query(getQuery).then(data => {
 		res.render("index", { data: data })
 	}).catch(e => console.error(e.stack))
 })
