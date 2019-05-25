@@ -24,4 +24,11 @@ router.get("/", (req, res, next) => {
 	}).catch(e => console.error(e.stack))
 })
 
+router.post("/post", (req, res, next) => {
+	const { weight, date, notes } = req.body
+	pool.query(postQuery, [weight, date, notes]).then(data => {
+		res.redirect("index")
+	}).catch(e => console.error(e.stack))
+})
+
 module.exports = router
