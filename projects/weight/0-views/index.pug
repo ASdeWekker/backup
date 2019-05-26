@@ -3,7 +3,7 @@ extends layout
 block content
 	header.header
 		h1.header--title Gewicht
-		form(action="").header--input
+		form(action="/post", method="POST").header--input
 			label(for="weight").header--input--label.weight
 			input(type="text", name="weight", required, maxlength="5", placeholder="gewicht...")#weight.header--input--weight
 			label(for="date").header--input--label.date

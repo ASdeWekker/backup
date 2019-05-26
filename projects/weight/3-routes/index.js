@@ -13,7 +13,7 @@ const pool = new Pool({ connectionString: connStr })
 pool.connect()
 // Query.
 const getQuery = "select * from weight order by date desc"
-const postQuery = "insert into weight (weight, date, note) values ($1, $2, $3)"
+const postQuery = "insert into weight (weight, date, notes) values ($1, $2, $3)"
 
 // Get the one and only page.
 
@@ -25,9 +25,11 @@ router.get("/", (req, res, next) => {
 })
 
 router.post("/post", (req, res, next) => {
-	const { weight, date, notes } = req.body
+	let { weight, date, notes } = req.body
+	rearrangedDate = date.split("-")
+	date = rearrangedDate[2] + "-" + rearrangedDate[1] + "-" + rearrangedDate[0]
 	pool.query(postQuery, [weight, date, notes]).then(data => {
-		res.redirect("index")
+		res.redirect("/")
 	}).catch(e => console.error(e.stack))
 })
 
