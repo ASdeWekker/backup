@@ -1,19 +1,30 @@
 extends layout
 
 block content
-	header.header
-		h1.header--title Gewicht
-		form(action="/post", method="POST").header--input
-			label(for="weight").header--input--label.weight
-			input(type="text", name="weight", required, maxlength="5", placeholder="gewicht...")#weight.header--input--weight
-			label(for="date").header--input--label.date
-			input(type="date", name="date", required, min="2019-05-17")#date.header--input--date
-			label(for="notes").header--input--label.notes
-			input(type="text", name="notes", maxlength="255", placeholder="opmerkingen...")#notes.header--input--notes
-			button(type="submit").header--input--submit Toevoegen
+	header
+		h1.text-center Gewicht
+		form(action="/post", method="POST").form
+			.form-row.form--row
+				.col-6.form--row--col
+					label(for="weight").form--row--col--label
+					input(type="text", name="weight", required, maxlength="5", placeholder="gewicht...")#weight.form-control.form--row--col--input
+				.col-6.form--row--col
+					label(for="date").form--row--col--label
+					input(type="date", name="date", required, min="2019-05-17")#date.form-control.form--row--col--input
+			.form-row.form--row
+				.col.form--row--col
+					label(for="notes").form--row--col--label
+					input(type="text", name="notes", maxlength="255", placeholder="opmerkingen...")#notes.form-control.form--row--col--input
+			.row.justify-content-center.form--row
+				.col-4.form--row--col
+					button(type="submit").btn.btn-primary.form--row--col--button Toevoegen
 	section.body
 		each key in data.rows
-			.body--item
-				h1.body--item--weight #{key.weight} kg
-				h1.body--item--date #{key.date}
-				p.body--item--notes #{key.notes}
+			.body--item.row
+				.body--item--weight.col-6
+					h3.body--item--weight--text.text-center #{key.weight} kg
+				.body--item--date.col-6
+					p.body--item--weight--text.text-muted.text-center #{key.date}
+			.body--item.row
+				.body--item--notes.col
+					p.body--item--notes--text.text-center #{key.notes}

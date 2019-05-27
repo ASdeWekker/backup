@@ -1,3 +1,15 @@
+input::placeholder {
+  text-align: center;
+}
 
+html body .container header .form--row--col {
+  margin-top: -12px;
+}
+html body .container header .form--row--col--button {
+  margin-top: 20px;
+}
+html body .container .body {
+  margin-top: 15px;
+}
 
 /*# sourceMappingURL=styles.css.map */
