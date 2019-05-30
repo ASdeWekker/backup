@@ -2,14 +2,31 @@ input::placeholder {
   text-align: center;
 }
 
-html body .container header .form--row--col {
+html body .wrapper {
+  background: #f7f7f7;
+}
+html body .wrapper .header {
+  background: #7688b5;
+  box-shadow: 0 3px 15px 0 #000;
+  padding: 16px 0;
+}
+html body .wrapper .header--title {
+  margin: 0;
+}
+html body .wrapper .header .form--row--col {
   margin-top: -12px;
 }
-html body .container header .form--row--col--button {
+html body .wrapper .header .form--row--col--button {
   margin-top: 20px;
 }
-html body .container .body {
+html body .wrapper .body {
   margin-top: 15px;
+}
+html body .wrapper .body--item {
+  margin: 0;
+}
+html body .wrapper .body .divider {
+  width: 86%;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -3,8 +3,17 @@ input::placeholder
 
 html
 	body
-		.container
-			header
+		.wrapper
+			background: darken(#fff, 3%)
+
+			.header
+				background: lighten(#455680, 20%)
+				box-shadow: 0 3px 15px 0 #000
+				padding: 16px 0
+
+				&--title
+					margin: 0
+
 				.form
 					&--row
 						&--col
@@ -15,3 +24,9 @@ html
 
 			.body
 				margin-top: 15px
+
+				&--item
+					margin: 0
+
+				.divider
+					width: 86%

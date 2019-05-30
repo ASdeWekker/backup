@@ -1,23 +1,24 @@
 extends layout
 
 block content
-	header
-		h1.text-center Gewicht
-		form(action="/post", method="POST").form
-			.form-row.form--row
-				.col-6.form--row--col
-					label(for="weight").form--row--col--label
-					input(type="text", name="weight", required, maxlength="5", placeholder="gewicht...")#weight.form-control.form--row--col--input
-				.col-6.form--row--col
-					label(for="date").form--row--col--label
-					input(type="date", name="date", required, min="2019-05-17")#date.form-control.form--row--col--input
-			.form-row.form--row
-				.col.form--row--col
-					label(for="notes").form--row--col--label
-					input(type="text", name="notes", maxlength="255", placeholder="opmerkingen...")#notes.form-control.form--row--col--input
-			.row.justify-content-center.form--row
-				.col-4.form--row--col
-					button(type="submit").btn.btn-primary.form--row--col--button Toevoegen
+	header.header.jumbotron.jumbotron-fluid
+		.container-fluid
+			h1.header--title.text-center Gewicht
+			form(action="/post", method="POST").form
+				.form-row.form--row
+					.col-6.form--row--col
+						label(for="weight").form--row--col--label
+						input(type="text", name="weight", required, maxlength="5", placeholder="gewicht...")#weight.form-control.form--row--col--input
+					.col-6.form--row--col
+						label(for="date").form--row--col--label
+						input(type="date", name="date", required, min="2019-05-17")#date.form-control.form--row--col--input
+				.form-row.form--row
+					.col.form--row--col
+						label(for="notes").form--row--col--label
+						input(type="text", name="notes", maxlength="255", placeholder="opmerkingen...")#notes.form-control.form--row--col--input
+				.row.justify-content-center.form--row
+					.col-4.form--row--col
+						button(type="submit").btn.btn-secondary.form--row--col--button Toevoegen
 	section.body
 		each key in data.rows
 			.body--item.row
@@ -25,6 +26,8 @@ block content
 					h3.body--item--weight--text.text-center #{key.weight} kg
 				.body--item--date.col-6
 					p.body--item--weight--text.text-muted.text-center #{key.date}
-			.body--item.row
-				.body--item--notes.col
-					p.body--item--notes--text.text-center #{key.notes}
+			if key.notes
+				.body--item.row
+					.body--item--notes.col
+						p.body--item--notes--text.text-center #{key.notes}
+			hr.divider.my-1
