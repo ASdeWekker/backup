@@ -1,0 +1,10 @@
+extends base
+
+block vars
+    -var title = "Stuff"
+
+block body
+    h1 Stuff page!!
+    each thing, i in stuff
+        h2 #{thing.header}
+        p #{thing.text}

@@ -3,7 +3,7 @@
 // Dependencies.
 const express = require("express")
 const router = express.Router()
-require("dotenv").config({ path: "/var/www/html/backup/projects/weight/1-public/.env" })
+require("dotenv").config({ path: "/var/www/html/penp/projects/weight/.env" })
 const { Pool } = require("pg")
 
 // Connection URI.

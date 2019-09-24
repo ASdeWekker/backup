@@ -1,0 +1,17 @@
+extends layout
+
+block content
+    #addtodo.container
+        h1 #{title}
+        .form
+            form(autocomplete="off", action="/todo/items" method="post")
+                input(autocomplete="false", type="hidden")
+                .input-wrap
+                    label(for="title")
+                    input(placeholder="Title...", type="text", name="title", required, maxlength="16")#title
+                .input-wrap
+                    label(for="text")
+                    input(placeholder="Text here...", type="text", name="text", required, maxlength="40")#text
+                .input-wrap.submit-button
+                    button(type="submit") Save the text.
+    script(defer src="../javascripts/todo/validity.js", crossorigin="anonymous", type="text/javascript")

@@ -1,0 +1,24 @@
+extends layout
+
+block content
+	h1= title
+	p Welcome to #{title}
+	h1 DATA!
+	ul
+		each key in data.rows
+			li
+				p #{key.name}
+				p #{key.number}
+				p #{key.date}
+				p #{key.date2}
+	br
+	form(method="POST", action="/sql")
+		input(type="text", name="name", placeholder="Naam")
+		br
+		input(type="number", name="number", placeholder="Getal")
+		br
+		input(type="date", name="date", placeholder="1")
+		br
+		input(type="date", name="date2", placeholder="2")
+		br
+		input(type="submit", value="Verzenden")

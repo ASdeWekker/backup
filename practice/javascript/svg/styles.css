@@ -1,0 +1,40 @@
+/* line 1, styles.sass */
+* {
+  box-sizing: border-box;
+}
+
+/* line 4, styles.sass */
+html, body {
+  background: none;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* line 11, styles.sass */
+html {
+  font-family: Arial;
+}
+/* line 14, styles.sass */
+html body {
+  color: #333;
+}
+/* line 17, styles.sass */
+html body h3 {
+  margin: 0;
+  text-align: center;
+}
+/* line 21, styles.sass */
+html body .container {
+  height: 90%;
+  margin: 1%;
+  width: 98%;
+}
+/* line 26, styles.sass */
+html body .container .svg {
+  background: #eee;
+  border: 5px solid #ddd;
+  border-radius: 10px;
+  padding: 0;
+}

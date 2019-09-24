@@ -1,0 +1,8 @@
+extends layout
+
+block content
+    #todoindex.container
+        h1 #{title}
+        p Welcome to #{title}
+        p: a(href="/todo/items/add") Add TODO
+        p: a(href="/todo/items") TODO view

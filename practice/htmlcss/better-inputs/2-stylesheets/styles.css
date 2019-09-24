@@ -1,0 +1,81 @@
+/* line 1, styles.sass */
+* {
+  box-sizing: border-box;
+}
+
+/* line 4, styles.sass */
+html, body {
+  background: tomato;
+  font-family: Arial, "sans-serif";
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 13, styles.sass */
+html body .main {
+  margin: 100px 50px;
+}
+/* line 16, styles.sass */
+html body .main .input-wrap {
+  background: white;
+  border-radius: 3px;
+  height: 50px;
+  margin-bottom: 50px;
+  position: relative;
+  width: 300px;
+}
+/* line 24, styles.sass */
+html body .main .input-wrap input, html body .main .input-wrap span {
+  position: absolute;
+  width: 300px;
+}
+/* line 28, styles.sass */
+html body .main .input-wrap input {
+  background: none;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  height: 50px;
+  left: 0;
+  padding: 0 10px;
+  top: 0;
+  z-index: 2;
+}
+/* line 38, styles.sass */
+html body .main .input-wrap input:focus {
+  border: 1px solid #ddd;
+  outline: none;
+  padding-top: 18px;
+}
+/* line 43, styles.sass */
+html body .main .input-wrap input:focus + span {
+  font-size: 80%;
+  opacity: 0.7;
+  top: 8px;
+}
+/* line 48, styles.sass */
+html body .main .input-wrap span {
+  left: 10px;
+  top: 16px;
+  transition: all 0.2s ease;
+  z-index: 1;
+}
+/* line 54, styles.sass */
+html body .main .linkie {
+  color: grey;
+  display: block;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+/* line 60, styles.sass */
+html body .main .linkie:hover + .divje {
+  background: tomato;
+  color: black;
+  text-decoration: underline;
+}
+/* line 65, styles.sass */
+html body .main .divje {
+  background: lightblue;
+  height: 100px;
+  width: 100px;
+}

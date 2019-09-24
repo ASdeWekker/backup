@@ -1,0 +1,9 @@
+JQuery:
+	https://code.jquery.com/jquery-3.0.0.min.js
+Bootstrap:
+    CSS:
+	https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css
+    JQuery:
+	https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js
+AngularJS:
+	https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js

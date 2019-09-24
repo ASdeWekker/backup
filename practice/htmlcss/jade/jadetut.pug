@@ -1,0 +1,23 @@
+doctype
+
+html
+	include ./head.pug
+
+	body
+		div
+			p First Paragraph	
+			p
+				| Lorem ipsum dolor sit amet.
+				br
+				| Lorem ipsum dolor sit amet.
+			p.
+				Nulla fingilla, nibh sed placerat posuere, metus urna lacinia sapien, in <i>consectetur justo</i> ex sit amet enum. Aenean gravida mauris quis risus tempor tempot. Vivamus malesuada maximus leo, vel aliquam erat mattis lacinia. Nunc sagittis ante at condimentum euismod.
+			ul
+				li: a(href="#") Superman
+				li: a(href="#") Batman
+				li: a(href="#") Flash
+				li: a(href="#") Wonder Woman
+			ul
+				-superheroes = ["Iron Man", "Thor", "Captain America", "Vision"]
+				each val, key in superheroes
+					li: a(href="#")= key

@@ -1,0 +1,22 @@
+{
+  "name": "postgres",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A pratice project for postgresql integration in nodejs",
+  "scripts": {
+    "start": "supervisor ./2-bin/postgres"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
+    "debug": "^4.1.0",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "http-errors": "^1.7.1",
+    "morgan": "^1.9.1",
+    "pg": "^7.6.1",
+    "pug": "^2.0.3",
+    "supervisor": "^0.12.0",
+    "watchr": "^4.1.0"
+  }
+}

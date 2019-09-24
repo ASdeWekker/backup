@@ -1,0 +1,14 @@
+{
+  "name": "calendar",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Practice calendar to work with nodejs",
+  "scripts": {
+    "start": "supervisor ./2-bin/calendar"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongodb": "^2.0.0",
+    "mongoskin": "^2.1.0"
+  }
+}

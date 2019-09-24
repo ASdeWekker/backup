@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    h1= title
+    p Welcome to #{title}
+    p
+        a(href="/thelist") The List
+    div(ng-app="")
+        p Name :
+            input(type="text" ng-model="name")
+    h1 Hello {{name}}

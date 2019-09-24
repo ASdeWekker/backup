@@ -1,0 +1,25 @@
+extends layout
+
+block content
+    h3 Students
+    div.container
+        each student, i in studentlist
+            div.col-lg-3.col-md-3.col-sm-6.col-xs-12
+                p
+                    b Student:&nbsp;
+                    | #{student.student}
+                p
+                    b Street:&nbsp;
+                    | #{student.street}
+                p
+                    b City:&nbsp;
+                    | #{student.city}
+                p
+                    b State:&nbsp;
+                    | #{student.state}
+                p
+                    b Sex:&nbsp;
+                    | #{student.sex}
+                p
+                    b GPA:&nbsp;
+                    | #{student.gpa}

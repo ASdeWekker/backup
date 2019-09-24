@@ -1,0 +1,29 @@
+extends layout
+
+block content
+    - let prev = data.rows[0].id - 1
+    - let next = data.rows[0].id + 1
+    #itemview.container
+        .top-buttons
+            a(href="/todo").button.home.blue Home
+            a(href="/todo/items").button.view View
+            a(href="/todo/add").button.add.blue Add
+        form(action="")
+            select(name="items", onchange="showItem(this.value)")
+                option(value="") Select an item..
+                each item, i in items.rows
+                    option(value=item.id)= item.title
+        div(id="id-" + data.rows[0].id).item
+            #title.header #{data.rows[0].title}
+            p#text #{data.rows[0].text}
+            p#complete #{data.rows[0].complete}
+        .middle-buttons
+            a(href="/todo/items/edit/" + data.rows[0].id)#edit.button.edit.blue Edit
+            a(href="/todo/items/" + data.rows[0].id)#delete.button.delete.blue Delete
+        .bottom-buttons
+            if (prev == 0)
+                a(href="javascript:void(0);")#prev.button.prev <
+            else
+                a(href="/todo/items/" + prev)#prev.button.prev <
+            a(href="/todo/items/" + next)#next.button.next >
+    script(defer src="../../javascripts/todo/singleItemAjax.js", type="text/javascript", crossorigin="anonymous")

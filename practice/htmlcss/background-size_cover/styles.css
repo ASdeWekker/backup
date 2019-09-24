@@ -1,0 +1,66 @@
+/* line 6, styles.sass */
+* {
+  box-sizing: border-box;
+}
+
+/* line 9, styles.sass */
+html, body, .container {
+  background: none;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* line 16, styles.sass */
+html {
+  background: #eee url(rotterdam.jpg) no-repeat center fixed;
+  background-size: cover;
+  min-height: 100%;
+}
+/* line 21, styles.sass */
+html body {
+  color: blue;
+}
+/* line 24, styles.sass */
+html body .container {
+  font-family: Arial, Verdana;
+}
+/* line 27, styles.sass */
+html body .container .clearfix {
+  background: none;
+  clear: both;
+  display: block;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+/* line 36, styles.sass */
+html body .container h1 {
+  font-size: 200%;
+  margin: 30px 0 0 0;
+  text-align: center;
+}
+/* line 41, styles.sass */
+html body .container .knop {
+  border: none;
+  border-radius: 3px;
+  box-shadow: #333 3px 3px;
+  display: block;
+  height: 36px;
+  line-height: 36px;
+  margin: 30px auto 0;
+  padding: 0;
+  text-align: center;
+  width: 144px;
+}
+/* line 53, styles.sass */
+html body .container p {
+  text-align: center;
+  width: 100%;
+}
+/* line 57, styles.sass */
+html body .container p.hide {
+  display: none;
+}

@@ -1,0 +1,19 @@
+extends base
+
+block content
+    h1.title Landing Page!
+    ul.linklist
+        each link, i in links
+            li.linkli: a(href="http://" + url + ":" + link.url).links #{link.name}
+    ul.hosts
+        li.hostli: a.host(href="http://192.168.1.90:3099") 90
+        li.hostli: a.host(href="http://10.8.0.1:3099") 10
+        li.hostli: a.host(href="http://192.168.1.99:3099") 99
+    ul.buttons
+        li.butli: a(href="#").button: i.fas.fa-american-sign-language-interpreting
+        li.butli: a(href="#").button: i.fas.fa-bowling-ball
+        li.butli: a(href="http://192.168.1.99:8112").button: i.fas.fa-tint
+        li.butli: a(href="/wol").button: i.fas.fa-power-off
+        li.butli: a(href="http://" + url + "/backup/alex/cv/2").button: i.far.fa-file-alt
+        li.butli: a(href="http://" + url + "/backup").button: i.fas.fa-folder-open
+        li.butli: a(href="#").button: i.fab.fa-node-js

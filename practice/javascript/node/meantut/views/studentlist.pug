@@ -1,0 +1,20 @@
+extends layout
+
+block content
+    div
+        p
+            a(href="/") Back
+    div
+        each student, i in studentlist
+            p
+                b Name:&nbsp;
+                | #{student.student}
+            p
+                b Street:&nbsp;
+                | #{student.street}
+            p
+                b City:&nbsp;
+                | #{student.city}
+            p
+                b State&nbsp;
+                | #{student.state}

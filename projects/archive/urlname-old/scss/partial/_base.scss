@@ -1,0 +1,30 @@
+.containerr {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: fit-content;
+    width: -moz-fit-content;
+    width: -webkit-fit-content;
+
+    h1 {
+        margin-bottom: 10px;
+    }
+
+    button {
+        margin: 13px 0;
+    }
+
+    h1, h2, p, button {
+        text-align: center;
+    }
+
+    h1, h2, p, a {
+        color: #eee;
+    }
+    /*.dblink {
+        float: left;
+    }
+    .layoutlink {
+        float: right;
+    }*/
+}

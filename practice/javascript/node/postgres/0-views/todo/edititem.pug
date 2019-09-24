@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    #edititem.container
+        h1 #{title}
+        .form
+            form(autocomplete="off", action="/todo/items" method="put")
+                input(autocomplete="false", type="hidden")
+                input(value=data.rows[0].id, type="hidden", name="id", required)
+                .input-wrap
+                    label(for="title")
+                    input(placeholder="Title...", value=data.rows[0].title, type="text", name="title", required, maxlength="16")#title
+                .input-wrap
+                    label(for="text")
+                    input(placeholder="Text here...", value=data.rows[0].text, type="text", name="text", required, maxlength="40")#text
+                .input-wrap.submit-button
+                    button(type="submit") Edit
+    script(defer src="../../javascripts/todo/validity.js", crossorigin="anonymous", type="text/javascript")

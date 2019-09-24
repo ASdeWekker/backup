@@ -1,0 +1,10 @@
+section.werk-wrap
+    h1 Werkervaring
+    div.gewerkt
+        -var gewerkt = [{"datum":"12-2015 - 04-2016","taak":"TLR Technisch Laboratorium<br>Administratief medewerker"},{"datum":"06-2013 - 08-2015","taak":"Tobias Beheer in Doorn<br>Kantoor automatisering en een start voor de website van het bedrijf gemaakt"},{"datum":"08-2012 - 03-2013","taak":"CP2 Fieldmarketing in Wijk bij Duurstede<br>Promoter"},{"datum":"05-2012 - 06-2012","taak":"Streetwise in Utrecht<br>Donateurs werven voor goede doelen"},{"datum":"05-2009 - 02-2012","taak":"Alber Heijn in Driebergen-Rijsenburg<br>Vakkenvuller"}];
+        -for (var i = 0; i < gewerkt.length; i++)
+            div.werk-plek &nbsp;
+                div.left
+                    p !{gewerkt[i].datum}
+                div.right
+                    p !{gewerkt[i].taak}

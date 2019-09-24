@@ -1,0 +1,51 @@
+.werk-wrap {
+    height: auto;
+    width: 100%;
+
+    .gewerkt {
+        height: auto;
+        margin: 10px auto 0;
+        max-width: 1000px;
+        width: auto;
+
+        .werk-plek {
+            height: auto;
+            margin-bottom: 35px;
+            width: 100%;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            .left, .right {
+                float: left;
+                height: 100%;
+                width: 49%;
+            }
+
+            p {
+                color: #333;
+                margin: 0;
+            }
+    
+            .left {
+                border-right: 1px solid #000;
+                
+                p {
+                    float: right;
+                    padding-right: $werk-margin;
+                    position: relative;
+                    top: 50%;
+                    transform: translate(0, -50%);
+                }
+            }
+            .right {
+                border-left: 1px solid #000;
+            
+                p {
+                    padding-left: $werk-margin;
+                }
+            }
+        }
+    }
+}

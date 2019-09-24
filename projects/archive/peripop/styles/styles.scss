@@ -1,0 +1,23 @@
+html {
+    margin: 0;
+    font-family: Arial, "sans-serif";
+
+    body {
+        background: #ff9d00;
+        margin: 0;
+
+        h1, p {
+            color: #000;
+            margin: 40px 8%;
+            text-align: center;
+        }
+    
+        h1 {
+            letter-spacing: 2px;
+        }
+
+        p {
+            letter-spacing: -1px;
+        }
+    }
+}

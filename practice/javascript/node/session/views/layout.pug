@@ -1,0 +1,40 @@
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        block title
+        title #{title} || Session // Login
+        link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", type="text/css")
+        link(rel="stylesheet", href="/stylesheets/style.css", type="text/css")
+    body
+        div#header.container
+            -var selected = "HOME";
+            block link
+            -var menu = {"HOME":"/","ABOUT":"/about","STUFF":"/stuff","SIGN IN":"/login"};
+            div.page-header
+                h1 Session / Login
+            nav.navbar.navbar-default
+                div.container-fluid
+                    div.navbar-header
+                        button.navbar-toggle.collapsed(type="button", data-toggle="collapse", data-target="#navbar-collapse", aria-expanded="false")
+                            span.sr-only
+                            span.icon-bar
+                            span.icon-bar
+                            span.icon-bar
+                    div#navbar-collapse.collapse.navbar-collapse
+                        ul.nav.navbar-nav
+                            each val, key in menu
+                                - var width = 100 / Object.keys(menu).length;
+                                - if (width == "25") { width = "twentyfive"; }
+                                li(class=""+ width    +"")
+                                    if selected === key
+                                        a.active(href=val)= key
+                                    else
+                                        a(href=val)= key
+        div#page.container
+            block content
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js", type="text/javascript")
+        script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js", type="text/javascript")
+        script(src="javascripts/js.js", type="text/javascript")

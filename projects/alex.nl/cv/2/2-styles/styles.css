@@ -1,0 +1,181 @@
+/* line 3, ../1-sass/partials/_reset.sass */
+html, body, div, span, p, h1, h2, h3, h4, h5, h6, a {
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+/* line 11, ../1-sass/partials/_reset.sass */
+article, aside, header, footer, section, menu, nav {
+  display: block;
+}
+
+/* line 14, ../1-sass/partials/_reset.sass */
+ol, ul {
+  list-style: none;
+}
+
+/* line 17, ../1-sass/partials/_reset.sass */
+a {
+  color: #333333;
+  text-decoration: none;
+}
+/* line 21, ../1-sass/partials/_reset.sass */
+a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+@font-face {
+  font-family: montserrat;
+  src: url(fonts/Montserrat-Regular.otf);
+}
+@font-face {
+  font-family: montserrat;
+  src: url(fonts/Montserrat-Bold.otf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: montserrat;
+  src: url(fonts/Montserrat-Light.otf);
+  font-weight: 100;
+}
+/* line 4, ../1-sass/partials/_extends.sass */
+html, html body .container .header, html body .container .header header, html body .container .page, html body .container .footer, html body .container .footer footer {
+  background: none;
+  height: auto;
+  width: 100%;
+}
+
+/* line 19, ../1-sass/styles.sass */
+* {
+  box-sizing: border-box;
+}
+
+/* line 23, ../1-sass/styles.sass */
+html {
+  background: #333333;
+  color: #dddddd;
+  margin: 0;
+  padding: 0;
+}
+/* line 30, ../1-sass/styles.sass */
+html body {
+  background: none;
+  font-family: montserrat, Verdana, sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+/* line 38, ../1-sass/styles.sass */
+html body .container {
+  background: none;
+  height: 100%;
+  width: 100%;
+}
+/* line 43, ../1-sass/styles.sass */
+html body .container p {
+  text-align: center;
+}
+/* line 47, ../1-sass/styles.sass */
+html body .container .header {
+  margin-top: 10px;
+}
+/* line 54, ../1-sass/styles.sass */
+html body .container .header header .name {
+  border: 0 double #dddddd;
+  border-width: 6px 0;
+  font-size: 250%;
+  font-weight: 900;
+  letter-spacing: 10px;
+  line-height: 36px;
+  padding: 6px 0;
+  text-align: center;
+  word-spacing: -5px;
+}
+/* line 65, ../1-sass/styles.sass */
+html body .container .header header .img {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  display: block;
+  height: 90%;
+  margin: 20px auto;
+  max-height: 400px;
+  max-width: 400px;
+  width: 90%;
+}
+/* line 75, ../1-sass/styles.sass */
+html body .container .page {
+  margin-bottom: 30px;
+}
+/* line 79, ../1-sass/styles.sass */
+html body .container .page div {
+  clear: both;
+}
+/* line 82, ../1-sass/styles.sass */
+html body .container .page div .title {
+  font-size: 200%;
+  margin-bottom: 15px;
+  text-align: center;
+  text-decoration: underline;
+}
+/* line 89, ../1-sass/styles.sass */
+html body .container .page div div {
+  margin: 0 5% 25px 5%;
+  overflow: hidden;
+  width: 90%;
+}
+/* line 94, ../1-sass/styles.sass */
+html body .container .page div div p {
+  display: block;
+  float: left;
+  width: 99%;
+}
+/* line 99, ../1-sass/styles.sass */
+html body .container .page div div .left {
+  margin: 0 1% 15px 0;
+  text-align: right;
+}
+/* line 103, ../1-sass/styles.sass */
+html body .container .page div div .right {
+  margin-left: 1%;
+  text-align: left;
+}
+@media screen and (min-width: 800px) {
+  /* line 108, ../1-sass/styles.sass */
+  html body .container .page div div p {
+    width: 48%;
+  }
+}
+/* line 111, ../1-sass/styles.sass */
+html body .container .page .personalia {
+  margin-bottom: 20px;
+}
+/* line 115, ../1-sass/styles.sass */
+html body .container .footer {
+  background: #dddddd;
+  color: #333333;
+}
+/* line 123, ../1-sass/styles.sass */
+html body .container .footer footer p {
+  display: inline-block;
+  left: 5%;
+  margin: 20px 0;
+  position: relative;
+  width: 90%;
+}
+/* line 130, ../1-sass/styles.sass */
+html body .container .fixed {
+  position: relative;
+}
+/* line 134, ../1-sass/styles.sass */
+html body .container .bottom {
+  bottom: 0;
+  position: fixed;
+}

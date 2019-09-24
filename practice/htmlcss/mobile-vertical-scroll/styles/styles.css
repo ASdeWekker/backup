@@ -1,0 +1,200 @@
+/* line 4, ../scss/styles.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 7, ../scss/styles.scss */
+html {
+  height: 100%;
+  width: 100%;
+}
+/* line 11, ../scss/styles.scss */
+html body {
+  background-color: #333;
+  background-image: url(../img/trees.jpg);
+  background-position: 50% 50%;
+  color: #eee;
+  font-family: Lucia Grande, Arial, "sans-serif";
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+/* line 22, ../scss/styles.scss */
+html body .container {
+  background: rgba(0, 0, 0, 0.8);
+  min-height: 100%;
+  margin-bottom: -60px;
+  width: 100%;
+}
+/* line 28, ../scss/styles.scss */
+html body .container .header {
+  margin-left: 5%;
+  width: 90%;
+}
+/* line 32, ../scss/styles.scss */
+html body .container .header .header-text {
+  float: left;
+  overflow-x: hidden;
+  width: auto;
+}
+/* line 38, ../scss/styles.scss */
+html body .container .header .menu-button {
+  background: none;
+  border: 2px solid #eee;
+  border-radius: 4px;
+  display: inline-block;
+  float: right;
+  height: 38px;
+  margin: 22px 0 0 10px;
+  width: 38px;
+}
+/* line 48, ../scss/styles.scss */
+html body .container .header .menu-button .bar {
+  background: #eee;
+  height: 2px;
+  margin: 7px 0 0 10%;
+  width: 80%;
+}
+/* line 57, ../scss/styles.scss */
+html body .container .navigation {
+  overflow: hidden;
+  transition: height 0.5s ease;
+  width: 100%;
+}
+/* line 62, ../scss/styles.scss */
+html body .container .navigation .ulnav {
+  list-style-type: none;
+  margin-left: 5%;
+  padding: 0;
+  width: 90%;
+}
+/* line 68, ../scss/styles.scss */
+html body .container .navigation .ulnav .item {
+  border-bottom: 2px solid #eee;
+  margin-top: 13px;
+  padding-bottom: 13px;
+  width: 100%;
+}
+/* line 74, ../scss/styles.scss */
+html body .container .navigation .ulnav .item:first-child {
+  margin-top: 0;
+}
+/* line 78, ../scss/styles.scss */
+html body .container .navigation .ulnav .item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+/* line 84, ../scss/styles.scss */
+html body .container .navigation .ulnav .item .link {
+  color: #eee;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
+/* line 91, ../scss/styles.scss */
+html body .container .navigation .ulnav .item .link:hover {
+  color: #eee;
+  text-decoration: underline;
+}
+/* line 100, ../scss/styles.scss */
+html body .container .closed {
+  height: 0px;
+}
+/* line 103, ../scss/styles.scss */
+html body .container .open {
+  height: 188px;
+}
+/* line 107, ../scss/styles.scss */
+html body .container .product-wrap {
+  height: auto;
+  width: 100%;
+}
+/* line 111, ../scss/styles.scss */
+html body .container .product-wrap .product {
+  height: auto;
+  margin-left: 5%;
+  width: 90%;
+}
+/* line 116, ../scss/styles.scss */
+html body .container .product-wrap .product .product-title {
+  text-decoration: underline;
+}
+/* line 120, ../scss/styles.scss */
+html body .container .product-wrap .product .product-info {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  height: auto;
+  margin-top: 15px;
+  padding: 3%;
+  width: 100%;
+}
+/* line 128, ../scss/styles.scss */
+html body .container .product-wrap .product .product-info img {
+  border-radius: 4px;
+  max-height: 100%;
+  max-width: 100%;
+}
+/* line 137, ../scss/styles.scss */
+html body .container .product-wrap .product .product-info .description {
+  line-height: 21px;
+  text-align: justify;
+}
+/* line 144, ../scss/styles.scss */
+html body .container .product-wrap .small-products {
+  background: rgba(255, 255, 255, 0.2);
+  height: 150px;
+  margin: 20px 0;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+/* line 154, ../scss/styles.scss */
+html body .container .product-wrap .small-products .small-product {
+  display: inline-block;
+  height: 140px;
+  margin: 5px;
+  width: 300px;
+}
+/* line 160, ../scss/styles.scss */
+html body .container .product-wrap .small-products .small-product img, html body .container .product-wrap .small-products .small-product .small-product-text {
+  display: inline-block;
+  float: left;
+}
+/* line 165, ../scss/styles.scss */
+html body .container .product-wrap .small-products .small-product img {
+  max-height: 100%;
+  max-width: 100%;
+}
+/* line 170, ../scss/styles.scss */
+html body .container .product-wrap .small-products .small-product .small-product-text {
+  margin-left: 5px;
+  white-space: normal;
+  width: 50%;
+}
+/* line 179, ../scss/styles.scss */
+html body .container .spacer {
+  display: block;
+  height: 60px;
+}
+/* line 184, ../scss/styles.scss */
+html body footer {
+  background: rgba(255, 255, 255, 0.2);
+  height: 60px;
+  width: 100%;
+}
+/* line 189, ../scss/styles.scss */
+html body footer .footer {
+  height: auto;
+  margin-left: 5%;
+  width: 90%;
+}
+/* line 194, ../scss/styles.scss */
+html body footer .footer .footer-text {
+  margin-top: 4px;
+  text-align: center;
+}

@@ -1,0 +1,19 @@
+extends base
+
+block title
+    -var title = "Home";
+
+block content
+    h1 Home
+    h2#hh22 nog meer tekst voor je
+    p flikkertjhh
+    br
+    //- Action en Method moeten nog
+    form.search-form
+        input.textfield(type="text", placeholder="Type out your website")
+        input.formbutton(type="submit", value="Search")
+    br
+    button.knoppie(onclick="doStuff()") klik maar!
+    br
+    br
+    button.dbbutton Roep de database op

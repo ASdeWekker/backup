@@ -1,0 +1,23 @@
+html {
+    
+    body {
+        background: #458b00;
+        color: #fff;
+        font-family: Verdana, "sans-serif";
+        margin: 0;
+
+        #title {
+            color: #66cd00;
+            margin: 50px;
+            text-align: center;
+
+            &:hover {
+                color: #45800b;
+            }
+        }
+
+        .hover {
+            font-weight: 200;
+        }
+    }
+}

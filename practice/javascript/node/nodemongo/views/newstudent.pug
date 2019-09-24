@@ -1,0 +1,30 @@
+extends layout
+
+block content
+    h3= title
+    form(role="form", name="addstudent", method="post", action="/addstudent")
+        div.input-group.input-group-lg
+            span.input-group-addon Name
+            input.form-control(type="text", name="student")
+        br
+        div.input-group.input-group-lg
+            span.input-group-addon Street
+            input.form-control(type="text", name="street")
+        br
+        div.input-group.input-group-lg
+            span.input-group-addon City
+            input.form-control(type="text", name="city")
+        br
+        div.input-group.input-group-lg
+            span.input-group-addon State
+            input.form-control(type="text", name="state")
+        br
+        div.input-group.input-group-lg
+            span.input-group-addon Sex
+            input.form-control(type="text", name="sex")
+        br
+        div.input-group.input-group-lg
+            span.input-group-addon GPA
+            input.form-control(type="text", name="gpa")
+        br
+        button.btn.btn-default(type="submit") Submit

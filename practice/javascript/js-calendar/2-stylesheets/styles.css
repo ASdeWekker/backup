@@ -1,0 +1,87 @@
+/* line 1, styles.sass */
+* {
+  box-sizing: border-box;
+}
+
+/* line 4, styles.sass */
+html {
+  background: tomato;
+  color: #fff;
+  font-family: Arial, "sans-serif";
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 15, styles.sass */
+html body .container .main {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+/* line 21, styles.sass */
+html body .container .main .arrows {
+  display: flex;
+  justify-content: center;
+}
+/* line 25, styles.sass */
+html body .container .main .arrows--arrow {
+  background: teal;
+  border-radius: 7px;
+  cursor: pointer;
+  display: block;
+  font-weight: 900;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  width: 60px;
+}
+/* line 36, styles.sass */
+html body .container .main .arrows .previous {
+  margin-right: 10px;
+}
+/* line 39, styles.sass */
+html body .container .main .arrows .next {
+  margin-left: 10px;
+}
+/* line 42, styles.sass */
+html body .container .main .table {
+  background: teal;
+  border-collapse: collapse;
+  margin: 60px 0 20px;
+}
+/* line 47, styles.sass */
+html body .container .main .table--thead {
+  background: white;
+  color: black;
+}
+/* line 52, styles.sass */
+html body .container .main .table--thead .month-year .table--thead--tr--th {
+  padding-top: 10px;
+}
+/* line 56, styles.sass */
+html body .container .main .table--thead .thead-days .table--thead--tr--th {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  width: 40px;
+}
+/* line 65, styles.sass */
+html body .container .main .table--tbody--tr:first-child .table--tbody--tr--td {
+  height: 0;
+  padding: 0;
+  width: 0;
+}
+/* line 70, styles.sass */
+html body .container .main .table--tbody--tr--td {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  width: 40px;
+}
+/* line 76, styles.sass */
+html body .container .main .table--tbody--tr .bg-info {
+  background: tomato;
+  border-radius: 50%;
+}

@@ -1,0 +1,78 @@
+*
+    box-sizing: border-box
+    
+html
+    background: tomato
+    color: #fff
+    font-family: Arial, "sans-serif"
+    font-size: 100%
+    margin: 0
+    padding: 0
+
+html
+    body
+        .container
+            .main
+                display: flex
+                flex-flow: column nowrap
+                justify-content: center
+                align-items: center
+
+                .arrows
+                    display: flex
+                    justify-content: center
+
+                    &--arrow
+                        background: teal
+                        border-radius: 7px
+                        cursor: pointer
+                        display: block
+                        font-weight: 900
+                        height: 30px
+                        line-height: 30px
+                        text-align: center
+                        width: 60px
+
+                    .previous
+                        margin-right: 10px
+
+                    .next
+                        margin-left: 10px
+
+                .table
+                    background: teal
+                    border-collapse: collapse
+                    margin: 60px 0 20px
+
+                    &--thead
+                        background: white
+                        color: black
+
+                        .month-year
+                            .table--thead--tr--th
+                                padding-top: 10px
+
+                        .thead-days
+                            .table--thead--tr--th
+                                height: 40px
+                                line-height: 40px
+                                text-align: center
+                                width: 40px
+
+                    &--tbody
+                        &--tr
+                            &:first-child
+                                .table--tbody--tr--td
+                                    height: 0
+                                    padding: 0
+                                    width: 0
+
+                            &--td
+                                height: 40px
+                                line-height: 40px
+                                text-align: center
+                                width: 40px
+
+                            .bg-info
+                                background: tomato
+                                border-radius: 50%

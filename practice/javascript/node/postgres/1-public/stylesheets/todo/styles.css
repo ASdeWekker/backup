@@ -1,0 +1,127 @@
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+a {
+  color: #ddd;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+#todoview {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.3) 90%);
+}
+
+html {
+  box-sizing: border-box;
+}
+html body {
+  background: #606060;
+  color: #6060ff;
+  font-family: "Lucida Grande", sans-serif;
+  margin: 0;
+}
+html body .container {
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100%;
+  width: 100%;
+}
+html body .container .form, html body .container form, html body .container .input-wrap, html body .container input, html body .container button, html body .container label {
+  width: 100%;
+}
+html body .container .form, html body .container form, html body .container .input-wrap {
+  height: auto;
+}
+html body .container .form form, html body .container form form, html body .container .input-wrap form {
+  margin: 0 5%;
+  width: 90%;
+}
+html body .container .form form .input-wrap, html body .container form form .input-wrap, html body .container .input-wrap form .input-wrap {
+  margin: 16px 0;
+}
+html body .container .form form .input-wrap input, html body .container .form form .input-wrap button, html body .container form form .input-wrap input, html body .container form form .input-wrap button, html body .container .input-wrap form .input-wrap input, html body .container .input-wrap form .input-wrap button {
+  border-radius: 18px;
+  font-size: 120%;
+  padding: 6px;
+}
+html body .container .form form .input-wrap input, html body .container form form .input-wrap input, html body .container .input-wrap form .input-wrap input {
+  background: #606060;
+  border: 1px solid tomato;
+}
+html body .container .form form .input-wrap input::placeholder, html body .container form form .input-wrap input::placeholder, html body .container .input-wrap form .input-wrap input::placeholder {
+  color: white;
+  text-align: center;
+}
+html body .container .form form .input-wrap button, html body .container form form .input-wrap button, html body .container .input-wrap form .input-wrap button {
+  border: none;
+  color: tomato;
+}
+html body .container .form form .input-wrap button:before, html body .container form form .input-wrap button:before, html body .container .input-wrap form .input-wrap button:before {
+  content: "< < < ";
+}
+html body .container .form form .input-wrap button:after, html body .container form form .input-wrap button:after, html body .container .input-wrap form .input-wrap button:after {
+  content: " > > >";
+}
+html body .container .item {
+  background: #606060;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px 4px rgba(0, 0, 0, 0.4);
+  margin: 5%;
+  width: 90%;
+}
+html body .container .item .header {
+  background: #6060ff;
+  border-radius: 10px 10px 0 0;
+  color: #fff;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  width: 100%;
+}
+html body .container .item p {
+  color: #eee;
+  text-align: center;
+}
+
+.top-buttons, .middle-buttons, .bottom-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin: 5%;
+  width: 90%;
+}
+
+.button {
+  background: #606060;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px 4px rgba(0, 0, 0, 0.4);
+  color: #eee;
+  display: block;
+  font-size: 130%;
+  float: left;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  width: 42%;
+}
+
+.home, .view, .add {
+  width: 26%;
+}
+
+.blue {
+  background: #6060ff;
+}
+
+#itemview form {
+  margin: 5% 10%;
+  width: 80%;
+}
+#itemview form select {
+  width: 100%;
+}
+
+/*# sourceMappingURL=styles.css.map */

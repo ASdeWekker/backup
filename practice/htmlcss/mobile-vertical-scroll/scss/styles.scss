@@ -1,0 +1,201 @@
+@import "compass";
+@import "partials/vars";
+
+* {
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+  width: 100%;
+
+  body {
+    background-color: #333;
+    background-image: url(../img/trees.jpg);
+    background-position: 50% 50%;
+    color: $sitewhite;
+    font-family: Lucia Grande, Arial, "sans-serif";
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    .container {
+      background: rgba(0, 0, 0, 0.8);
+      min-height: 100%;
+      margin-bottom: $inversedfooterheight;
+      width: 100%;
+
+      .header {
+        margin-left: 5%;
+        width: 90%;
+
+        .header-text {
+          float: left;
+          overflow-x: hidden;
+          width: auto;
+        }
+
+        .menu-button {
+          background: none;
+          border: 2px solid $sitewhite;
+          border-radius: 4px;
+          display: inline-block;
+          float: right;
+          height: 38px;
+          margin: 22px 0 0 10px;
+          width: 38px;
+
+          .bar {
+            background: $sitewhite;
+            height: 2px;
+            margin: 7px 0 0 10%;
+            width: 80%;
+          }
+        }
+      }
+
+      .navigation {
+        overflow: hidden;
+        transition: height 0.5s ease;
+        width: 100%;
+
+        .ulnav {
+          list-style-type: none;
+          margin-left: 5%;
+          padding: 0;
+          width: 90%;
+
+          .item {
+            border-bottom: 2px solid $sitewhite;
+            margin-top: 13px;
+            padding-bottom: 13px;
+            width: 100%;
+
+            &:first-child {
+              margin-top: 0;
+            }
+
+            &:last-child {
+              border-bottom: none;
+              margin-bottom: 0;
+              padding-bottom: 0;
+            }
+
+            .link {
+              color: $sitewhite;
+              display: block;
+              text-align: center;
+              text-decoration: none;
+              width: 100%;
+
+              &:hover {
+                color: $sitewhite;
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+
+      .closed {
+        height: 0px;
+      }
+      .open {
+        height: 188px;
+      }
+
+      .product-wrap {
+        height: auto;
+        width: 100%;
+
+        .product {
+          height: auto;
+          margin-left: 5%;
+          width: 90%;
+
+          .product-title {
+            text-decoration: underline;
+          }
+
+          .product-info {
+            background: rgba(255,255,255,0.2);
+            border-radius: 4px;
+            height: auto;
+            margin-top: 15px;
+            padding: 3%;
+            width: 100%;
+
+            img {
+              border-radius: 4px;
+              max-height: 100%;
+              max-width: 100%;
+            }
+
+            .description-header {
+            }
+
+            .description {
+              line-height: 21px;
+              text-align: justify;
+            }
+          }
+        }
+
+        .small-products {
+          background: rgba(255,255,255,0.2);
+          height: 150px;
+          margin: 20px 0;
+          overflow-x: scroll;
+          overflow-y: hidden;
+          white-space: nowrap;
+          width: 100%;
+          -webkit-overflow-scrolling: touch;
+
+          .small-product {
+            display: inline-block;
+            height: 140px;
+            margin: 5px;
+            width: 300px;
+
+            img, .small-product-text {
+              display: inline-block;
+              float: left;
+            }
+
+            img {
+              max-height: 100%;
+              max-width: 100%;
+            }
+
+            .small-product-text {
+              margin-left: 5px;
+              white-space: normal;
+              width: 50%;
+            }
+          }
+        }
+      }
+
+      .spacer {
+        display: block;
+        height: $footerheight;
+      }
+    }
+    footer {
+      background: rgba(255,255,255,0.2);
+      height: $footerheight;
+      width: 100%;
+
+      .footer {
+        height: auto;
+        margin-left: 5%;
+        width: 90%;
+
+        .footer-text {
+          margin-top: 4px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

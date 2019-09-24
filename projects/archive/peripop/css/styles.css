@@ -1,0 +1,24 @@
+/* line 1, ../styles/styles.scss */
+html {
+  margin: 0;
+  font-family: Arial, "sans-serif";
+}
+/* line 5, ../styles/styles.scss */
+html body {
+  background: #ff9d00;
+  margin: 0;
+}
+/* line 9, ../styles/styles.scss */
+html body h1, html body p {
+  color: #000;
+  margin: 40px 8%;
+  text-align: center;
+}
+/* line 15, ../styles/styles.scss */
+html body h1 {
+  letter-spacing: 2px;
+}
+/* line 19, ../styles/styles.scss */
+html body p {
+  letter-spacing: -1px;
+}

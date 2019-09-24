@@ -1,0 +1,11 @@
+extends layout
+
+block title
+	-var title = "Something went wrong...";
+
+block link
+	-var selected = "HOME";
+
+block content
+	h1 Error pagina
+	p !{error}

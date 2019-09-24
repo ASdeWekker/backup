@@ -1,0 +1,12 @@
+extends layout
+
+block title
+    -var title = "About";
+
+block link
+    -var selected = "ABOUT";
+
+block content
+    each text, i in pagetext
+        h2 #{text.header}
+        p #{text.text}

@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    #todoview.container
+        h1 #{title}
+        each item, i in data.rows
+            div(id="id-" + item.id).item
+                .header: a(href="/todo/items/" + item.id).item-link #{item.title}
+                p #{item.text}
+                p #{item.complete}

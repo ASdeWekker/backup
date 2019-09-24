@@ -1,0 +1,172 @@
+/* line 10, ../../2-sass/styles.sass */
+html, html body, html body .container {
+  background: none;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 17, ../../2-sass/styles.sass */
+* {
+  box-sizing: border-box;
+}
+
+/* line 21, ../../2-sass/styles.sass */
+html, body, ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 31, ../../2-sass/styles.sass */
+html body .container {
+  background: radial-gradient(#65fdf0, #1d6fa3);
+  font-family: Verdana, "sans-serif";
+  overflow: hidden;
+}
+/* line 37, ../../2-sass/styles.sass */
+html body .container h1, html body .container h2, html body .container h3, html body .container p {
+  text-align: center;
+  width: 100%;
+}
+/* line 41, ../../2-sass/styles.sass */
+html body .container ul {
+  height: auto;
+  width: 100%;
+}
+/* line 45, ../../2-sass/styles.sass */
+html body .container ul li {
+  display: block;
+  float: left;
+  list-style-type: none;
+}
+/* line 50, ../../2-sass/styles.sass */
+html body .container ul li a {
+  color: #eee;
+  text-align: center;
+  text-decoration: none;
+}
+/* line 57, ../../2-sass/styles.sass */
+html body .container .title {
+  color: #eee;
+}
+/* line 62, ../../2-sass/styles.sass */
+html body .container .linklist {
+  margin: 0 auto;
+  overflow: auto;
+}
+/* line 66, ../../2-sass/styles.sass */
+html body .container .linklist .linkli {
+  height: 42px;
+  line-height: 42px;
+  margin: 10px 0;
+  overflow: auto;
+}
+/* line 72, ../../2-sass/styles.sass */
+html body .container .linklist .linkli .links {
+  color: #333;
+  display: inline-block;
+  line-height: 22px;
+  padding: 10px;
+  text-decoration: underline;
+  width: 100%;
+}
+/* line 80, ../../2-sass/styles.sass */
+html body .container .linklist .linkli .links:hover {
+  background: #333;
+  border-radius: 10px;
+  color: #eee;
+  text-decoration: none;
+}
+/* line 88, ../../2-sass/styles.sass */
+html body .container .hosts {
+  margin: 20px 0 0 0;
+}
+/* line 91, ../../2-sass/styles.sass */
+html body .container .hosts .hostli {
+  width: 30%;
+}
+/* line 94, ../../2-sass/styles.sass */
+html body .container .hosts .hostli:first-child {
+  margin-left: 5%;
+}
+/* line 97, ../../2-sass/styles.sass */
+html body .container .hosts .hostli .host {
+  display: block;
+  font-size: 2em;
+  font-weight: 900;
+  width: 100%;
+}
+/* line 105, ../../2-sass/styles.sass */
+html body .container .buttons {
+  background: none;
+  bottom: 10px;
+  overflow: hidden;
+  position: absolute;
+}
+/* line 112, ../../2-sass/styles.sass */
+html body .container .buttons .butli {
+  width: 14%;
+}
+/* line 115, ../../2-sass/styles.sass */
+html body .container .buttons .butli:first-child {
+  margin-left: 1%;
+}
+/* line 119, ../../2-sass/styles.sass */
+html body .container .buttons .butli .button {
+  color: #eee;
+  display: block;
+  font-size: 2em;
+}
+/* line 124, ../../2-sass/styles.sass */
+html body .container .buttons .butli .button svg {
+  display: block;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1261px) {
+  /* line 129, ../../2-sass/styles.sass */
+  .linklist li {
+    width: 11.1%;
+  }
+}
+@media screen and (max-width: 1260px) {
+  /* line 134, ../../2-sass/styles.sass */
+  .linklist li {
+    width: 14.28571%;
+  }
+}
+@media screen and (max-width: 1080px) {
+  /* line 134, ../../2-sass/styles.sass */
+  .linklist li {
+    width: 16.66667%;
+  }
+}
+@media screen and (max-width: 900px) {
+  /* line 134, ../../2-sass/styles.sass */
+  .linklist li {
+    width: 20%;
+  }
+}
+@media screen and (max-width: 720px) {
+  /* line 134, ../../2-sass/styles.sass */
+  .linklist li {
+    width: 25%;
+  }
+}
+@media screen and (max-width: 540px) {
+  /* line 134, ../../2-sass/styles.sass */
+  .linklist li {
+    width: 33.33333%;
+  }
+}
+@media screen and (max-width: 360px) {
+  /* line 134, ../../2-sass/styles.sass */
+  .linklist li {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 180px) {
+  /* line 134, ../../2-sass/styles.sass */
+  .linklist li {
+    width: 100%;
+  }
+}

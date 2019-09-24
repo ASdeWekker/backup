@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>js-calendar</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="tomato">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="2-stylesheets/styles.css" type="text/css">
+  </head>
+  <body>
+    <div class="container">
+      <section class="main">
+        <table class="table" id="calendar">
+          <thead class="table--thead">
+            <tr class="table--thead--tr month-year">
+              <th class="table--thead--tr--th" colspan="7" id="monthAndYear"></th>
+            </tr>
+            <tr class="table--thead--tr thead-days">
+              <th class="table--thead--tr--th" colspan="1">Zo</th>
+              <th class="table--thead--tr--th" colspan="1">Ma</th>
+              <th class="table--thead--tr--th" colspan="1">Di</th>
+              <th class="table--thead--tr--th" colspan="1">Wo</th>
+              <th class="table--thead--tr--th" colspan="1">Do</th>
+              <th class="table--thead--tr--th" colspan="1">Vr</th>
+              <th class="table--thead--tr--th" colspan="1">Za</th>
+            </tr>
+          </thead>
+          <tbody class="table--tbody" id="calendar-body"></tbody>
+        </table>
+        <div class="arrows">
+          <div class="previous arrows--arrow" onclick="previous()" id="previous"><</div>
+          <div class="next arrows--arrow" onclick="next()" id="next">></div>
+        </div>
+      </section>
+    </div>
+    <script src="3-js/calendar.js" type="text/javascript"></script><script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+.personalia {
+    height: auto;
+    margin-top: 20px;
+    width: 100%;
+
+    .table-wrap {
+        margin: 10px auto;
+        width: 350px;
+        transform: translateX(6%);
+
+        table {
+            tbody {
+                tr {
+                    td {
+                        padding: 3px;
+
+                        &:first-child {
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

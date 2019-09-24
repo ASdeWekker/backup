@@ -1,0 +1,121 @@
+/* line 1, ../scss/partials/_intro.scss */
+.name {
+  font-family: Arial, "sans-serif";
+  font-size: 400%;
+  font-weight: 800;
+  margin-top: 0;
+}
+
+/* line 8, ../scss/partials/_intro.scss */
+.img-wrap {
+  height: auto;
+  margin: 30px auto 0;
+  max-width: 400px;
+  padding: 10px;
+  width: auto;
+}
+/* line 15, ../scss/partials/_intro.scss */
+.img-wrap img {
+  max-height: 100%;
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+/* line 1, ../scss/partials/_werk.scss */
+.werk-wrap {
+  height: auto;
+  width: 100%;
+}
+/* line 5, ../scss/partials/_werk.scss */
+.werk-wrap .gewerkt {
+  height: auto;
+  margin: 10px auto 0;
+  max-width: 1000px;
+  width: auto;
+}
+/* line 11, ../scss/partials/_werk.scss */
+.werk-wrap .gewerkt .werk-plek {
+  height: auto;
+  margin-bottom: 35px;
+  width: 100%;
+}
+/* line 16, ../scss/partials/_werk.scss */
+.werk-wrap .gewerkt .werk-plek:last-child {
+  margin-bottom: 0;
+}
+/* line 20, ../scss/partials/_werk.scss */
+.werk-wrap .gewerkt .werk-plek .left, .werk-wrap .gewerkt .werk-plek .right {
+  float: left;
+  height: 100%;
+  width: 49%;
+}
+/* line 26, ../scss/partials/_werk.scss */
+.werk-wrap .gewerkt .werk-plek p {
+  color: #333;
+  margin: 0;
+}
+/* line 31, ../scss/partials/_werk.scss */
+.werk-wrap .gewerkt .werk-plek .left {
+  border-right: 1px solid #000;
+}
+/* line 34, ../scss/partials/_werk.scss */
+.werk-wrap .gewerkt .werk-plek .left p {
+  float: right;
+  padding-right: 15px;
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+/* line 42, ../scss/partials/_werk.scss */
+.werk-wrap .gewerkt .werk-plek .right {
+  border-left: 1px solid #000;
+}
+/* line 45, ../scss/partials/_werk.scss */
+.werk-wrap .gewerkt .werk-plek .right p {
+  padding-left: 15px;
+}
+
+/* line 1, ../scss/partials/_persoon.scss */
+.personalia {
+  height: auto;
+  margin-top: 20px;
+  width: 100%;
+}
+/* line 6, ../scss/partials/_persoon.scss */
+.personalia .table-wrap {
+  margin: 10px auto;
+  width: 350px;
+  transform: translateX(6%);
+}
+/* line 14, ../scss/partials/_persoon.scss */
+.personalia .table-wrap table tbody tr td {
+  padding: 3px;
+}
+/* line 17, ../scss/partials/_persoon.scss */
+.personalia .table-wrap table tbody tr td:first-child {
+  text-align: right;
+}
+
+/* line 6, ../scss/styles.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* Please work */
+/* line 11, ../scss/styles.scss */
+html, body {
+  font-family: Arial, "sans-serif";
+  margin: 0;
+  padding: 0;
+}
+
+/* line 17, ../scss/styles.scss */
+body {
+  margin-bottom: 300px;
+}
+
+/* line 21, ../scss/styles.scss */
+h1 {
+  text-align: center;
+  width: 100%;
+}

@@ -1,0 +1,19 @@
+{
+    "name": "UrlName",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "start": "node ./urlname.js"
+    },
+    "dependencies": {
+        "bootstrap": "^3.3.7",
+        "express": "^4.16.2",
+        "jquery": "^3.2.1",
+        "mongodb": "^2.2.33",
+        "mongoose": "^4.13.6",
+        "path": "^0.12.7",
+        "pug": "^2.0.0-rc.4",
+        "serve-favicon": "^2.4.5",
+        "supervisor": "^0.12.0"
+    }
+}

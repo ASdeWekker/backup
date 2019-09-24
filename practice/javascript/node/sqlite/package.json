@@ -1,0 +1,17 @@
+{
+    "name": "sqlite_practice",
+    "version": "0.1.0",
+    "private": true,
+    "description": "SQLite Practice",
+    "main": "sqlite.js",
+    "scripts": {
+        "start": "node ./sqlite.js"
+    },
+    "author": "Alex de Wekker",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.16.2",
+        "pug": "^2.0.0-rc.4",
+        "sqlite3": "^4.0.3"
+    }
+}

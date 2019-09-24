@@ -1,0 +1,135 @@
+/// VARS.
+
+$alt-text-color: #333
+$text-color: #eee
+$lblue: #65fdf0
+$dblue: #1d6fa3
+
+// STANDARD SIZE AND SUCH.
+
+%stdsizebg
+    background: none
+    height: 100%
+    width: 100%
+
+// STANDARD STYLINGS.
+
+*
+    box-sizing: border-box
+
+
+html, body, ul
+    margin: 0
+    padding: 0
+
+html
+    @extend %stdsizebg
+
+    body
+        @extend %stdsizebg
+
+        .container
+            @extend %stdsizebg
+            background: radial-gradient($lblue, $dblue)
+            font-family: Verdana, "sans-serif"
+            overflow: hidden
+        
+            h1, h2, h3, p
+                text-align: center
+                width: 100%
+
+            ul
+                height: auto
+                width: 100%
+
+                li
+                    display: block
+                    float: left
+                    list-style-type: none
+
+                    a
+                        color: $text-color
+                        text-align: center
+                        text-decoration: none
+            
+            // HEADER TITLE.
+        
+            .title
+                color: $text-color
+        
+            // LIST OF LINKS.
+        
+            .linklist
+                margin: 0 auto
+                overflow: auto
+        
+                .linkli
+                    height: 42px
+                    line-height: 42px
+                    margin: 10px 0
+                    overflow: auto
+        
+                    .links
+                        color: $alt-text-color
+                        display: inline-block
+                        line-height: 22px
+                        padding: 10px
+                        text-decoration: underline
+                        width: 100% //120px
+        
+                        &:hover
+                            background: $alt-text-color
+                            border-radius: 10px
+                            color: $text-color
+                            text-decoration: none
+
+            // BUTTONS FOR SWITCHING BETWEEN HOSTS.
+
+            .hosts
+                margin: 20px 0 0 0
+
+                .hostli
+                    width: 30%
+
+                    &:first-child
+                        margin-left: 5%
+
+                    .host
+                        display: block
+                        font-size: 2em
+                        font-weight: 900
+                        width: 100%
+        
+            // BUTTONS AT THE BOTTOM OF THE PAGE.
+        
+            .buttons
+                background: none
+                bottom: 10px
+                overflow: hidden
+                position: absolute
+                //width: 100%
+        
+                .butli
+                    width: 14%
+        
+                    &:first-child
+                        margin-left: 1%
+        
+        
+                    .button
+                        color: $text-color
+                        display: block
+                        font-size: 2em
+        
+                        svg
+                            display: block
+                            margin: 0 auto
+                
+@media screen and (min-width: 1261px)
+    .linklist li
+        width: 11.1%
+        
+@for $i from 7 to 0
+    @media screen and (max-width: 180px * $i)
+        .linklist li
+            width: 100% / $i

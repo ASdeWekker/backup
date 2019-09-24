@@ -1,0 +1,137 @@
+// Stylesheet for my CV webpage.
+
+// Importing partial stylesheets.
+
+// Colors
+@import partials/vars
+// The reset file - After color file to use color
+@import partials/reset
+// Font-families
+@import partials/fonts
+// Mixins
+@import partials/mixins
+// Extends
+@import partials/extends
+
+// ----------------------------------------
+// Stylings and such for the page.
+// ----------------------------------------
+*
+    box-sizing: border-box
+
+// -------------------- BASE STYLINGS --------------------
+html
+    @extend %stdsizeclr
+    background: $color
+    color: $color-alt
+    margin: 0
+    padding: 0
+
+    body
+        background: none
+        font-family: montserrat, Verdana, sans-serif
+        height: 100%
+        margin: 0
+        padding: 0
+        width: 100%
+
+        .container
+            background: none
+            height: 100%
+            width: 100%
+
+            p
+                text-align: center
+
+            // -------------------- HEADER STYLINGS --------------------
+            .header
+                @extend %stdsizeclr
+                margin-top: 10px
+
+                header
+                    @extend %stdsizeclr
+
+                    .name
+                        border: 0 double $color-alt
+                        border-width: 6px 0
+                        font-size: 250%
+                        font-weight: 900
+                        letter-spacing: 10px
+                        line-height: 36px
+                        padding: 6px 0
+                        text-align: center
+                        word-spacing: -5px
+                        
+                    .img 
+                        +border-radius(50%)
+                        display: block
+                        height: $hwp
+                        margin: 20px auto
+                        max-height: $hw
+                        max-width: $hw
+                        width: $hwp
+
+            // -------------------- MAIN PAGE STYLINGS --------------------
+            .page
+                @extend %stdsizeclr
+                margin-bottom: 30px
+
+                div 
+                    clear: both
+
+                    .title
+                        font-size: 200%
+                        margin-bottom: 15px
+                        text-align: center
+                        text-decoration: underline
+
+                div
+                    div
+                        margin: 0 5% 25px 5%
+                        overflow: hidden
+                        width: 90%
+
+                        p
+                            display: block
+                            float: left
+                            width: 99%
+
+                        .left
+                            margin: 0 1% 15px 0
+                            text-align: right
+
+                        .right
+                            margin-left: 1%
+                            text-align: left
+
+                        @media screen and (min-width: 800px)
+                            p
+                                width: 48%
+
+                .personalia
+                    margin-bottom: 20px
+
+            // -------------------- FOOTER STYLINGS --------------------
+            .footer
+                @extend %stdsizeclr
+                background: $color-alt
+                color: $color
+
+                footer
+                    @extend %stdsizeclr
+
+                    p
+                        display: inline-block
+                        left: 5%
+                        margin: 20px 0
+                        position: relative
+                        width: 90%
+            // Fixed
+            .fixed
+                position: relative
+
+            // Bottom
+            .bottom
+                bottom: 0
+                position: fixed
+
