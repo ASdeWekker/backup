@@ -8,16 +8,16 @@ block content
 				.form-row.form--row
 					.col-6.form--row--col
 						label(for="weight").form--row--col--label
-						input(type="text", name="weight", required, maxlength="5", placeholder="gewicht...")#weight.form-control.form--row--col--input
+						input(type="text", name="weight", required, maxlength="5", placeholder="Gewicht...")#weight.form-control.form--row--col--input
 					.col-6.form--row--col
 						label(for="date").form--row--col--label
 						input(type="date", name="date", required, min="2019-05-17")#date.form-control.form--row--col--input
 				.form-row.form--row
 					.col.form--row--col
 						label(for="notes").form--row--col--label
-						input(type="text", name="notes", maxlength="255", placeholder="opmerkingen...")#notes.form-control.form--row--col--input
+						input(type="text", name="notes", maxlength="255", placeholder="Opmerkingen...")#notes.form-control.form--row--col--input
 				.row.justify-content-center.form--row
-					.col-4.form--row--col
+					.col.form--row--col
 						button(type="submit").btn.btn-secondary.form--row--col--button Toevoegen
 	section.body
 		each key in data.rows

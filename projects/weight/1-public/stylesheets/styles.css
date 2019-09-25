@@ -7,11 +7,17 @@ html body .wrapper {
 }
 html body .wrapper .header {
   background: #7688b5;
-  box-shadow: 0 3px 15px 0 #000;
+  border-radius: 25px;
+  margin: 16px;
   padding: 16px 0;
 }
 html body .wrapper .header--title {
   margin: 0;
+}
+html body .wrapper .header .form--row {
+  margin: 0 auto;
+  max-width: 600px;
+  width: 90%;
 }
 html body .wrapper .header .form--row--col {
   margin-top: -12px;
@@ -19,14 +25,27 @@ html body .wrapper .header .form--row--col {
 html body .wrapper .header .form--row--col--button {
   margin-top: 20px;
 }
+html body .wrapper .header .form--row:nth-child(3) .form--row--col {
+  display: flex;
+  justify-content: center;
+}
+html body .wrapper .header .form--row:nth-child(3) .form--row--col button {
+  border-radius: 20px;
+}
+html body .wrapper .header .form input {
+  border-radius: 20px;
+}
 html body .wrapper .body {
   margin-top: 15px;
 }
 html body .wrapper .body--item {
-  margin: 0;
+  margin: 0 auto;
 }
 html body .wrapper .body .divider {
   width: 86%;
+}
+html body .wrapper .body--item, html body .wrapper .body .divider {
+  max-width: 700px;
 }
 
 /*# sourceMappingURL=styles.css.map */
