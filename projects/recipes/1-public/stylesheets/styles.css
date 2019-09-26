@@ -1,0 +1,34 @@
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+a {
+  color: #ddd;
+  text-decoration: none;
+}
+
+html, body {
+  background: none;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+html {
+  background: #303030;
+  box-sizing: border-box;
+  color: #ddd;
+}
+html body .container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+html body .container .title {
+  color: #368cbf;
+  text-align: center;
+}
+
+/*# sourceMappingURL=styles.css.map */

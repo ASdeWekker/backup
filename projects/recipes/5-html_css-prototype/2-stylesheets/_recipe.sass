@@ -1,0 +1,46 @@
+// Styling for a single recipe page.
+            
+#recipe
+    margin-bottom: 0
+
+    .instructions, .ingredients
+        padding-left: 10px
+
+    .photo
+        display: flex
+        justify-content: center
+
+    .wrap
+        &--title
+            color: $text-alt
+            font-family: "Raleway", sans-serif
+            font-size: 200%
+            font-weight: 300
+            text-align: center
+
+        &--photo
+            border-radius: 50%
+            border: 2px solid $text-alt
+            display: block
+            height: 90%
+            margin-bottom: 10px
+            max-height: 404px
+            max-width: 404px
+            width: 90%
+
+        &--list
+            padding-left: 20px
+
+            &--item
+                color: $text-alt
+                margin-bottom: 3px
+
+                &--span
+                    color: $text
+
+        &--p
+            text-align: center
+
+            &--i
+                font-size: 80%
+                opacity: 0.6

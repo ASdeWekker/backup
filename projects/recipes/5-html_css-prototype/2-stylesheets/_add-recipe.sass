@@ -1,0 +1,113 @@
+// Styling for the page to add recipes.
+
+#add-recipe
+    margin: 0 5% 30px
+    width: 90%
+
+    .form
+        background: none
+        height: auto
+        width: 100%
+
+        .title
+            margin-top: 30px
+
+        .photo
+            margin-bottom: 10px
+
+            #photo
+                height: 0.1px
+                opacity: 0
+                overflow: hidden
+                position: absolute
+                width: 0.1px
+                z-index: -1
+
+
+        &--input-title
+            height: 50px
+
+            &--title
+                color: $text-alt
+                height: 50px
+                line-height: 50px
+                margin-top: 0
+                text-align: center
+
+        &--input-wrap
+            background: $bg
+            border-radius: 5px
+            height: 50px
+            margin-bottom: 20px
+            position: relative
+            width: 100%
+
+            &--input, &--label
+                position: absolute
+
+            &--input
+                background: none
+                border: 2px solid $text-alt
+                border-radius: 5px
+                caret-color: $text
+                color: $text
+                height: 50px
+                left: 0
+                padding: 0 10px
+                top: 0
+                width: 100%
+                z-index: 2
+
+                &:focus
+                    outline: none
+                    padding-top: 18px
+
+                &:focus + .form--input-wrap--label
+                    font-size: 80%
+                    opacity: 0.7
+                    top: 8px
+
+                &::placeholder
+                    color: $bg
+
+                &:not(:placeholder-shown)
+                    padding-top: 18px
+
+                &:not(:placeholder-shown) + .form--input-wrap--label
+                    font-size: 80%
+                    opacity: 0.7
+                    top: 8px
+
+            &--label
+                color: $text
+                left: 10px
+                top: 16px
+                transition: all 0.2s ease
+                z-index: 1
+
+                &--span
+                    font-size: 70%
+
+            &--button
+                background: $text-alt
+                border: none
+                border-radius: 5px
+                color: $bg
+                display: block
+                font-size: 120%
+                height: 100%
+                line-height: 50px
+                padding: 0
+                text-align: center
+                width: 100%
+
+            .half-button
+                float: left
+                margin-right: 10%
+                width: 45%
+
+                &:last-child
+                    margin-right: 0
+
+        .instructions-button
+            margin-bottom: 10px

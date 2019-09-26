@@ -1,0 +1,116 @@
+// Import vars and mixins.
+
+@import vars-and-mixins
+
+// Import styles for the other two pages.
+
+@import add-recipe
+@import recipe
+
+// Styling.
+
+*
+    box-sizing: border-box
+
+html, body
+    font-family: Arial
+    margin: 0
+    padding: 0
+
+html, body, .container
+    height: auto
+    position: relative
+    width: 100%
+
+.footer, footer
+    height: 48px
+    width: 100%
+
+// Styling for the main page.
+
+html
+    background: $bg
+    color: $text
+    
+    body
+        .container
+            .main
+                display: flex
+                flex-flow: column nowrap
+                margin-left: 10%
+                margin-bottom: 48px
+                width: 80%
+
+                .item
+                    height: auto
+                    width: 100%
+
+                    &--title, &--small-desc
+                        &--link
+                            text-decoration: none
+
+                    &--title
+                        margin: 19px 0
+                        width: 100%
+
+                        &--link
+                            color: $text
+                            display: block
+                            font-family: "Raleway", sans-serif
+                            font-size: 75%
+                            font-weight: 900
+                            text-align: center
+                            width: 100%
+
+                    &:nth-child(2n)
+                        .item--title--link
+                            font-weight: 300
+
+                    &--small-desc
+                        &--link
+                            color: $text
+
+            .footer
+                background: none
+                bottom: 0
+                position: fixed
+
+                footer
+                    .searchbar
+                        height: 40px
+                        width: 80%
+
+                        &--input
+                            background: $bg
+                            border: 2px solid $text-alt
+                            border-radius: 30px
+                            color: $text
+                            font-size: 130%
+                            height: 100%
+                            margin: 4px 0 0 4px
+                            padding: 0 20px
+                            width: 100%
+
+                            &:focus
+                                outline: none
+
+                    .add-recipe
+                        background: $text-alt
+                        border-radius: 50%
+                        border: 2px solid $text-alt
+                        bottom: 4px
+                        height: 40px
+                        right: 4px
+                        position: absolute
+                        width: 40px
+
+                        &--cross
+                            background: $bg-alt
+                            height: 2px
+                            left: 9px
+                            position: absolute
+                            top: 17px
+                            width: 18px
+
+                        &--cross.vert
+                            transform: rotate(90deg)

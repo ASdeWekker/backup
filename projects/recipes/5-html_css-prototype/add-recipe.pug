@@ -1,0 +1,48 @@
+doctype html
+html
+    include ./1-partials/head.pug
+    body
+        .container
+            #add-recipe.main
+                form#form.form
+                    .form--input-wrap.title
+                        input(type="text", placeholder=".")#title.form--input-wrap--input
+                        label(for="title").form--input-wrap--label Gerecht
+
+                    .form--input-wrap.photo
+                        input(type="file", accept="image/*")#photo.form--input-wrap--input
+                        label(for="photo").form--input-wrap--button Kies een foto van het gerecht
+
+                    .form--input-title.instructions
+                        h2.form--input-title--title Instructies
+                    .form--input-wrap.instructions-1
+                        input(type="text", placeholder=".")#instructions-1.form--input-wrap--input
+                        label(for="instructions-1").form--input-wrap--label - Stap 1
+                    #instructions-2.form--input-wrap.instructions-2
+                        input(type="text", placeholder=".")#instructions-2.form--input-wrap--input
+                        label(for="instructions-2").form--input-wrap--label - Stap 2
+                    .form--input-wrap.instructions-button
+                        a.form--input-wrap--button.button.button-instructions-add.half-button +
+                        a.form--input-wrap--button.button.button-instructions-delete.half-button -
+
+                    .form--input-title.ingredients
+                        h2.form--input-title--title Ingredienten
+                    .form--input-wrap.ingredients-1
+                        input(type="text", placeholder=".")#ingredients.form--input-wrap--input
+                        label(for="ingredients").form--input-wrap--label - Ingredient 1
+                    .form--input-wrap.ingredients-2
+                        input(type="text", placeholder=".")#ingredients.form--input-wrap--input
+                        label(for="ingredients").form--input-wrap--label - Ingredient 2
+                    .form--input-wrap.ingredients-button
+                        a.form--input-wrap--button.button.button-ingredients-add.half-button +
+                        a.form--input-wrap--button.button.button-ingredients-delete.half-button -
+
+                    .form--input-wrap.tags
+                        input(type="text", placeholder=".")#tags.form--input-wrap--input
+                        label(for="tags").form--input-wrap--label Tags 
+                            span.form--input-wrap--label--span (scheiden met een komma)
+
+                    .form--input-wrap.submit
+                        input(type="submit", value="Versturen").form--input-wrap--submit.form--input-wrap--button
+        //Scripts
+        script(defer src="3-js/changeSteps.js", type="text/javascript")

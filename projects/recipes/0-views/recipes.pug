@@ -1,0 +1,9 @@
+extends base
+
+block content
+    #recipes.container
+        h1.title #{title}
+        p: a(href="/recipes/add-recipe").add-recipe Toevoegen
+        p: a(href="/recipes/add-recipe-2").add-recipe Toevoegen 2
+        p: a(href="/recipes/add-recipe-3").add-recipe Toevoegen 3
+        p: a(href="http://" + url + "/de_kelder/7-prototype") Prototype

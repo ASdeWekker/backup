@@ -1,0 +1,30 @@
+extends base
+
+block content
+    #add-recipe.container
+        h1.title #{title}
+        div
+            form
+                div
+                    label(for="title") titel
+                    input(type="text")#title
+                //- div
+                //-     label(for="photo") foto
+                //-     input(type="file", accept="image/*")#photo
+                //- div
+                //-     label(for="instructions-1") instructions 1
+                //-     input(type="text")#instructions-1
+                //- div
+                //-     label(for="instructions-2") instructions 2
+                //-     input(type="text")#instructions-2
+                //- div
+                //-     label(for="ingredients-1") ingredients 1
+                //-     input(type="text")#ingredients-1
+                //- div
+                //-     label(for="ingredients-2") ingredients 2
+                //-     input(type="text")#ingredients-2
+                div
+                    label(for="tags") tags
+                    input(type="text")#tags
+                div
+                    input(type="submit", value="submit")
