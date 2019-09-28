@@ -1,0 +1,14 @@
+body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 20px;
+}
+body ol, body ul {
+  padding-left: 30px;
+}
+body .board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+/*# sourceMappingURL=index.css.map */
