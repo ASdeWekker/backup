@@ -10,5 +10,35 @@ body .board-row:after {
   content: "";
   display: table;
 }
+body .status {
+  margin-bottom: 10px;
+}
+body .square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 34px;
+}
+body .square:focus {
+  outline: none;
+}
+body .kbd-navigation, body .square:focus {
+  background: #ddd;
+}
+body .game {
+  display: flex;
+  flex-direction: row;
+}
+body .game-info {
+  margin-left: 20px;
+}
 
 /*# sourceMappingURL=index.css.map */
