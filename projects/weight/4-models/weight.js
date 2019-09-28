@@ -3,7 +3,7 @@ require("dotenv").config({ path: "/var/www/html/backup/projects/weight/.env" })
 const query = `
 create table if not exists weight (
 	id serial primary key not null,
-	weight int not null,
+	weight_val int not null,
 	date date unique not null,
 	notes varchar(255))
 `
