@@ -1,0 +1,18 @@
+{
+  "name": "react-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "react-express.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon react-app.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "Alex",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^4.1.2",
+    "express": "^4.17.1"
+  }
+}
