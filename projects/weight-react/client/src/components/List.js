@@ -1,11 +1,10 @@
 import React, { Component } from "react"
-import Item from "./Item"
 
 class List extends Component {
 	constructor(props) {
 		super()
 		this.state = {
-			weight = []
+			weight: []
 		}
 	}
 
@@ -18,7 +17,6 @@ class List extends Component {
 	render() {
 		return (
 			<div>
-				<h2>Gewicht</h2>
 				<ul>
 				{this.state.weight.map(weight =>
 					<li key={weight.id}>{weight.weight} {weight.date}</li>
