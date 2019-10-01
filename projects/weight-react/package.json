@@ -4,8 +4,7 @@
   "description": "",
   "main": "weight.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon weight.js",
+    "server": "nodemon config/server.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },

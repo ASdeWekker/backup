@@ -1,12 +1,15 @@
-import React from 'react';
-import './App.css';
+import React from "react"
+import "./App.css"
+import Header from "./components/Header"
+import List from "./components/List"
 
 function App() {
-  return (
-    <div className="App">
-      <h1>React app</h1>
-    </div>
-  );
+	return (
+		<div className="App">
+			<Header />
+			<List />
+		</div>
+	);
 }
 
-export default App;
+export default App

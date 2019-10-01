@@ -1,1 +1,6 @@
-const express = require("express")
+
+
+// Weight routes
+app.route("/api/weight")
+	.get(weight.getList)
+	.post(weight.postWeight)
