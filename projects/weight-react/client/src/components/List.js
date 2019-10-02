@@ -8,11 +8,11 @@ class List extends Component {
 		}
 	}
 
-	componentDidMount() {
-		fetch("/api/weight")
-			.then(res => res.json())
-			.then(weight => this.setState({weight}, () => console.log("Weight fetched...", weight)))
-	}
+	// componentDidMount() {
+	// 	fetch("/api/weight")
+	// 		.then(res => res.json())
+	// 		.then(weight => this.setState({weight}, () => console.log("Weight fetched...", weight)))
+	// }
 
 	render() {
 		return (

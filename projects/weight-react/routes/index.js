@@ -8,7 +8,9 @@ const pool = new Pool({ connectionString: connStr })
 pool.connect()
 
 const getWeight = "select * from weight order by id desc"
-const postWeight = "insert into weight (weight_val, date, notes) value ($1, $2, $3)"
+const postWeight = "insert into weight (weight_val_new, date_new, notes) value ($1, $2, $3)"
+const postWeightt = "insert into weight (number_one, number_two, number_three) value ($1, $2, $3)"
+
 
 // Weight routes
 router.route("/weight")
@@ -17,12 +19,13 @@ router.route("/weight")
 			.then(data => res.json(data))
 			.catch(e => console.error(e.stack))})
 	.post((req, res) => {
-		let { weight_val, date, notes } = req.body
-		pool.query(postWeight, [weight_val, date, notes])
+		let { weight_val, notes } = req.body
+		pool.query(postWeightt, [weight_val, new Date(), notes])
 			.then(data => {
 				console.log("Inserted: " + data)
 				res.json(data)})
 			.catch(e => console.error(e.stack))
 	})
+
 
 module.exports = router

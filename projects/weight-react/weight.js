@@ -1,10 +1,14 @@
 const express = require("express")
+const bodyParser = require("body-parser")
 
 const indexRouter = require("./routes/index.js")
 
 const app = express()
 
 app.disable("x-powered-by")
+
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json())
 
 
 // app.get("/api/weight", (req, res) => {
