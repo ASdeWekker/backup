@@ -15,6 +15,13 @@ router.route("/weight")
 	.get((req, res) => {
 		pool.query(getWeight)
 			.then(data => res.json(data))
+			.catch(e => console.error(e.stack))})
+	.post((req, res) => {
+		let { weight_val, date, notes } = req.body
+		pool.query(postWeight, [weight_val, date, notes])
+			.then(data => {
+				console.log("Inserted: " + data)
+				res.json(data)})
 			.catch(e => console.error(e.stack))
 	})
 
