@@ -1,27 +1,24 @@
-const express = require("express")
-const bodyParser = require("body-parser")
+// This file will be called by ./config/server.js
 
-const indexRouter = require("./routes/index.js")
+// Dependencies.
+express = require("express")
+const bodyparser = require("body-parser")
 
+// Declare the route(s)
+const indexRouter = require("./routes/index")
+
+// Call the app with express.
 const app = express()
 
+// Disable the server info
 app.disable("x-powered-by")
 
-app.use(bodyParser.urlencoded({ extended: true }))
-app.use(bodyParser.json())
+// Add body parser for the forms.
+app.use(bodyparser.json())
+app.use(bodyparser.urlencoded({ extended: false }))
 
 
-// app.get("/api/weight", (req, res) => {
-//     const weight = [
-//         {id: 1, weight: "100", date: "21-09-2019"},
-//         {id: 2, weight: "105", date: "11-08-2019"},
-//         {id: 3, weight: "110", date: "03-07-2019"}
-//     ]
-
-//     res.json(weight);
-// })
-
-
+// Call the routes.
 app.use("/api", indexRouter)
 
 
