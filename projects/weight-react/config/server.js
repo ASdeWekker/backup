@@ -15,13 +15,3 @@ function onListening() {
 	const bind = typeof addr === "string" ? "pipe " + addr : "port " + addr.port
 	debug("Listening on " + bind)
 }
-
-// process.on("SIGINT", () => {
-// 	console.info("SIGINT signal received")
-// 	server.close((err) => {
-// 		if (err) {
-// 			console.error(err)
-// 			process.exit(1)
-// 		}
-// 	})
-// })
