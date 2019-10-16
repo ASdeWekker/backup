@@ -16,11 +16,11 @@ pool.connect()
 router.route("/weight")
 	.get((req, res) => {
 		pool.query(queries.getWeight)
-			.then(data => res.json(data))
+			.then(data => res.json(data.rows))
 			.catch(e => console.error(e.stack))})
 	.post((req, res) => {
-		let { weight_val, notes } = req.body
-		pool.query(queries.postWeight, [weight_val, new Date(), notes])
+		let { weight_val, date, notes } = req.body
+		pool.query(queries.postWeight, [weight_val, date, notes])
 			.then(data => res.json(data))
 			.catch(e => console.error(e.stack))})
 
