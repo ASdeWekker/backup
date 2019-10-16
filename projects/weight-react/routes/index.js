@@ -4,9 +4,7 @@
 const express = require("express")
 const router = express.Router()
 const { Pool } = require("pg")
-
-// Connection URI.
-const connStr = "postgresql://" + process.env.PSQLU + ":" + process.env.PSQLW + "@192.168.1.90:5432/weight"
+const connStr = require("../config/connection").connectionString
 
 // Connect to a new pool.
 const pool = new Pool({ connectionString: connStr })
@@ -17,7 +15,7 @@ const getWeight = "select * from weight order by date desc"
 const postWeight = "insert into weight (weight_val_new, date_new, notes) values ($1, $2, $3)"
 
 
-// Home page.
+// A route to GET and POST weight.
 router.route("/weight")
 	.get((req, res) => {
 		pool.query(getWeight)
