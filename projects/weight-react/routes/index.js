@@ -14,9 +14,7 @@ pool.connect()
 
 // Queries.
 const getWeight = "select * from weight order by date desc"
-const postWeight = "insert into weight (weight_val, date) value ($1, $2)"
-const postWeightWithNotes = "insert into weight (weight_val_new, date_new, notes) values ($1, $2, $3)"
-const specialGet = "select (weight_val_new, date_new, notes) from weight where id = 132"
+const postWeight = "insert into weight (weight_val_new, date_new, notes) values ($1, $2, $3)"
 
 
 // Home page.
