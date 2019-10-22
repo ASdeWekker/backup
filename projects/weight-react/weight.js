@@ -4,13 +4,13 @@
 express = require("express")
 const bodyparser = require("body-parser")
 
-// Declare the route(s)
+// Declare the route(s).
 const indexRouter = require("./routes/index")
 
 // Call the app with express.
 const app = express()
 
-// Disable the server info
+// Disable the server info.
 app.disable("x-powered-by")
 
 // Add body parser for the forms.
