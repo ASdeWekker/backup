@@ -16,13 +16,13 @@ class List extends Component {
 
 	render() {
 		return (
-			<div>
-				<ul>
+			<div className="list">
+				<ul className="list--items">
 				{this.state.weight.map(weight =>
-					<li key={weight.id}>
-						<p>{weight.weight_val}</p>
-						<p>{weight.date}</p>
-						<p>{weight.notes}</p>
+					<li key={weight.id} className="list--items--item">
+						<p className="list--items--item--weight">{weight.weight_val}</p>
+						<p className="list--items--item--date">{weight.date}</p>
+						<p className="list--items--item--notes">{weight.notes}</p>
 					</li>
 				)}
 				</ul>

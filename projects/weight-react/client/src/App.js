@@ -1,5 +1,4 @@
 import React from "react"
-import "./App.css"
 import Header from "./components/Header"
 import List from "./components/List"
 
@@ -9,7 +8,7 @@ function App() {
 			<Header />
 			<List />
 		</div>
-	);
+	)
 }
 
 export default App
