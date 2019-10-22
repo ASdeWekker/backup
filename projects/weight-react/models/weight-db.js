@@ -8,8 +8,8 @@ const { Client } = require("pg")
 const query = `
 create table if not exists weight (
 	id serial primary key not null,
-	weight_val int not null,
-	date date unique not null,
+	weight_val numeric not null,
+	date timestamptz unique not null,
 	notes varchar(255))
 `
 
