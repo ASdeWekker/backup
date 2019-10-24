@@ -21,7 +21,7 @@ router.route("/weight")
 	.post((req, res) => {
 		let { weight_val, date, notes } = req.body
 		pool.query(queries.postWeight, [weight_val, date, notes])
-			.then(data => res.json(data))
+			.then(data => res.json(data)) // Make a console log saying that you've inserted data.
 			.catch(e => console.error(e.stack))})
 
 
