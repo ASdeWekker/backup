@@ -16,7 +16,10 @@ client.connect()
 router.route("/weight")
 	.get((req, res) => {
 		client.query(queries.getWeight)
-			.then(data => res.json(data.rows))
+			.then(data => {
+				console.log("Fetched " + data.rows.length + " rows")
+				res.json(data.rows)
+			})
 			.catch(e => console.error(e.stack))})
 	.post((req, res) => {
 		let { weight_val, date, notes } = req.body
