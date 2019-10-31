@@ -4,7 +4,7 @@ import List from "./components/List"
 
 function App() {
 	return (
-		<div className="App">
+		<div className="App wrapper container-fluid">
 			<Header />
 			<List />
 		</div>
