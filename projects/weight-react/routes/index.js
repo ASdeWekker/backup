@@ -22,7 +22,8 @@ router.route("/weight")
 			})
 			.catch(e => console.error(e.stack))})
 	.post((req, res) => {
-		let { weight_val, date, notes } = req.body
+		let { weight_val, notes } = req.body
+		let date = new Date()
 		client.query(queries.postWeight, [weight_val, date, notes])
 			.then(data => {
 				console.log("Inserted data succesfully")
