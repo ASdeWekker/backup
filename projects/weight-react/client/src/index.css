@@ -1,9 +1,13 @@
-html, body, #root {
+html, body, #root, .App {
   background: none;
   height: 100%;
   margin: 0;
   padding: 0;
   width: 100%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 button, input {
@@ -18,7 +22,45 @@ button {
 }
 
 html {
+  background: #050505;
+  border-box: box-sizing;
+  color: #fff;
   line-height: 1.15;
+}
+html body #root .App {
+  margin: 10% 6%;
+  width: 78%;
+}
+html body #root .App .header {
+  margin: 0 0 25px 6%;
+}
+html body #root .App .header--title {
+  color: #bfbfbf;
+  font: expanded small-caps 400 36px Georgia, sans-serif;
+}
+html body #root .App .list--items {
+  margin: 0;
+  padding: 0;
+}
+html body #root .App .list--items--item {
+  background: #18181a;
+  border-radius: 3px;
+  list-style-type: none;
+  padding: 6%;
+}
+html body #root .App .list--items--item--date {
+  margin: 0;
+}
+html body #root .App .list--items--item--weight {
+  font-size: 24px;
+  margin: 10px 0;
+}
+html body #root .App .list--items--item--notes {
+  margin: 0;
+}
+html body #root .App .list--items--item--date, html body #root .App .list--items--item--notes {
+  color: #999999;
+  font-size: 12px;
 }
 
 /*# sourceMappingURL=index.css.map */

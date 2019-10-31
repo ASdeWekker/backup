@@ -1,9 +1,18 @@
-html, body, #root
+// Variables.
+$background: #000
+$text: #fff
+$box-color: #18181a
+
+// Just some standard stuff
+html, body, #root, .App
 	background: none
 	height: 100%
 	margin: 0
 	padding: 0
 	width: 100%
+
+*, *:before, *:after
+	box-sizing: inherit
 
 // Normalize font styles.
 button, input
@@ -16,16 +25,46 @@ button
 
 
 html
+	background: lighten($background, 2%)
+	border-box: box-sizing
+	color: $text
 	line-height: 1.15
 
 	body
 		#root
 			.App
+				margin: 10% 6%
+				width: 78%
+
 				.header
+					margin: 0 0 25px 6%
+
+					&--title
+						color: darken($text, 25%)
+						font: expanded small-caps 400 36px Georgia, sans-serif
+
 				.list
 					&--items
+						margin: 0
+						padding: 0
+
 						&--item
-							&--weight
+							background: $box-color
+							border-radius: 3px
+							list-style-type: none
+							padding: 6%
+							
 							&--date
+								margin: 0
+
+							&--weight
+								font-size: 24px
+								margin: 10px 0
+
 							&--notes
+								margin: 0
+
+							&--date, &--notes
+								color: darken($text, 40%)
+								font-size: 12px
 
