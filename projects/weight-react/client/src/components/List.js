@@ -6,6 +6,7 @@ class List extends Component {
 		this.state = {
 			weight: []
 		}
+		this.dateStringOptions = { year: "numeric", month: "numeric", day: "numeric" }
 	}
 
 	componentDidMount() {
@@ -20,8 +21,8 @@ class List extends Component {
 				<ul className="list--items">
 				{this.state.weight.map(weight =>
 					<li key={weight.id} className="list--items--item">
-						<p className="list--items--item--weight">{weight.weight_val}</p>
-						<p className="list--items--item--date">{weight.date}</p>
+						<p className="list--items--item--weight">{weight.weight_val} kg</p>
+						<p className="list--items--item--date">{new Date(weight.date).toLocaleDateString("nl-NL", this.dateStringOptions)}</p>
 						<p className="list--items--item--notes">{weight.notes}</p>
 					</li>
 				)}
