@@ -22,31 +22,59 @@ button {
 }
 
 html {
-  background: #050505;
+  background: #1f1f1f;
   border-box: box-sizing;
   color: #fff;
   line-height: 1.15;
 }
 html body #root .App {
-  margin: 10% 6%;
-  width: 78%;
+  margin: 0 10%;
+  width: 80%;
 }
 html body #root .App .header {
-  margin: 0 0 25px 6%;
+  margin: 0 10% 25px 10%;
 }
 html body #root .App .header--title {
   color: #bfbfbf;
   font: expanded small-caps 400 36px Georgia, sans-serif;
+}
+html body #root .App .header .form--row {
+  margin-bottom: 10px;
+}
+html body #root .App .header .form--row--label {
+  overflow: hidden;
+}
+html body #root .App .header .form--row--input {
+  background: #1a1a1a;
+  border: 0px dotted #afafb5;
+  border-bottom-width: 1px;
+  color: #fff;
+  padding: 0.3rem 0.6rem;
+}
+html body #root .App .header .form--row--button {
+  background: #1f1f1f;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  color: #cccccc;
+  margin-top: 7px;
+  padding: 0.5rem 1rem;
+}
+html body #root .App .header .form .weight-input input {
+  width: 90px;
+}
+html body #root .App .header .form .notes-input input {
+  width: 100%;
 }
 html body #root .App .list--items {
   margin: 0;
   padding: 0;
 }
 html body #root .App .list--items--item {
-  background: #18181a;
-  border-radius: 3px;
+  background: #303035;
+  border-radius: 6px;
   list-style-type: none;
-  padding: 6%;
+  margin: 15px 0;
+  padding: 7% 10%;
 }
 html body #root .App .list--items--item--date {
   margin: 0;

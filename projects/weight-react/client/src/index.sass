@@ -1,7 +1,8 @@
 // Variables.
-$background: #000
+$background: lighten(#000, 10%)
 $text: #fff
-$box-color: #18181a
+$text-darker: darken($text, 20%)
+$box-color: lighten(#18181a, 10%)
 
 // Just some standard stuff
 html, body, #root, .App
@@ -33,15 +34,45 @@ html
 	body
 		#root
 			.App
-				margin: 10% 6%
-				width: 78%
+				margin: 0 10%
+				width: 80%
 
 				.header
-					margin: 0 0 25px 6%
+					margin: 0 10% 25px 10%
 
 					&--title
 						color: darken($text, 25%)
 						font: expanded small-caps 400 36px Georgia, sans-serif
+
+					.form
+						&--row
+							margin-bottom: 10px
+
+							&--label
+								overflow: hidden
+
+							&--input
+								background: $background
+								border: 0px dotted lighten($box-color, 50%)
+								border-bottom-width: 1px
+								color: $text
+								padding: 0.3rem 0.6rem
+
+							&--button
+								background: lighten($background, 2%)
+								border: 1px solid $text-darker
+								border-radius: 5px
+								color: $text-darker
+								margin-top: 7px
+								padding: 0.5rem 1rem
+
+						.weight-input
+							input
+								width: 90px
+
+						.notes-input
+							input
+								width: 100%
 
 				.list
 					&--items
@@ -50,9 +81,10 @@ html
 
 						&--item
 							background: $box-color
-							border-radius: 3px
+							border-radius: 6px
 							list-style-type: none
-							padding: 6%
+							margin: 15px 0
+							padding: 7% 10%
 							
 							&--date
 								margin: 0
