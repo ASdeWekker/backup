@@ -2,7 +2,7 @@
 
 // Queries.
 const getWeight = "select weight_val,date,notes from weight order by date desc"
-const postWeight = "insert into weight (weight_val, date, notes) values ($1, to_timestamp($2, 'DD-MM-YYYY hh24:mi:ss'), $3)"
+const postWeight = "insert into weight (weight_val, date, notes) values ($1, to_timestamp($2, 'YYYY-MM-DD hh24:mi:ss'), $3)"
 
 module.exports = {
 	postWeight: postWeight,
