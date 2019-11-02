@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import Item from "./Item"
 
 class List extends Component {
 	constructor(props) {
@@ -19,13 +20,9 @@ class List extends Component {
 		return (
 			<div className="list">
 				<ul className="list--items">
-				{this.state.weight.map(weight =>
-					<li key={weight.id} className="list--items--item">
-						<p className="list--items--item--date">{new Date(weight.date).toLocaleDateString("nl-NL", this.dateStringOptions)}</p>
-						<p className="list--items--item--weight">{weight.weight_val} KG</p>
-						<p className="list--items--item--notes">{weight.notes}</p>
-					</li>
-				)}
+					{this.state.weight.map((weight) => (
+						<Item key={weight.id} weight={weight} />
+					))}
 				</ul>
 			</div>
 		)
