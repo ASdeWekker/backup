@@ -12,9 +12,6 @@ html, body, #root, .App
 	padding: 0
 	width: 100%
 
-*, *:before, *:after
-	box-sizing: inherit
-
 // Normalize font styles.
 button, input
 	font-family: inherit
@@ -27,7 +24,6 @@ button
 
 html
 	background: lighten($background, 2%)
-	border-box: box-sizing
 	color: $text
 	line-height: 1.15
 
@@ -43,6 +39,7 @@ html
 					&--title
 						color: darken($text, 25%)
 						font: expanded small-caps 400 36px Georgia, sans-serif
+						letter-spacing: 5px
 
 					.form
 						&--row
@@ -71,9 +68,9 @@ html
 							input
 								width: 90px
 
-						.notes-input
-							input
-								width: 100%
+						.submit-button
+							display: flex
+							justify-content: flex-end
 
 				.list
 					&--items

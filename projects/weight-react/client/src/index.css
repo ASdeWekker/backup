@@ -6,10 +6,6 @@ html, body, #root, .App {
   width: 100%;
 }
 
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
 button, input {
   font-family: inherit;
   font-size: 100%;
@@ -23,7 +19,6 @@ button {
 
 html {
   background: #1f1f1f;
-  border-box: box-sizing;
   color: #fff;
   line-height: 1.15;
 }
@@ -37,6 +32,7 @@ html body #root .App .header {
 html body #root .App .header--title {
   color: #bfbfbf;
   font: expanded small-caps 400 36px Georgia, sans-serif;
+  letter-spacing: 5px;
 }
 html body #root .App .header .form--row {
   margin-bottom: 10px;
@@ -63,8 +59,9 @@ html body #root .App .header .form--row--button {
 html body #root .App .header .form .weight-input input {
   width: 90px;
 }
-html body #root .App .header .form .notes-input input {
-  width: 100%;
+html body #root .App .header .form .submit-button {
+  display: flex;
+  justify-content: flex-end;
 }
 html body #root .App .list--items {
   margin: 0;
