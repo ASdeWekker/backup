@@ -56,6 +56,7 @@ html body #root .App .header .form--row--button {
   border: 1px solid #cccccc;
   border-radius: 5px;
   color: #cccccc;
+  cursor: pointer;
   margin-top: 7px;
   padding: 0.5rem 1rem;
 }
