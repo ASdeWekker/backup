@@ -2,7 +2,7 @@ import React, { Component } from "react"
 
 class Form extends Component {
 	constructor(props) {
-		super(props)
+		super()
 		this.state = {
 			values: {
 				weight_val: "",
@@ -14,7 +14,7 @@ class Form extends Component {
 	}
 
 	submitForm = async e => {
-		// e.preventDefault()
+		e.preventDefault()
 		console.log(this.state)
 		this.setState({ isSubmitting: true })
 
