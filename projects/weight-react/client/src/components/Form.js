@@ -2,7 +2,7 @@ import React, { Component } from "react"
 
 class Form extends Component {
 	constructor(props) {
-		super()
+		super(props)
 		this.state = {
 			values: {
 				weight_val: "",
@@ -13,15 +13,29 @@ class Form extends Component {
 		}
 	}
 
+	submitForm = async e => {
+		// e.preventDefault()
+		console.log(this.state)
+		this.setState({ isSubmitting: true })
+
+		const res = await fetch("http://10.8.0.4:3010/api/weight", {
+			method: "POST",
+			body: JSON.stringify(this.state.values),
+			headers: {
+				"Content-Type": "application/json"
+			}
+		})
+		this.setState({ isSubmitting: false })
+		const data = await res.json()
+		!data.hasOwnProperty("error")
+			? this.setState({ message: data.success })
+			: this.setState({ message: data.error, isError: true })
+	}
+
 	handleInputChange = e => {
 		this.setState({
 			values: { ...this.state.values, [e.target.name]: e.target.value }
 		})
-	}
-
-	submitForm = e => {
-		e.preventDefault()
-		console.log(this.state.values)
 	}
 
 	render() {
@@ -54,10 +68,10 @@ class Form extends Component {
 						name="notes"
 						id="notes"
 						title="Notes"
-						maxlength="255"
+						maxLength="255"
 					/>
 				</div>
-				<div className="form--row">
+				<div className="form--row submit-button">
 					<button className="form--row--button" type="submit">Toevoegen</button>
 				</div>
 			</form>
