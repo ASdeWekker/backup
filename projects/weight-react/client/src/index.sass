@@ -5,7 +5,7 @@ $text-darker: darken($text, 20%)
 $box-color: lighten(#18181a, 10%)
 
 // Just some standard stuff
-html, body, #root, .App
+html, #root, .App
 	background: none
 	height: 100%
 	margin: 0
@@ -27,74 +27,73 @@ html
 	color: $text
 	line-height: 1.15
 
-	body
-		#root
-			.App
-				margin: 0 10%
-				width: 80%
+	#root
+		.App
+			margin: 0 10%
+			width: 80%
 
-				.header
-					margin: 0 10% 25px 10%
+			.header
+				margin: 0 10% 25px 10%
 
-					&--title
-						color: darken($text, 25%)
-						font: expanded small-caps 400 36px Georgia, sans-serif
-						letter-spacing: 5px
+				&--title
+					color: darken($text, 25%)
+					font: expanded small-caps 400 36px Georgia, sans-serif
+					letter-spacing: 5px
 
-					.form
-						&--row
-							margin-bottom: 10px
+				.form
+					&--row
+						margin-bottom: 10px
 
-							&--label
-								overflow: hidden
+						&--label
+							overflow: hidden
 
-							&--input
-								background: $background
-								border: 0px dotted lighten($box-color, 50%)
-								border-bottom-width: 1px
-								color: $text
-								padding: 0.3rem 0.6rem
+						&--input
+							background: $background
+							border: 0px dotted lighten($box-color, 50%)
+							border-bottom-width: 1px
+							color: $text
+							padding: 0.3rem 0.6rem
 
-							&--button
-								background: lighten($background, 2%)
-								border: 1px solid $text-darker
-								border-radius: 5px
-								color: $text-darker
-								cursor: pointer
-								margin-top: 7px
-								padding: 0.5rem 1rem
+						&--button
+							background: lighten($background, 2%)
+							border: 1px solid $text-darker
+							border-radius: 5px
+							color: $text-darker
+							cursor: pointer
+							margin-top: 7px
+							padding: 0.5rem 1rem
 
-						.weight-input
-							input
-								width: 90px
+					.weight-input
+						input
+							width: 90px
 
-						.submit-button
-							display: flex
-							justify-content: flex-end
+					.submit-button
+						display: flex
+						justify-content: flex-end
 
-				.list
-					&--items
-						margin: 0
-						padding: 0
+			.list
+				&--items
+					margin: 0
+					padding: 0
 
-						&--item
-							background: $box-color
-							border-radius: 6px
-							list-style-type: none
-							margin: 15px 0
-							padding: 7% 10%
-							
-							&--date
-								margin: 0
+					&--item
+						background: $box-color
+						border-radius: 6px
+						list-style-type: none
+						margin: 15px 0
+						padding: 7% 10%
+						
+						&--date
+							margin: 0
 
-							&--weight
-								font-size: 24px
-								margin: 10px 0
+						&--weight
+							font-size: 24px
+							margin: 10px 0
 
-							&--notes
-								margin: 0
+						&--notes
+							margin: 0
 
-							&--date, &--notes
-								color: darken($text, 40%)
-								font-size: 12px
+						&--date, &--notes
+							color: darken($text, 40%)
+							font-size: 12px
 
