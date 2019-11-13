@@ -20,7 +20,7 @@ class Form extends Component {
 		this.setState({ isSubmitting: true })
 
 		// Post the inputted values.
-		const res = await fetch("http://10.8.0.4:3010/api/weight", {
+		const res = await fetch("/api/weight", {
 			method: "POST",
 			body: JSON.stringify(this.state.values),
 			headers: {
