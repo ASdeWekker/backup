@@ -32,8 +32,12 @@ class Form extends Component {
 			: this.setState({ message: data.error, isError: true })
 		console.log("Maak het formulier leeg en voeg het item zelf toe.")
 
-		this.state.values.weight_val = ""
-		this.state.values.notes = ""
+		this.setState({
+			values: {
+				weight_val: "",
+				notes: ""
+			}
+		})
 	}
 
 	handleInputChange = e => {
