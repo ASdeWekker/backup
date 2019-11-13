@@ -34,7 +34,8 @@ class Form extends Component {
 		!data.hasOwnProperty("error")
 			? this.setState({ message: data.success })
 			: this.setState({ message: data.error, isError: true })
-		// Empty the form after submit.
+
+		// Add an element with data and empty the form after submit.
 		this.setState({
 			values: {
 				weight_val: "",
