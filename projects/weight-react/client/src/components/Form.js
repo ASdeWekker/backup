@@ -13,11 +13,13 @@ class Form extends Component {
 		}
 	}
 
+	// Function to submit a form.
 	submitForm = async e => {
-		e.preventDefault()
+		e.preventDefault() // Not sure what this does.
 		console.log(this.state)
 		this.setState({ isSubmitting: true })
 
+		// Post the inputted values.
 		const res = await fetch("http://10.8.0.4:3010/api/weight", {
 			method: "POST",
 			body: JSON.stringify(this.state.values),
@@ -25,13 +27,14 @@ class Form extends Component {
 				"Content-Type": "application/json"
 			}
 		})
-		this.setState({ isSubmitting: false })
+
+		this.setState({ isSubmitting: false }) // Done submitting.
+		// Wait for the result and check for errors.
 		const data = await res.json()
 		!data.hasOwnProperty("error")
 			? this.setState({ message: data.success })
 			: this.setState({ message: data.error, isError: true })
-		console.log("Maak het formulier leeg en voeg het item zelf toe.")
-
+		// Empty the form after submit.
 		this.setState({
 			values: {
 				weight_val: "",
@@ -40,6 +43,7 @@ class Form extends Component {
 		})
 	}
 
+	// A function to be able to input data.
 	handleInputChange = e => {
 		this.setState({
 			values: { ...this.state.values, [e.target.name]: e.target.value }
@@ -62,7 +66,6 @@ class Form extends Component {
 						title="Weight"
 						min="0"
 						step="any"
-						required
 					/>
 				</div>
 				<div className="form--row notes-input">
