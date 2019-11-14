@@ -3,9 +3,9 @@ import React, { Component } from "react"
 class Form extends Component {
 	constructor(props) {
 		super()
-		this.displayData = []
+		this.showNewElems = []
 		this.state = {
-			showdata: this.displayData,
+			newElems: this.showNewElems,
 			values: {
 				weight_val: "",
 				notes: ""
@@ -13,7 +13,7 @@ class Form extends Component {
 			isSubmitting: false,
 			isError: false
 		}
-		//this.appendData = this.appendData.bind(this)
+		this.dateStringOptions = { year: "numeric", month: "numeric", day: "numeric" }
 	}
 
 	// Function to submit a form.
@@ -39,9 +39,15 @@ class Form extends Component {
 			: this.setState({ message: data.error, isError: true })
 
 		// Add an element with data and empty the form after submit.
-		this.displayData.push(<p>Append data</p>)
+		this.showNewElems.push(
+			<li className="list--items--item">
+				<p className="list--items--item--date">{new Date().toLocaleDateString("nl-NL", this.dateStringOptions)}</p>
+				<p className="list--items--item--weight">{this.state.values.weight_val}</p>
+				<p className="list--items--item--notes">{this.state.values.notes}</p>
+			</li>
+		)
 		this.setState({
-			showdata: this.displayData,
+			newElems: this.showNewElems,
 			values: {
 				weight_val: "",
 				notes: ""
@@ -91,7 +97,9 @@ class Form extends Component {
 				<div className="form--row submit-button">
 					<button className="form--row--button" type="submit">Toevoegen</button>
 				</div>
-				<div>{this.displayData}</div>
+				<div className="list">
+					<ul className="list--items">{this.showNewElems}</ul>
+				</div>
 			</form>
 		)
 	}
