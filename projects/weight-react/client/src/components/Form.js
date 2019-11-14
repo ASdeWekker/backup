@@ -39,7 +39,7 @@ class Form extends Component {
 			: this.setState({ message: data.error, isError: true })
 
 		// Add an element with data and empty the form after submit.
-		this.showNewElems.push(
+		this.showNewElems.unshift(
 			<li className="list--items--item">
 				<p className="list--items--item--date">{new Date().toLocaleDateString("nl-NL", this.dateStringOptions)}</p>
 				<p className="list--items--item--weight">{this.state.values.weight_val}</p>
