@@ -1,4 +1,4 @@
-html, #root, .App {
+html, body, #root, .App {
   background: none;
   height: 100%;
   margin: 0;
@@ -22,32 +22,32 @@ html {
   color: #fff;
   line-height: 1.15;
 }
-html #root .App {
+html body #root .App {
   margin: 0 10%;
   width: 80%;
 }
-html #root .App .header {
+html body #root .App .header {
   margin: 0 10% 25px 10%;
 }
-html #root .App .header--title {
+html body #root .App .header--title {
   color: #bfbfbf;
   font: expanded small-caps 400 36px Georgia, sans-serif;
   letter-spacing: 5px;
 }
-html #root .App .header .form--row {
+html body #root .App .header .form--row {
   margin-bottom: 10px;
 }
-html #root .App .header .form--row--label {
+html body #root .App .header .form--row--label {
   overflow: hidden;
 }
-html #root .App .header .form--row--input {
+html body #root .App .header .form--row--input {
   background: #1a1a1a;
   border: 0px dotted #afafb5;
   border-bottom-width: 1px;
   color: #fff;
   padding: 0.3rem 0.6rem;
 }
-html #root .App .header .form--row--button {
+html body #root .App .header .form--row--button {
   background: #1f1f1f;
   border: 1px solid #cccccc;
   border-radius: 5px;
@@ -56,35 +56,35 @@ html #root .App .header .form--row--button {
   margin-top: 7px;
   padding: 0.5rem 1rem;
 }
-html #root .App .header .form .weight-input input {
+html body #root .App .header .form .weight-input input {
   width: 90px;
 }
-html #root .App .header .form .submit-button {
+html body #root .App .header .form .submit-button {
   display: flex;
   justify-content: flex-end;
 }
-html #root .App .list--items {
+html body #root .App .list--items {
   margin: 0;
   padding: 0;
 }
-html #root .App .list--items--item {
+html body #root .App .list--items--item {
   background: #303035;
   border-radius: 6px;
   list-style-type: none;
   margin: 15px 0;
   padding: 7% 10%;
 }
-html #root .App .list--items--item--date {
+html body #root .App .list--items--item--date {
   margin: 0;
 }
-html #root .App .list--items--item--weight {
+html body #root .App .list--items--item--weight {
   font-size: 24px;
   margin: 10px 0;
 }
-html #root .App .list--items--item--notes {
+html body #root .App .list--items--item--notes {
   margin: 0;
 }
-html #root .App .list--items--item--date, html #root .App .list--items--item--notes {
+html body #root .App .list--items--item--date, html body #root .App .list--items--item--notes {
   color: #999999;
   font-size: 12px;
 }
