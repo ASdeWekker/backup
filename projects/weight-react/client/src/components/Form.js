@@ -3,7 +3,9 @@ import React, { Component } from "react"
 class Form extends Component {
 	constructor(props) {
 		super()
+		this.displayData = []
 		this.state = {
+			showdata: this.displayData,
 			values: {
 				weight_val: "",
 				notes: ""
@@ -11,6 +13,7 @@ class Form extends Component {
 			isSubmitting: false,
 			isError: false
 		}
+		//this.appendData = this.appendData.bind(this)
 	}
 
 	// Function to submit a form.
@@ -36,7 +39,9 @@ class Form extends Component {
 			: this.setState({ message: data.error, isError: true })
 
 		// Add an element with data and empty the form after submit.
+		this.displayData.push(<p>Append data</p>)
 		this.setState({
+			showdata: this.displayData,
 			values: {
 				weight_val: "",
 				notes: ""
@@ -86,6 +91,7 @@ class Form extends Component {
 				<div className="form--row submit-button">
 					<button className="form--row--button" type="submit">Toevoegen</button>
 				</div>
+				<div>{this.displayData}</div>
 			</form>
 		)
 	}
