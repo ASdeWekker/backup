@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import Child from "./Child"
 
 class SiblingOne extends Component {
 	constructor(props) {
@@ -16,15 +17,15 @@ class SiblingOne extends Component {
 		e.preventDefault()
 		console.log(this.state)
 
-		this.showNewElems.unshift(
-			<p>New value: {this.state.values.valueOne}</p>
-		)
-		this.setState({
-			newElems: this.showNewElems,
-			values: {
-				valueOne: ""
-			}
-		})
+		if (this.state.values.valueOne !== "") {
+			this.showNewElems.unshift(<Child classname="lol" things={this.state.values} />)
+			this.setState({
+				newElems: this.showNewElems,
+				values: {
+					valueOne: ""
+				}
+			})
+		}
 	}
 
 	handleInputChange = e => {

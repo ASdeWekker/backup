@@ -20,3 +20,19 @@
 .App-link {
 	color: #09d3ac;
 }
+
+.child-elem {
+	background: black;
+	border-radius: 10px;
+	margin: 0 auto;
+	width: 200px;
+}
+
+.child-elem p {
+	color: tomato;
+}
+
+.child-elem p span {
+	color: white;
+	text-decoration: underline;
+}
