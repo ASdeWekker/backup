@@ -12,7 +12,7 @@
   "author": "Alex",
   "license": "MIT",
   "dependencies": {
-    "concurrently": "^4.1.2",
+    "concurrently": "^5.0.0",
     "express": "^4.17.1"
   }
 }
