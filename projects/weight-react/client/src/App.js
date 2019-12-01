@@ -62,17 +62,21 @@ class App extends Component {
 		})
 	}
 
+	// Call the api when this component mounts.
 	componentDidMount() {
 		fetch("/api/weight")
 			.then(res => res.json())
 			.then(weight => this.setState({weight}, () => console.log("Weight fetched...", weight)))
 	}
 
+	// Render all the stuff.
 	render() {
 		return (
 			<div className="App">
+				{/* === The Header === */}
 				<header className="header">
 					<h1 className="header--title">Gewicht</h1>
+					{/* === The Form === */}
 					<form className="form" onSubmit={this.submitForm}>
 						<div className="form--row weight-input">
 							<label className="form--row--label" htmlFor="weight_val"></label>
@@ -108,6 +112,7 @@ class App extends Component {
 						</div>
 					</form>
 				</header>
+				{/* === The List === */}
 				<div className="list">
 					<ul className="list--items prepend-list">
 						{this.displayData}
