@@ -20,3 +20,4 @@ node_modules
 arduino/sketches/libraries
 .directory
 .env
+build
