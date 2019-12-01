@@ -4,10 +4,11 @@ import Item from "./components/Item"
 class App extends Component {
 	constructor(props) {
 		super()
-		this.showNewElems = []
+		this.displayData = []
 		this.state = {
-			newElems: this.showNewElems,
+			showData: this.displayData,
 			values: {
+				date: "",
 				weight_val: "",
 				notes: ""
 			},
@@ -41,16 +42,13 @@ class App extends Component {
 			: this.setState({ message: data.error, isError: true })
 
 		// Add an element with data and empty the form after submit.
-		this.showNewElems.unshift(
-			<li className="list--items--item">
-				<p className="list--items--item--date">{new Date().toLocaleDateString("nl-NL", this.dateStringOptions)}</p>
-				<p className="list--items--item--weight">{this.state.values.weight_val}</p>
-				<p className="list--items--item--notes">{this.state.values.notes}</p>
-			</li>
+		this.displayData.unshift(
+			<Item key={weight.id} weight={this.state.values} />
 		)
 		this.setState({
-			newElems: this.showNewElems,
+			showData: this.displayData,
 			values: {
+				date: "",
 				weight_val: "",
 				notes: ""
 			}
@@ -111,8 +109,10 @@ class App extends Component {
 					</form>
 				</header>
 				<div className="list">
+					<ul className="list--items prepend-list">
+						{this.displayData}
+					</ul>
 					<ul className="list--items">
-						{this.showNewElems}
 						{this.state.weight.map((weight) => (
 							<Item key={weight.id} weight={weight} />
 						))}
