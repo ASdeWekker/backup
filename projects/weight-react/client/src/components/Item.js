@@ -5,7 +5,9 @@ class Item extends Component {
 		return (
 			<li className="list--items--item">
 				<p className="list--items--item--date">
-					{new Date(this.props.weight.date).toLocaleDateString("nl-NL", this.props.dateStringOptions)}
+					{this.props.weight.date
+						? new Date(this.props.weight.date).toLocaleDateString("nl-NL", this.props.dateStringOptions)
+						: new Date().toLocaleDateString("nl-NL", this.props.dateStringOptions)}
 				</p>
 				<p className="list--items--item--weight">{this.props.weight.weight_val}</p>
 				<p className="list--items--item--notes">{this.props.weight.notes}</p>
