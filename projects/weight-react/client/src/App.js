@@ -17,6 +17,7 @@ class App extends Component {
 			isError: false
 		}
 		this.dateStringOptions = { year: "numeric", month: "numeric", day: "numeric" }
+		this.id = 9999
 	}
 
 	// Function to submit a form.
@@ -29,9 +30,7 @@ class App extends Component {
 		const res = await fetch("/api/weight", {
 			method: "POST",
 			body: JSON.stringify(this.state.values),
-			headers: {
-				"Content-Type": "application/json"
-			}
+			headers: { "Content-Type": "application/json" }
 		})
 
 		this.setState({ isSubmitting: false }) // Done submitting.
@@ -42,8 +41,9 @@ class App extends Component {
 			: this.setState({ message: data.error, isError: true })
 
 		// Add an element with data and empty the form after submit.
+		this.id++
 		this.displayData.unshift(
-			<Item key={weight.id} weight={this.state.values} />
+			<Item key={this.id} weight={this.state.values} />
 		)
 		this.setState({
 			showData: this.displayData,
