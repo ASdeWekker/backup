@@ -1,0 +1,54 @@
+$bg: #fff
+$bg-alt: #ededed
+$text: #333
+$text-alt: #808080
+$text-alt-2: #7a7a7a
+
+html, body, .container
+	background: $bg
+	height: 100%
+	margin: 0
+	padding: 0
+	width: 100%
+
+a
+	color: $text
+	text-decoration: none
+
+html
+	font-size: 14px
+
+	body
+		.container
+			.header
+				height: auto
+				width: 100%
+
+				&--container
+					clear: both
+					height: 100%
+					width: 100%
+
+					&--left, &--right
+						float: left
+						height: 100%
+						width: 50%
+
+					&--left
+						h1, h2
+							font-size: 1.5em
+							margin-left: 36px
+
+						&--text
+							font-weight: 400
+							margin: 26px 0 -8px
+
+						&--date
+							font-weight: 100
+							margin-top: 0
+
+					&--right
+						&--placeholder
+							height: 100%
+							
+							width: 100%

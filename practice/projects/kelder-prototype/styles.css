@@ -1,3 +1,48 @@
+html, body, .container {
+  background: #fff;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
 
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+html {
+  font-size: 14px;
+}
+html body .container .header {
+  height: auto;
+  width: 100%;
+}
+html body .container .header--container {
+  clear: both;
+  height: 100%;
+  width: 100%;
+}
+html body .container .header--container--left, html body .container .header--container--right {
+  float: left;
+  height: 100%;
+  width: 50%;
+}
+html body .container .header--container--left h1, html body .container .header--container--left h2 {
+  font-size: 1.5em;
+  margin-left: 36px;
+}
+html body .container .header--container--left--text {
+  font-weight: 400;
+  margin: 26px 0 -8px;
+}
+html body .container .header--container--left--date {
+  font-weight: 100;
+  margin-top: 0;
+}
+html body .container .header--container--right--placeholder {
+  height: 100%;
+  width: 100%;
+}
 
 /*# sourceMappingURL=styles.css.map */
