@@ -1,0 +1,59 @@
+doctype html
+head
+	title Kelder prototype
+	meta(charset="utf-8")
+	meta(name="viewport", content="width=device-width, initial-scale=1")
+	link(rel="stylesheet", href="fa-svg-with-js.css", type="text/css")
+	link(rel="stylesheet", href="styles.css", type="text/css")
+body
+	.container
+		header.header
+			.header--container
+		section.body
+		section.bottom
+			.most-used-places
+				.container
+					a(href="javascript:void();").container--button.recipes
+						.container--button--circle
+							i.fas.fa-utensils
+						p.container--button--text Recipes
+					a(href="javascript:void();").container--button.weight
+						.container--button--circle
+							i.fas.fa-weight
+						p.container--button--text Weight
+					a(href="javascript:void();").container--button.pihole
+						.container--button--circle
+							i.fab.fa-adversal
+						p.container--button--text Pihole
+					a(href="javascript:void();").container--button.apache
+						.container--button--circle
+							i.fas.fa-cloud
+						p.container--button--text Apache
+					a(href="javascript:void();").container--button.docker
+						.container--button--circle
+							i.fab.fa-docker
+						p.container--button--text Docker
+			.home-control
+				.container
+					.container--button.pc
+						p.container--button--text
+							span.container--button--title--icon
+								a(href="javascript:void();").container--button--text--icon--link
+									i.fas.fa-power-off
+							span.container--button--title--text
+								a(href="javascript:void();").container--button--title--text--link PC
+					.container--button.ledstrip
+						p.container--button--text
+							span.container--button--title--icon
+								a(href="javascript:void();").container--button--text--icon--link
+									i.fas.fa-power-off
+							span.container--button--title--text
+								a(href="javascript:void();").container--button--title--text--link Ledstrip
+					.container--button.plugs
+						p.container--button--text
+							span.container--button--title--icon
+								a(href="javascript:void();").container--button--text--icon--link
+									i.fas.fa-power-off
+							span.container--button--title--text
+								a(href="javascript:void();").container--button--title--text--link Plugs
+	script(src="fontawesome-all.min.js", type="text/javascript")
