@@ -1,3 +1,7 @@
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 html, body, .container {
   background: #fff;
   height: 100%;
@@ -12,37 +16,76 @@ a {
 }
 
 html {
+  box-sizing: border-box;
+  color: #333;
   font-size: 14px;
 }
 html body .container .header {
   height: auto;
+  min-height: 100px;
   width: 100%;
 }
 html body .container .header--container {
   clear: both;
   height: 100%;
+  min-height: 100px;
   width: 100%;
 }
 html body .container .header--container--left, html body .container .header--container--right {
   float: left;
   height: 100%;
+  min-height: 100px;
   width: 50%;
 }
-html body .container .header--container--left h1, html body .container .header--container--left h2 {
+html body .container .header--container--left {
+  align-items: center;
+  display: flex;
+}
+html body .container .header--container--left--wrapper {
+  margin-top: -20px;
+}
+html body .container .header--container--left--wrapper h1, html body .container .header--container--left--wrapper h2 {
   font-size: 1.5em;
   margin-left: 36px;
 }
-html body .container .header--container--left--text {
+html body .container .header--container--left--wrapper--text {
   font-weight: 400;
   margin: 26px 0 -8px;
 }
-html body .container .header--container--left--date {
+html body .container .header--container--left--wrapper--date {
   font-weight: 100;
   margin-top: 0;
 }
+html body .container .header--container--right {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
 html body .container .header--container--right--placeholder {
   height: 100%;
+  width: 70%;
+}
+html body .container .body {
+  height: auto;
+  margin-top: 20px;
   width: 100%;
+}
+html body .container .body .practice {
+  height: 80px;
+  width: 100%;
+  border: 1px solid red;
+}
+html body .container .body .practice .container {
+  height: 80px;
+  width: 100%;
+}
+html body .container .body .practice .container--header {
+  font-size: 1em;
+  margin: 0 0 0 36px;
+}
+html body .container .body .practice .container--button {
+  border-radius: 20px;
+  display: block;
 }
 
 /*# sourceMappingURL=styles.css.map */

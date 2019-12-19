@@ -4,6 +4,11 @@ $text: #333
 $text-alt: #808080
 $text-alt-2: #7a7a7a
 
+$header-height: 100px
+
+*, *:before, *:after
+	box-sizing: inherit
+
 html, body, .container
 	background: $bg
 	height: 100%
@@ -16,39 +21,78 @@ a
 	text-decoration: none
 
 html
+	box-sizing: border-box
+	color: $text
 	font-size: 14px
 
 	body
 		.container
 			.header
 				height: auto
+				min-height: $header-height
 				width: 100%
 
 				&--container
 					clear: both
 					height: 100%
+					min-height: $header-height
 					width: 100%
 
 					&--left, &--right
 						float: left
 						height: 100%
+						min-height: $header-height
 						width: 50%
 
 					&--left
-						h1, h2
-							font-size: 1.5em
-							margin-left: 36px
+						align-items: center
+						display: flex
 
-						&--text
-							font-weight: 400
-							margin: 26px 0 -8px
+						&--wrapper
+							margin-top: -20px
 
-						&--date
-							font-weight: 100
-							margin-top: 0
+							h1, h2
+								font-size: 1.5em
+								margin-left: 36px
+
+							&--text
+								font-weight: 400
+								margin: 26px 0 -8px
+
+							&--date
+								font-weight: 100
+								margin-top: 0
 
 					&--right
+						align-items: center
+						display: flex
+						justify-content: center
+
 						&--placeholder
 							height: 100%
-							
-							width: 100%
+							width: 70%
+
+			.body
+				height: auto
+				margin-top: 20px
+				width: 100%
+
+				.practice
+					height: 80px
+					width: 100%
+					border: 1px solid red
+
+					.container
+						height: 80px
+						width: 100%
+
+						&--header
+							font-size: 1em
+							margin: 0 0 0 36px
+
+						&--button
+							border-radius: 20px
+							display: block
+
+							&--text
+								span
