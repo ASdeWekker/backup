@@ -16,65 +16,86 @@ body
 				.header--container--right
 					p.header--container--right--placeholder Plek om te tonen welke dingen er wel of niet staan?
 		section.body
-			.practice
-				.container
-					h2.container--header Practice
-					.container--button.item-1
-						p.container--button--text Item 1
-							span
-								i.fas.fa-power-off
-					.container--button.item-2
-						p.container--button--text Item 2
-							span
-								i.fas.fa-power-off
-					.container--button.item-3
-						p.container--button--text Item 3
-							span
-								i.fas.fa-power-off
-		section.bottom
-			.most-used-places
-				.container
-					a(href="javascript:void();").container--button.recipes
-						.container--button--circle
-							i.fas.fa-utensils
-						p.container--button--text Recipes
-					a(href="javascript:void();").container--button.weight
-						.container--button--circle
-							i.fas.fa-weight
-						p.container--button--text Weight
-					a(href="javascript:void();").container--button.pihole
-						.container--button--circle
-							i.fab.fa-adversal
-						p.container--button--text Pihole
-					a(href="javascript:void();").container--button.apache
-						.container--button--circle
-							i.fas.fa-cloud
-						p.container--button--text Apache
-					a(href="javascript:void();").container--button.docker
-						.container--button--circle
-							i.fab.fa-docker
-						p.container--button--text Docker
-			.home-control
-				.container
-					.container--button.pc
-						p.container--button--text
-							span.container--button--title--icon
-								a(href="javascript:void();").container--button--text--icon--link
-									i.fas.fa-power-off
-							span.container--button--title--text
-								a(href="javascript:void();").container--button--title--text--link PC
-					.container--button.ledstrip
-						p.container--button--text
-							span.container--button--title--icon
-								a(href="javascript:void();").container--button--text--icon--link
-									i.fas.fa-power-off
-							span.container--button--title--text
-								a(href="javascript:void();").container--button--title--text--link Ledstrip
-					.container--button.plugs
-						p.container--button--text
-							span.container--button--title--icon
-								a(href="javascript:void();").container--button--text--icon--link
-									i.fas.fa-power-off
-							span.container--button--title--text
-								a(href="javascript:void();").container--button--title--text--link Plugs
+			.container.practice
+				h2.container--header Practice
+				.container--wrapper
+					.container--wrapper--button.item-1
+						a(href="javascript:void(0);").container--wrapper--button--link ExpressTut
+						a(href="javascript:void(0);").container--wrapper--button--toggle: i.fas.fa-power-off
+					.container--wrapper--button.item-2
+						a(href="javascript:void(0);").container--wrapper--button--link NodeMongo
+						a(href="javascript:void(0);").container--wrapper--button--toggle: i.fas.fa-power-off
+					.container--wrapper--button.item-3
+						a(href="javascript:void(0);").container--wrapper--button--link MeanTut
+						a(href="javascript:void(0);").container--wrapper--button--toggle: i.fas.fa-power-off
+					.container--wrapper--button.item-4
+						a(href="javascript:void(0);").container--wrapper--button--link Session
+						a(href="javascript:void(0);").container--wrapper--button--toggle: i.fas.fa-power-off
+					.container--wrapper--button.item-5
+						a(href="javascript:void(0);").container--wrapper--button--link AddPage
+						a(href="javascript:void(0);").container--wrapper--button--toggle: i.fas.fa-power-off
+					.container--wrapper--button.item-6
+						a(href="javascript:void(0);").container--wrapper--button--link PostgreSQL
+						a(href="javascript:void(0);").container--wrapper--button--toggle: i.fas.fa-power-off
+			.container.projects
+				h2.container--header Projects
+				.container--wrapper
+					.container--wrapper--button.item-1
+						a(href="javascript:void(0);").container--wrapper--button--link Darten
+						a(href="javascript:void(0);").container--wrapper--button--toggle: i.fas.fa-power-off
+					.container--wrapper--button.item-2
+						a(href="javascript:void(0);").container--wrapper--button--link URLName
+						a(href="javascript:void(0);").container--wrapper--button--toggle: i.fas.fa-power-off
+					.container--wrapper--button.item-3
+						a(href="javascript:void(0);").container--wrapper--button--link SpeedTest
+						a(href="javascript:void(0);").container--wrapper--button--toggle: i.fas.fa-power-off
+					.container--wrapper--button.item-4
+						a(href="javascript:void(0);").container--wrapper--button--link Weight
+						a(href="javascript:void(0);").container--wrapper--button--toggle: i.fas.fa-power-off
+		//- section.bottom
+		//- 	.most-used-places
+		//- 		.container
+		//- 			a(href="javascript:void();").container--button.recipes
+		//- 				.container--button--circle
+		//- 					i.fas.fa-utensils
+		//- 				p.container--button--text Recipes
+		//- 			a(href="javascript:void();").container--button.weight
+		//- 				.container--button--circle
+		//- 					i.fas.fa-weight
+		//- 				p.container--button--text Weight
+		//- 			a(href="javascript:void();").container--button.pihole
+		//- 				.container--button--circle
+		//- 					i.fab.fa-adversal
+		//- 				p.container--button--text Pihole
+		//- 			a(href="javascript:void();").container--button.apache
+		//- 				.container--button--circle
+		//- 					i.fas.fa-cloud
+		//- 				p.container--button--text Apache
+		//- 			a(href="javascript:void();").container--button.docker
+		//- 				.container--button--circle
+		//- 					i.fab.fa-docker
+		//- 				p.container--button--text Docker
+		//- 	.home-control
+		//- 		.container
+		//- 			.container--button.pc
+		//- 				p.container--button--text
+		//- 					span.container--button--title--icon
+		//- 						a(href="javascript:void();").container--button--text--icon--link
+		//- 							i.fas.fa-power-off
+		//- 					span.container--button--title--text
+		//- 						a(href="javascript:void();").container--button--title--text--link PC
+		//- 			.container--button.ledstrip
+		//- 				p.container--button--text
+		//- 					span.container--button--title--icon
+		//- 						a(href="javascript:void();").container--button--text--icon--link
+		//- 							i.fas.fa-power-off
+		//- 					span.container--button--title--text
+		//- 						a(href="javascript:void();").container--button--title--text--link Ledstrip
+		//- 			.container--button.plugs
+		//- 				p.container--button--text
+		//- 					span.container--button--title--icon
+		//- 						a(href="javascript:void();").container--button--text--icon--link
+		//- 							i.fas.fa-power-off
+		//- 					span.container--button--title--text
+		//- 						a(href="javascript:void();").container--button--title--text--link Plugs
 	script(src="fontawesome-all.min.js", type="text/javascript")

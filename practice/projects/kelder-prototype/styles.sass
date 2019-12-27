@@ -4,7 +4,8 @@ $text: #333
 $text-alt: #808080
 $text-alt-2: #7a7a7a
 
-$header-height: 100px
+$headerHeight: 100px
+$marginLeft: 32px
 
 *, *:before, *:after
 	box-sizing: inherit
@@ -23,25 +24,26 @@ a
 html
 	box-sizing: border-box
 	color: $text
+	font-family: Arial, sans-serif
 	font-size: 14px
 
 	body
 		.container
 			.header
 				height: auto
-				min-height: $header-height
+				min-height: $headerHeight
 				width: 100%
 
 				&--container
 					clear: both
 					height: 100%
-					min-height: $header-height
+					min-height: $headerHeight
 					width: 100%
 
 					&--left, &--right
 						float: left
 						height: 100%
-						min-height: $header-height
+						min-height: $headerHeight
 						width: 50%
 
 					&--left
@@ -53,14 +55,16 @@ html
 
 							h1, h2
 								font-size: 1.5em
-								margin-left: 36px
+								margin-left: $marginLeft
 
 							&--text
 								font-weight: 400
+								letter-spacing: -2px
 								margin: 26px 0 -8px
 
 							&--date
 								font-weight: 100
+								letter-spacing: -1px
 								margin-top: 0
 
 					&--right
@@ -74,25 +78,44 @@ html
 
 			.body
 				height: auto
-				margin-top: 20px
 				width: 100%
 
-				.practice
+				.container
 					height: 80px
 					width: 100%
-					border: 1px solid red
 
-					.container
-						height: 80px
+					&--header
+						font-size: 1.1em
+						font-weight: 400
+						height: 22px
+						line-height: 22px
+						margin: 0 0 8px $marginLeft
+
+					&--wrapper
+						height: 50px
+						overflow-x: scroll
+						overflow-y: hidden
+						scrollbar-width: none
+						white-space: nowrap
 						width: 100%
-
-						&--header
-							font-size: 1em
-							margin: 0 0 0 36px
+						-webkit-overflow-scrolling: touch
 
 						&--button
+							background: $bg-alt
 							border-radius: 20px
-							display: block
+							display: inline-block
+							font-size: 1.2em
+							margin-right: 10px
+							padding: 0.6em 0.7em
 
-							&--text
-								span
+							&:first-child
+								margin-left: 20px
+
+							&--link
+								margin: 0
+
+							&--toggle
+								margin-left: 0.3em
+
+				.container.projects
+					margin-top: 10px

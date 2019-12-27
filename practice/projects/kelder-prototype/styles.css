@@ -18,6 +18,7 @@ a {
 html {
   box-sizing: border-box;
   color: #333;
+  font-family: Arial, sans-serif;
   font-size: 14px;
 }
 html body .container .header {
@@ -46,14 +47,16 @@ html body .container .header--container--left--wrapper {
 }
 html body .container .header--container--left--wrapper h1, html body .container .header--container--left--wrapper h2 {
   font-size: 1.5em;
-  margin-left: 36px;
+  margin-left: 32px;
 }
 html body .container .header--container--left--wrapper--text {
   font-weight: 400;
+  letter-spacing: -2px;
   margin: 26px 0 -8px;
 }
 html body .container .header--container--left--wrapper--date {
   font-weight: 100;
+  letter-spacing: -1px;
   margin-top: 0;
 }
 html body .container .header--container--right {
@@ -67,25 +70,47 @@ html body .container .header--container--right--placeholder {
 }
 html body .container .body {
   height: auto;
-  margin-top: 20px;
   width: 100%;
 }
-html body .container .body .practice {
-  height: 80px;
-  width: 100%;
-  border: 1px solid red;
-}
-html body .container .body .practice .container {
+html body .container .body .container {
   height: 80px;
   width: 100%;
 }
-html body .container .body .practice .container--header {
-  font-size: 1em;
-  margin: 0 0 0 36px;
+html body .container .body .container--header {
+  font-size: 1.1em;
+  font-weight: 400;
+  height: 22px;
+  line-height: 22px;
+  margin: 0 0 8px 32px;
 }
-html body .container .body .practice .container--button {
+html body .container .body .container--wrapper {
+  height: 50px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  white-space: nowrap;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+html body .container .body .container--wrapper--button {
+  background: #ededed;
   border-radius: 20px;
-  display: block;
+  display: inline-block;
+  font-size: 1.2em;
+  margin-right: 10px;
+  padding: 0.6em 0.7em;
+}
+html body .container .body .container--wrapper--button:first-child {
+  margin-left: 20px;
+}
+html body .container .body .container--wrapper--button--link {
+  margin: 0;
+}
+html body .container .body .container--wrapper--button--toggle {
+  margin-left: 0.3em;
+}
+html body .container .body .container.projects {
+  margin-top: 10px;
 }
 
 /*# sourceMappingURL=styles.css.map */
