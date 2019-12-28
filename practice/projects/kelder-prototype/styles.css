@@ -157,8 +157,27 @@ html body .container-big .bottom .home-control {
   width: 100%;
 }
 html body .container-big .bottom .home-control .container {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
   height: 110px;
+  justify-content: space-evenly;
   width: 100%;
+}
+html body .container-big .bottom .home-control .container--button {
+  align-items: center;
+  background: #ededed;
+  border-radius: 30px;
+  display: flex;
+  height: 50px;
+  padding: 0 0.6em;
+}
+html body .container-big .bottom .home-control .container--button--icon {
+  font-size: 2em;
+  margin-right: 6px;
+}
+html body .container-big .bottom .home-control .container--button--text {
+  font-size: 1.4em;
 }
 
 /*# sourceMappingURL=styles.css.map */

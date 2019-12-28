@@ -14,7 +14,7 @@ body
 						h1.header--container--left--wrapper--text Kelder
 						h2.header--container--left--wrapper--date 17 December
 				.header--container--right
-					p.header--container--right--placeholder Plek om te tonen welke dingen er wel of niet staan?
+					p.header--container--right--placeholder Plek om te tonen welke dingen er wel of niet aan staan?
 		section.body
 			.container.practice
 				h2.container--header Practice
@@ -55,14 +55,6 @@ body
 		section.bottom
 			.most-used-places
 				.container
-					a(href="javascript:void();").container--button.recipes
-						.container--button--circle
-							i.fas.fa-utensils
-						p.container--button--text Recipes
-					a(href="javascript:void();").container--button.weight
-						.container--button--circle
-							i.fas.fa-weight
-						p.container--button--text Weight
 					a(href="javascript:void();").container--button.pihole
 						.container--button--circle
 							i.fab.fa-adversal
@@ -75,27 +67,26 @@ body
 						.container--button--circle
 							i.fab.fa-docker
 						p.container--button--text Docker
+					a(href="javascript:void();").container--button.recipes
+						.container--button--circle
+							i.fas.fa-utensils
+						p.container--button--text Recipes
+					a(href="javascript:void();").container--button.weight
+						.container--button--circle
+							i.fas.fa-weight
+						p.container--button--text Weight
 			.home-control
 				.container
-					.container--button.pc
-						p.container--button--title
-							span.container--button--title--icon
-								a(href="javascript:void();").container--button--text--icon--link
-									i.fas.fa-power-off
-							span.container--button--title--text
-								a(href="javascript:void();").container--button--title--text--link PC
-					.container--button.ledstrip
-						p.container--button--title
-							span.container--button--title--icon
-								a(href="javascript:void();").container--button--text--icon--link
-									i.fas.fa-power-off
-							span.container--button--title--text
-								a(href="javascript:void();").container--button--title--text--link Ledstrip
 					.container--button.plugs
-						p.container--button--title
-							span.container--button--title--icon
-								a(href="javascript:void();").container--button--text--icon--link
-									i.fas.fa-power-off
-							span.container--button--title--text
-								a(href="javascript:void();").container--button--title--text--link Plugs
+						a(href="javascript:void(0);").container--button--icon
+							i.fas.fa-power-off
+						a(href="javascript:void(0);").container--button--text Plugs
+					.container--button.ledstrip
+						a(href="javascript:void(0);").container--button--icon
+							i.fas.fa-power-off
+						a(href="javascript:void(0);").container--button--text Ledstrip
+					.container--button.pc
+						a(href="javascript:void(0);").container--button--icon
+							i.fas.fa-power-off
+						a(href="javascript:void(0);").container--button--text PC
 	script(src="fontawesome-all.min.js", type="text/javascript")

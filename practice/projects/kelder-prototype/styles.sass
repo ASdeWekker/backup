@@ -165,12 +165,24 @@ html
 					width: 100%
 
 					.container
+						align-items: center
+						display: flex
+						flex-flow: row nowrap
 						height: 110px
+						justify-content: space-evenly
 						width: 100%
 
 						&--button
-							&--title
-								&--icon
-									&--link
-								&--text
-									&--link
+							align-items: center
+							background: $bg-alt
+							border-radius: 30px
+							display: flex
+							height: 50px
+							padding: 0 0.6em
+
+							&--icon
+								font-size: 2em
+								margin-right: 6px
+
+							&--text
+								font-size: 1.4em
