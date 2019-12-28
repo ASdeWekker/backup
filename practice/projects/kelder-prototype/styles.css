@@ -2,7 +2,7 @@
   box-sizing: inherit;
 }
 
-html, body, .container {
+html, body, .container-big {
   background: #fff;
   height: 100%;
   margin: 0;
@@ -21,69 +21,69 @@ html {
   font-family: Arial, sans-serif;
   font-size: 14px;
 }
-html body .container .header {
+html body .container-big .header {
   height: auto;
   min-height: 100px;
   width: 100%;
 }
-html body .container .header--container {
+html body .container-big .header--container {
   clear: both;
   height: 100%;
   min-height: 100px;
   width: 100%;
 }
-html body .container .header--container--left, html body .container .header--container--right {
+html body .container-big .header--container--left, html body .container-big .header--container--right {
   float: left;
   height: 100%;
   min-height: 100px;
   width: 50%;
 }
-html body .container .header--container--left {
+html body .container-big .header--container--left {
   align-items: center;
   display: flex;
 }
-html body .container .header--container--left--wrapper {
+html body .container-big .header--container--left--wrapper {
   margin-top: -20px;
 }
-html body .container .header--container--left--wrapper h1, html body .container .header--container--left--wrapper h2 {
+html body .container-big .header--container--left--wrapper h1, html body .container-big .header--container--left--wrapper h2 {
   font-size: 1.5em;
   margin-left: 32px;
 }
-html body .container .header--container--left--wrapper--text {
+html body .container-big .header--container--left--wrapper--text {
   font-weight: 400;
   letter-spacing: -2px;
   margin: 26px 0 -8px;
 }
-html body .container .header--container--left--wrapper--date {
+html body .container-big .header--container--left--wrapper--date {
   font-weight: 100;
   letter-spacing: -1px;
   margin-top: 0;
 }
-html body .container .header--container--right {
+html body .container-big .header--container--right {
   align-items: center;
   display: flex;
   justify-content: center;
 }
-html body .container .header--container--right--placeholder {
+html body .container-big .header--container--right--placeholder {
   height: 100%;
   width: 70%;
 }
-html body .container .body {
+html body .container-big .body {
   height: auto;
   width: 100%;
 }
-html body .container .body .container {
+html body .container-big .body .container {
   height: 80px;
   width: 100%;
 }
-html body .container .body .container--header {
+html body .container-big .body .container--header {
   font-size: 1.1em;
   font-weight: 400;
   height: 22px;
   line-height: 22px;
   margin: 0 0 8px 32px;
 }
-html body .container .body .container--wrapper {
+html body .container-big .body .container--wrapper {
   height: 50px;
   overflow-x: scroll;
   overflow-y: hidden;
@@ -92,7 +92,7 @@ html body .container .body .container--wrapper {
   width: 100%;
   -webkit-overflow-scrolling: touch;
 }
-html body .container .body .container--wrapper--button {
+html body .container-big .body .container--wrapper--button {
   background: #ededed;
   border-radius: 20px;
   display: inline-block;
@@ -100,17 +100,65 @@ html body .container .body .container--wrapper--button {
   margin-right: 10px;
   padding: 0.6em 0.7em;
 }
-html body .container .body .container--wrapper--button:first-child {
+html body .container-big .body .container--wrapper--button:first-child {
   margin-left: 20px;
 }
-html body .container .body .container--wrapper--button--link {
+html body .container-big .body .container--wrapper--button--link {
   margin: 0;
 }
-html body .container .body .container--wrapper--button--toggle {
+html body .container-big .body .container--wrapper--button--toggle {
   margin-left: 0.3em;
 }
-html body .container .body .container.projects {
+html body .container-big .body .container.projects {
   margin-top: 10px;
+}
+html body .container-big .bottom {
+  bottom: 0;
+  height: 206px;
+  left: 0;
+  position: fixed;
+  width: 100%;
+}
+html body .container-big .bottom .most-used-places {
+  background: #ededed;
+  height: 96px;
+  width: 100%;
+}
+html body .container-big .bottom .most-used-places .container {
+  display: flex;
+  flex-flow: row nowrap;
+  height: 96px;
+  justify-content: space-evenly;
+  width: 100%;
+}
+html body .container-big .bottom .most-used-places .container--button {
+  height: 80px;
+  margin-top: 8px;
+  width: 62px;
+}
+html body .container-big .bottom .most-used-places .container--button--circle {
+  align-items: center;
+  background: #fff;
+  border-radius: 50%;
+  color: #808080;
+  display: flex;
+  font-size: 3em;
+  height: 62px;
+  justify-content: center;
+  width: 62px;
+}
+html body .container-big .bottom .most-used-places .container--button--text {
+  margin: 0;
+  text-align: center;
+  width: 62px;
+}
+html body .container-big .bottom .home-control {
+  height: 110px;
+  width: 100%;
+}
+html body .container-big .bottom .home-control .container {
+  height: 110px;
+  width: 100%;
 }
 
 /*# sourceMappingURL=styles.css.map */

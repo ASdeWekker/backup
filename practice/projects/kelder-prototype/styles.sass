@@ -10,7 +10,7 @@ $marginLeft: 32px
 *, *:before, *:after
 	box-sizing: inherit
 
-html, body, .container
+html, body, .container-big
 	background: $bg
 	height: 100%
 	margin: 0
@@ -28,7 +28,7 @@ html
 	font-size: 14px
 
 	body
-		.container
+		.container-big
 			.header
 				height: auto
 				min-height: $headerHeight
@@ -119,3 +119,58 @@ html
 
 				.container.projects
 					margin-top: 10px
+
+			.bottom
+				bottom: 0
+				height: 206px
+				left: 0
+				position: fixed
+				width: 100%
+
+				.most-used-places
+					background: $bg-alt
+					height: 96px
+					width: 100%
+
+					.container
+						display: flex
+						flex-flow: row nowrap
+						height: 96px
+						justify-content: space-evenly
+						width: 100%
+
+						&--button
+							height: 80px
+							margin-top: 8px
+							width: 62px
+
+							&--circle
+								align-items: center
+								background: $bg
+								border-radius: 50%
+								color: $text-alt
+								display: flex
+								font-size: 3em
+								height: 62px
+								justify-content: center
+								width: 62px
+
+							&--text
+								margin: 0
+								text-align: center
+								width: 62px
+
+				.home-control
+					height: 110px
+					width: 100%
+
+					.container
+						height: 110px
+						width: 100%
+
+						&--button
+							&--title
+								&--icon
+									&--link
+								&--text
+									&--link
