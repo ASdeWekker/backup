@@ -6,87 +6,88 @@ head
 	link(rel="stylesheet", href="fa-svg-with-js.css", type="text/css")
 	link(rel="stylesheet", href="styles.css", type="text/css")
 body
-	.container-big
-		header.header
-			.header--container
-				.header--container--left
-					.header--container--left--wrapper
-						h1.header--container--left--wrapper--text Kelder
-						h2.header--container--left--wrapper--date 17 December
-				.header--container--right
-					p.header--container--right--placeholder Plek om te tonen welke dingen er wel of niet aan staan?
-		section.body
-			.container.practice
-				h2.container--header Practice
-				.container--wrapper
-					.container--wrapper--button.item-1
-						a(href="javascript:void(0);").container--wrapper--button--link ExpressTut
-						a(href="javascript:void(0);").container--wrapper--button--toggle: i.fas.fa-power-off
-					.container--wrapper--button.item-2
-						a(href="javascript:void(0);").container--wrapper--button--link NodeMongo
-						a(href="javascript:void(0);").container--wrapper--button--toggle: i.fas.fa-power-off
-					.container--wrapper--button.item-3
-						a(href="javascript:void(0);").container--wrapper--button--link MeanTut
-						a(href="javascript:void(0);").container--wrapper--button--toggle: i.fas.fa-power-off
-					.container--wrapper--button.item-4
-						a(href="javascript:void(0);").container--wrapper--button--link Session
-						a(href="javascript:void(0);").container--wrapper--button--toggle: i.fas.fa-power-off
-					.container--wrapper--button.item-5
-						a(href="javascript:void(0);").container--wrapper--button--link AddPage
-						a(href="javascript:void(0);").container--wrapper--button--toggle: i.fas.fa-power-off
-					.container--wrapper--button.item-6
-						a(href="javascript:void(0);").container--wrapper--button--link PostgreSQL
-						a(href="javascript:void(0);").container--wrapper--button--toggle: i.fas.fa-power-off
-			.container.projects
-				h2.container--header Projects
-				.container--wrapper
-					.container--wrapper--button.item-1
-						a(href="javascript:void(0);").container--wrapper--button--link Darten
-						a(href="javascript:void(0);").container--wrapper--button--toggle: i.fas.fa-power-off
-					.container--wrapper--button.item-2
-						a(href="javascript:void(0);").container--wrapper--button--link URLName
-						a(href="javascript:void(0);").container--wrapper--button--toggle: i.fas.fa-power-off
-					.container--wrapper--button.item-3
-						a(href="javascript:void(0);").container--wrapper--button--link SpeedTest
-						a(href="javascript:void(0);").container--wrapper--button--toggle: i.fas.fa-power-off
-					.container--wrapper--button.item-4
-						a(href="javascript:void(0);").container--wrapper--button--link Weight
-						a(href="javascript:void(0);").container--wrapper--button--toggle: i.fas.fa-power-off
-		section.bottom
-			.most-used-places
-				.container
-					a(href="javascript:void();").container--button.pihole
-						.container--button--circle
-							i.fab.fa-adversal
-						p.container--button--text Pihole
-					a(href="javascript:void();").container--button.apache
-						.container--button--circle
-							i.fas.fa-cloud
-						p.container--button--text Apache
-					a(href="javascript:void();").container--button.docker
-						.container--button--circle
-							i.fab.fa-docker
-						p.container--button--text Docker
-					a(href="javascript:void();").container--button.recipes
-						.container--button--circle
-							i.fas.fa-utensils
-						p.container--button--text Recipes
-					a(href="javascript:void();").container--button.weight
-						.container--button--circle
-							i.fas.fa-weight
-						p.container--button--text Weight
-			.home-control
-				.container
-					.container--button.plugs
-						a(href="javascript:void(0);").container--button--icon
-							i.fas.fa-power-off
-						a(href="javascript:void(0);").container--button--text Plugs
-					.container--button.ledstrip
-						a(href="javascript:void(0);").container--button--icon
-							i.fas.fa-power-off
-						a(href="javascript:void(0);").container--button--text Ledstrip
-					.container--button.pc
-						a(href="javascript:void(0);").container--button--icon
-							i.fas.fa-power-off
-						a(href="javascript:void(0);").container--button--text PC
+	#root
+		.App
+			header.header
+				.header--container
+					.header--container--left
+						.header--container--left--wrapper
+							h1.header--container--left--wrapper--text Kelder
+							h2.header--container--left--wrapper--date 17 December
+					.header--container--right
+						p.header--container--right--placeholder Plek om te tonen welke dingen er wel of niet aan staan?
+			section.body
+				.container.practice
+					h2.container--header Practice
+					.container--wrapper
+						.container--wrapper--button.item-1
+							a(href="javascript:void(0);").container--wrapper--button--link ExpressTut
+							a(href="javascript:void(0);").container--wrapper--button--toggle: i.fas.fa-power-off
+						.container--wrapper--button.item-2
+							a(href="javascript:void(0);").container--wrapper--button--link NodeMongo
+							a(href="javascript:void(0);").container--wrapper--button--toggle: i.fas.fa-power-off
+						.container--wrapper--button.item-3
+							a(href="javascript:void(0);").container--wrapper--button--link MeanTut
+							a(href="javascript:void(0);").container--wrapper--button--toggle: i.fas.fa-power-off
+						.container--wrapper--button.item-4
+							a(href="javascript:void(0);").container--wrapper--button--link Session
+							a(href="javascript:void(0);").container--wrapper--button--toggle: i.fas.fa-power-off
+						.container--wrapper--button.item-5
+							a(href="javascript:void(0);").container--wrapper--button--link AddPage
+							a(href="javascript:void(0);").container--wrapper--button--toggle: i.fas.fa-power-off
+						.container--wrapper--button.item-6
+							a(href="javascript:void(0);").container--wrapper--button--link PostgreSQL
+							a(href="javascript:void(0);").container--wrapper--button--toggle: i.fas.fa-power-off
+				.container.projects
+					h2.container--header Projects
+					.container--wrapper
+						.container--wrapper--button.item-1
+							a(href="javascript:void(0);").container--wrapper--button--link Darten
+							a(href="javascript:void(0);").container--wrapper--button--toggle: i.fas.fa-power-off
+						.container--wrapper--button.item-2
+							a(href="javascript:void(0);").container--wrapper--button--link URLName
+							a(href="javascript:void(0);").container--wrapper--button--toggle: i.fas.fa-power-off
+						.container--wrapper--button.item-3
+							a(href="javascript:void(0);").container--wrapper--button--link SpeedTest
+							a(href="javascript:void(0);").container--wrapper--button--toggle: i.fas.fa-power-off
+						.container--wrapper--button.item-4
+							a(href="javascript:void(0);").container--wrapper--button--link Weight
+							a(href="javascript:void(0);").container--wrapper--button--toggle: i.fas.fa-power-off
+			section.bottom
+				.most-used-places
+					.container
+						a(href="javascript:void();").container--button.pihole
+							.container--button--circle
+								i.fab.fa-adversal
+							p.container--button--text Pihole
+						a(href="javascript:void();").container--button.apache
+							.container--button--circle
+								i.fas.fa-cloud
+							p.container--button--text Apache
+						a(href="javascript:void();").container--button.docker
+							.container--button--circle
+								i.fab.fa-docker
+							p.container--button--text Docker
+						a(href="javascript:void();").container--button.recipes
+							.container--button--circle
+								i.fas.fa-utensils
+							p.container--button--text Recipes
+						a(href="javascript:void();").container--button.weight
+							.container--button--circle
+								i.fas.fa-weight
+							p.container--button--text Weight
+				.home-control
+					.container
+						.container--button.plugs
+							a(href="javascript:void(0);").container--button--icon
+								i.fas.fa-power-off
+							a(href="javascript:void(0);").container--button--text Plugs
+						.container--button.ledstrip
+							a(href="javascript:void(0);").container--button--icon
+								i.fas.fa-power-off
+							a(href="javascript:void(0);").container--button--text Ledstrip
+						.container--button.pc
+							a(href="javascript:void(0);").container--button--icon
+								i.fas.fa-power-off
+							a(href="javascript:void(0);").container--button--text PC
 	script(src="fontawesome-all.min.js", type="text/javascript")

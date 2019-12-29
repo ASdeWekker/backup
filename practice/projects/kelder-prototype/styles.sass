@@ -10,7 +10,7 @@ $marginLeft: 32px
 *, *:before, *:after
 	box-sizing: inherit
 
-html, body, .container-big
+html, body, #root, .App
 	background: $bg
 	height: 100%
 	margin: 0
@@ -35,161 +35,162 @@ html
 	font-size: 14px
 
 	body
-		.container-big
-			.header
-				height: auto
-				min-height: $headerHeight
-				width: 100%
-
-				&--container
-					clear: both
-					height: 100%
+		#root
+			.App
+				.header
+					height: auto
 					min-height: $headerHeight
 					width: 100%
 
-					&--left, &--right
-						float: left
+					&--container
+						clear: both
 						height: 100%
 						min-height: $headerHeight
-						width: 50%
+						width: 100%
 
-					&--left
-						align-items: center
-						display: flex
+						&--left, &--right
+							float: left
+							height: 100%
+							min-height: $headerHeight
+							width: 50%
+
+						&--left
+							align-items: center
+							display: flex
+
+							&--wrapper
+								margin-top: -20px
+
+								h1, h2
+									font-size: 1.5em
+									margin-left: $marginLeft
+
+								&--text
+									font-weight: 400
+									letter-spacing: -2px
+									margin: 26px 0 -8px
+
+								&--date
+									font-weight: 100
+									letter-spacing: -1px
+									margin-top: 0
+
+						&--right
+							align-items: center
+							display: flex
+							justify-content: center
+
+							&--placeholder
+								height: 100%
+								width: 70%
+
+				.body
+					height: auto
+					width: 100%
+
+					.container
+						height: 80px
+						width: 100%
+
+						&--header
+							font-size: 1.1em
+							font-weight: 400
+							height: 22px
+							line-height: 22px
+							margin: 0 0 8px $marginLeft
 
 						&--wrapper
-							margin-top: -20px
-
-							h1, h2
-								font-size: 1.5em
-								margin-left: $marginLeft
-
-							&--text
-								font-weight: 400
-								letter-spacing: -2px
-								margin: 26px 0 -8px
-
-							&--date
-								font-weight: 100
-								letter-spacing: -1px
-								margin-top: 0
-
-					&--right
-						align-items: center
-						display: flex
-						justify-content: center
-
-						&--placeholder
-							height: 100%
-							width: 70%
-
-			.body
-				height: auto
-				width: 100%
-
-				.container
-					height: 80px
-					width: 100%
-
-					&--header
-						font-size: 1.1em
-						font-weight: 400
-						height: 22px
-						line-height: 22px
-						margin: 0 0 8px $marginLeft
-
-					&--wrapper
-						height: 50px
-						overflow-x: scroll
-						overflow-y: hidden
-						scrollbar-width: none
-						white-space: nowrap
-						width: 100%
-						-webkit-overflow-scrolling: touch
-
-						&--button
-							background: $bg-alt
-							border-radius: 20px
-							display: inline-block
-							font-size: 1.2em
-							margin-right: 10px
-							padding: 0.6em 0.7em
-
-							&:first-child
-								margin-left: 20px
-
-							&--link
-								margin: 0
-
-							&--toggle
-								margin-left: 0.3em
-
-				.container.projects
-					margin-top: 10px
-
-			.bottom
-				bottom: 0
-				height: 206px
-				left: 0
-				position: fixed
-				width: 100%
-
-				.most-used-places
-					background: $bg-alt
-					height: 96px
-					width: 100%
-
-					.container
-						display: flex
-						flex-flow: row nowrap
-						height: 96px
-						justify-content: space-evenly
-						width: 100%
-
-						&--button
-							height: 80px
-							margin-top: 8px
-							width: 62px
-
-							&--circle
-								align-items: center
-								background: $bg
-								border-radius: 50%
-								color: $text-alt
-								display: flex
-								font-size: 3em
-								height: 62px
-								justify-content: center
-								width: 62px
-
-							&--text
-								margin: 0
-								text-align: center
-								width: 62px
-
-				.home-control
-					height: 110px
-					width: 100%
-
-					.container
-						align-items: center
-						display: flex
-						flex-flow: row nowrap
-						height: 110px
-						justify-content: space-evenly
-						width: 100%
-
-						&--button
-							align-items: center
-							background: $bg-alt
-							border-radius: 30px
-							display: flex
 							height: 50px
-							padding: 0 0.6em
+							overflow-x: scroll
+							overflow-y: hidden
+							scrollbar-width: none
+							white-space: nowrap
+							width: 100%
+							-webkit-overflow-scrolling: touch
 
-							&--icon
-								font-size: 2em
-								margin-right: 6px
+							&--button
+								background: $bg-alt
+								border-radius: 20px
+								display: inline-block
+								font-size: 1.2em
+								margin-right: 10px
+								padding: 0.6em 0.7em
 
-							&--text
-								font-size: 1.4em
+								&:first-child
+									margin-left: 20px
+
+								&--link
+									margin: 0
+
+								&--toggle
+									margin-left: 0.3em
+
+					.container.projects
+						margin-top: 10px
+
+				.bottom
+					bottom: 0
+					height: 206px
+					left: 0
+					position: fixed
+					width: 100%
+
+					.most-used-places
+						background: $bg-alt
+						height: 96px
+						width: 100%
+
+						.container
+							display: flex
+							flex-flow: row nowrap
+							height: 96px
+							justify-content: space-evenly
+							width: 100%
+
+							&--button
+								height: 80px
+								margin-top: 8px
+								width: 62px
+
+								&--circle
+									align-items: center
+									background: $bg
+									border-radius: 50%
+									color: $text-alt
+									display: flex
+									font-size: 2.9em
+									height: 62px
+									justify-content: center
+									width: 62px
+
+								&--text
+									margin: 0
+									text-align: center
+									width: 62px
+
+					.home-control
+						height: 110px
+						width: 100%
+
+						.container
+							align-items: center
+							display: flex
+							flex-flow: row nowrap
+							height: 110px
+							justify-content: space-evenly
+							width: 100%
+
+							&--button
+								align-items: center
+								background: $bg-alt
+								border-radius: 30px
+								display: flex
+								height: 50px
+								padding: 0 0.6em
+
+								&--icon
+									font-size: 2em
+									margin-right: 6px
+
+								&--text
+									font-size: 1.4em
