@@ -60,7 +60,6 @@ app.route("/login")
 			subject: "Hier is je token.",
 			text: `Hier is de link! Log maar lekker in bij localhost: http://localhost:${port}/verify/${token} Bij aad: http://10.8.0.4:${port}/verify/${token} Of bij serge: http://10.8.0.5:${port}/verify/${token}`,
 			html: `<p>Hier is de link!<br />Log maar lekker in bij <a href='http://localhost:${port}/verify/${token}'>localhost</a>.</p><p>Bij <a href='http://10.8.0.4:${port}/verify/${token}'>aad</a>.</p><p>Of bij <a href='http://10.8.0.5:${port}/verify/${token}'>serge</a>.</p><p>De link is als volgt<br /><pre>/verify/${token}</pre></p>`
-
 		}
 		transporter.sendMail(mailOptions, (err, info) => {
 			if (err) {
