@@ -56,18 +56,20 @@ app.get("/", auth, (req, res) => {
 
 // GET and POST route for login.
 app.route("/login")
+	// The GET page will ask you to enter your email.
 	.get((req, res) => {
 		res.json({ "message": "Enter your e-mail adres and we will send you a token" })})
+	// The POST page will sign a JWT and send it via the mail
 	.post((req, res) => {
 		let email = req.body.email
 		let privateKey = process.env.SECRETKEY
 		let token = jwt.sign({ expiresIn: "10m", email: email }, privateKey, { algorithm: "HS512" })
-		let mailOptions = {
+		let mailOptions = { // Nodemailer email options containing the email header and body.
 			from: "info@dewekker.dev",
 			to: email,
 			subject: "Hier is je token.",
-			text: `Hier is de link! Log maar lekker in bij localhost: http://localhost:${port}/verify/${token} Bij aad: http://10.8.0.4:${port}/verify/${token} Of bij serge: http://10.8.0.5:${port}/verify/${token}`,
-			html: `<p>Hier is de link!<br />Log maar lekker in bij <a href='http://localhost:${port}/verify/${token}'>localhost</a>.</p><p>Bij <a href='http://10.8.0.4:${port}/verify/${token}'>aad</a>.</p><p>Of bij <a href='http://10.8.0.5:${port}/verify/${token}'>serge</a>.</p><p>De link is als volgt<br /><pre>/verify/${token}</pre></p>`
+			text: `Hier is de link! Log maar lekker in bij localhost: http://localhost:${port}/jwt/${token} Bij aad: http://10.8.0.4:${port}/jwt/${token} Of bij serge: http://10.8.0.5:${port}/jwt/${token}`,
+			html: `<p>Hier is de link!<br />Log maar lekker in bij <a href='http://localhost:${port}/jwt/${token}'>localhost</a>.</p><p>Bij <a href='http://10.8.0.4:${port}/jwt/${token}'>aad</a>.</p><p>Of bij <a href='http://10.8.0.5:${port}/jwt/${token}'>serge</a>.</p><p>De link is als volgt<br /><pre>/jwt/${token}</pre></p>`
 		}
 		transporter.sendMail(mailOptions, (err, info) => {
 			if (err) {
@@ -79,8 +81,8 @@ app.route("/login")
 			}
 		})})
 
-// GET to verify the token send in the mail.
-app.get("/verify/:token", (req, res) => {
+// GET to put the token send in the mail in a cookie.
+app.get("/jwt/:token", (req, res) => {
 	res.cookie("token", req.params.token, { maxAge: 1000 * 60 * 10, secure: true, httpOnly: true }).redirect("/")
 })
 
