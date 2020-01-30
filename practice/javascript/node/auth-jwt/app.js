@@ -32,10 +32,11 @@ app.disable("x-powered-by")
 
 // A middleware function to check if you're authorized to look at the endpoint.
 function auth(req, res, next) {
+	console.log(req.cookies)
 	if (typeof req.cookies["token"] !== "undefined") {
 		let token = req.cookies["token"]
 		let privateKey = process.env.SECRETKEY
-		jwt.verify(token, privateKey, (err, user) => {
+		jwt.verify(token, privateKey, (user, err) => {
 			if (err) {
 				res.status(403).json({ "message": "You're not authorized" })
 				console.log(err)
@@ -83,7 +84,14 @@ app.route("/login")
 
 // GET to put the token send in the mail in a cookie.
 app.get("/jwt/:token", (req, res) => {
-	res.cookie("token", req.params.token, { maxAge: 1000 * 60 * 10, secure: true, httpOnly: true }).redirect("/")
+	console.log(req.params.token)
+	res.cookie(
+		"token",
+		req.params.token, {
+			expires: new Date(Date.now() + 1000 * 60 * 10),
+			// secure: true,
+			// httpOnly: true 
+		}).redirect(301, "/")
 })
 
 // Run the server.
