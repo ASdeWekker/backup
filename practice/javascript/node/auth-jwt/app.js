@@ -62,15 +62,21 @@ app.route("/login")
 		res.json({ "message": "Enter your e-mail adres and we will send you a token" })})
 	// The POST page will sign a JWT and send it via the mail
 	.post((req, res) => {
-		let email = req.body.email
 		let privateKey = process.env.SECRETKEY
-		let token = jwt.sign({ expiresIn: "10m", email: email }, privateKey, { algorithm: "HS512" })
+		let token = jwt.sign({ expiresIn: "10m", email: process.env.MAIL }, privateKey, { algorithm: "HS512" })
 		let mailOptions = { // Nodemailer email options containing the email header and body.
 			from: "info@dewekker.dev",
-			to: email,
+			to: process.env.MAIL,
 			subject: "Hier is je token.",
 			text: `Hier is de link! Log maar lekker in bij localhost: http://localhost:${port}/jwt/${token} Bij aad: http://10.8.0.4:${port}/jwt/${token} Of bij serge: http://10.8.0.5:${port}/jwt/${token}`,
-			html: `<p>Hier is de link!<br />Log maar lekker in bij <a href='http://localhost:${port}/jwt/${token}'>localhost</a>.</p><p>Bij <a href='http://10.8.0.4:${port}/jwt/${token}'>aad</a>.</p><p>Of bij <a href='http://10.8.0.5:${port}/jwt/${token}'>serge</a>.</p><p>De link is als volgt<br /><pre>/jwt/${token}</pre></p>`
+			html: `
+				<p>Hier is de link!<br />
+					Log maar lekker in bij 
+					<a href='http://localhost:${port}/jwt/${token}'>localhost</a>.
+				</p>
+				<p>De link is als volgt<br />
+					<pre>/jwt/${token}</pre>
+				</p>`
 		}
 		transporter.sendMail(mailOptions, (err, info) => {
 			if (err) {
