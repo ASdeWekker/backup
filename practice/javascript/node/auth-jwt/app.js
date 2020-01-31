@@ -9,7 +9,7 @@ const nodemailer = require("nodemailer")
 const port = 3012
 
 // Nodemailer connection options.
-let transporter = nodemailer.createTransport({
+const transporter = nodemailer.createTransport({
 	host: process.env.JWTMAILHOST,
 	port: process.env.JWTMAILPORT,
 	secure: true,
@@ -18,6 +18,9 @@ let transporter = nodemailer.createTransport({
 		pass: process.env.JWTPASS
 	}
 })
+
+// The secret key.
+const privateKey = process.env.JWTSECRETKEY
 
 // Declare the app.
 const app = express()
@@ -31,22 +34,21 @@ app.disable("x-powered-by")
 
 // A middleware function to check if you're authorized to look at the endpoint.
 function auth(req, res, next) {
-	console.log("console.log(req.cookies) :")
-	console.log(req.cookies)
 	if (typeof req.cookies["token"] !== "undefined") {
 		let token = req.cookies["token"]
-		let privateKey = process.env.JWTSECRETKEY
 		jwt.verify(token, privateKey, (err, user) => {
 			if (err) {
+				console.log("Authorization error, more info below")
 				res.status(403).json({ "message": "You're not authorized" })
-				console.log("Error:")
-				console.log(err)
-				if (err.iat <= Date.now()) console.log("The JWT is too old.")
+				if (err.exp <= Date.now()) {
+					console.log("The JWT is too old")
+				} else {
+					console.log("JWT authorization error:")
+					console.log(err)
+				}
 			} else {
-				console.log("Token:")
+				console.log("Logged in with the following token:")
 				console.log(jwt.decode(token))
-				console.log("User")
-				console.log(user)
 				return next()
 			}
 		})
@@ -68,7 +70,6 @@ app.route("/login")
 		res.json({ "message": "Enter your e-mail adres and we will send you a token" })})
 	// The POST page will sign a JWT and send it via the mail
 	.post((req, res) => {
-		let privateKey = process.env.JWTSECRETKEY
 		let token = jwt.sign({ email: process.env.JWTEMAIL }, privateKey, { expiresIn: "1m", algorithm: "HS512" })
 		let mailOptions = { // Nodemailer email options containing the email header and body.
 			from: "info@dewekker.dev",
@@ -86,12 +87,11 @@ app.route("/login")
 		}
 		transporter.sendMail(mailOptions, (err, info) => {
 			if (err) {
-				console.log("Error:")
+				console.log("Nodemailer sendMail error:")
 				console.log(err)
 				res.json({ "message": "Something went wrong..." })
 			} else {
-				console.log("Info:")
-				console.log(info)
+				console.log("A token has been sent")
 				res.json({ "message": "Token has been sent via mail" })
 			}
 		})})
