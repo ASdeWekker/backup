@@ -4,7 +4,6 @@ const jwt = require("jsonwebtoken")
 const bodyparser = require("body-parser")
 const cookieparser = require("cookie-parser")
 const nodemailer = require("nodemailer")
-require("dotenv").config({ path: "/var/www/html/penp/practice/javascript/node/auth-jwt/.env" })
 
 // Set the port.
 const port = 3012
