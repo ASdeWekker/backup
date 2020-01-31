@@ -39,9 +39,10 @@ function auth(req, res, next) {
 			if (err) {
 				res.status(403).json({ "message": "You're not authorized" })
 				console.log(err)
+			} else {
+				console.log(jwt.decode(token))
+				return next()
 			}
-			console.log(jwt.decode(token))
-			return next()
 		})
 	} else {
 		console.log("Not Authorized")
@@ -50,7 +51,7 @@ function auth(req, res, next) {
 }
 
 // GET for root, you do need to be authenticated though.
-app.get("/", auth, (req, res) => {
+app.get("/", (req, res) => {
 	res.json({ "message":  "hello world, you need a token to get in here." })
 })
 
@@ -62,18 +63,17 @@ app.route("/login")
 	// The POST page will sign a JWT and send it via the mail
 	.post((req, res) => {
 		let privateKey = process.env.JWTSECRETKEY
-		let token = jwt.sign({ expiresIn: "10m", email: process.env.JWTEMAIL }, privateKey, { algorithm: "HS512" })
+		let token = jwt.sign({ expiresIn: "1m", email: process.env.JWTEMAIL }, privateKey, { algorithm: "HS512" })
 		let mailOptions = { // Nodemailer email options containing the email header and body.
 			from: "info@dewekker.dev",
 			to: process.env.JWTEMAIL,
 			subject: "Hier is je token.",
-			text: `Hier is de link! Log maar lekker in bij localhost: http://localhost:${port}/jwt/${token} Bij aad: http://10.8.0.4:${port}/jwt/${token} Of bij serge: http://10.8.0.5:${port}/jwt/${token}`,
+			text: `Hier is de cookie: /jwt/${token}`,
 			html: `
-				<p>Hier is de link!<br />
-					Log maar lekker in bij 
-					<a href='http://localhost:${port}/jwt/${token}'>localhost</a>.
-				</p>
-				<p>De link is als volgt<br />
+				<p>Hier is de link!</p>
+				<p>Log maar lekker in bij 
+					<a href='http://localhost:${port}/jwt/${token}'>localhost</a>.<br />
+					De link is als volgt<br />
 					<pre>/jwt/${token}</pre>
 				</p>`
 		}
@@ -87,15 +87,14 @@ app.route("/login")
 			}
 		})})
 
-// GET to put the token send in the mail in a cookie.
+// GET endpoint for the cookie you've received in the mail.
 app.get("/jwt/:token", (req, res) => {
-	console.log(req.params.token)
 	res.cookie(
 		"token",
 		req.params.token, {
-			expires: new Date(Date.now() + 1000 * 60 * 10),
+			maxAge: 1000 * 60 * 1,
 			// secure: true,
-			// httpOnly: true 
+			httpOnly: true 
 		}).redirect(301, "/")
 })
 
