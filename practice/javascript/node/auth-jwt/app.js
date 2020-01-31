@@ -76,6 +76,7 @@ app.route("/login")
 			subject: "Hier is je token.",
 			text: `Hier is de cookie: /jwt/${token}`,
 			html: `
+				<style>body{background:#333;color:#ddd;}</style>
 				<p>Hier is de link!</p>
 				<p>Log maar lekker in bij 
 					<a href='http://localhost:${port}/jwt/${token}'>localhost</a>.<br />
