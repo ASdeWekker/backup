@@ -10,12 +10,12 @@ const port = 3012
 
 // Nodemailer connection options.
 let transporter = nodemailer.createTransport({
-	host: process.env.MAILHOST,
-	port: process.env.MAILPORT,
+	host: process.env.JWTMAILHOST,
+	port: process.env.JWTMAILPORT,
 	secure: true,
 	auth: {
-		user: process.env.EMAIL,
-		pass: process.env.PASS
+		user: process.env.JWTEMAIL,
+		pass: process.env.JWTPASS
 	}
 })
 
@@ -34,7 +34,7 @@ function auth(req, res, next) {
 	console.log(req.cookies)
 	if (typeof req.cookies["token"] !== "undefined") {
 		let token = req.cookies["token"]
-		let privateKey = process.env.SECRETKEY
+		let privateKey = process.env.JWTSECRETKEY
 		jwt.verify(token, privateKey, (user, err) => {
 			if (err) {
 				res.status(403).json({ "message": "You're not authorized" })
@@ -61,11 +61,11 @@ app.route("/login")
 		res.json({ "message": "Enter your e-mail adres and we will send you a token" })})
 	// The POST page will sign a JWT and send it via the mail
 	.post((req, res) => {
-		let privateKey = process.env.SECRETKEY
-		let token = jwt.sign({ expiresIn: "10m", email: process.env.MAIL }, privateKey, { algorithm: "HS512" })
+		let privateKey = process.env.JWTSECRETKEY
+		let token = jwt.sign({ expiresIn: "10m", email: process.env.JWTEMAIL }, privateKey, { algorithm: "HS512" })
 		let mailOptions = { // Nodemailer email options containing the email header and body.
 			from: "info@dewekker.dev",
-			to: process.env.MAIL,
+			to: process.env.JWTEMAIL,
 			subject: "Hier is je token.",
 			text: `Hier is de link! Log maar lekker in bij localhost: http://localhost:${port}/jwt/${token} Bij aad: http://10.8.0.4:${port}/jwt/${token} Of bij serge: http://10.8.0.5:${port}/jwt/${token}`,
 			html: `
