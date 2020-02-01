@@ -21,6 +21,8 @@ const transporter = nodemailer.createTransport({
 
 // The secret key.
 const privateKey = process.env.JWTSECRETKEY
+// Expiration time for the cookie and the token.
+let expTime = 60 * 1
 
 // Declare the app.
 const app = express()
@@ -31,6 +33,12 @@ app.use(bodyparser.urlencoded({ extended: true }))
 app.use(cookieparser())
 // Turn off server info.
 app.disable("x-powered-by")
+
+// A small date function to make everything a bit more readable.
+function dateFormat(date) {
+	let dateStringOptions = { year: "numeric", month: "numeric", day: "numeric", hour: "numeric", minute: "numeric" }
+	return new Date(date).toLocaleDateString("nl-NL", dateStringOptions)
+}
 
 // A middleware function to check if you're authorized to look at the endpoint.
 function auth(req, res, next) {
@@ -47,13 +55,14 @@ function auth(req, res, next) {
 					console.log(err)
 				}
 			} else {
+				let dt = jwt.decode(token)
 				console.log("Logged in with the following token:")
-				console.log(jwt.decode(token))
+				console.log(`email: ${dt.email}, iat: ${dateFormat(1000 * dt.iat)}, exp: ${dateFormat(1000 * dt.exp)}`)
 				return next()
 			}
 		})
 	} else {
-		console.log("Not Authorized")
+		console.log("Not authorized, get a valid token.")
 		res.redirect("/login")
 	}
 }
@@ -70,7 +79,7 @@ app.route("/login")
 		res.json({ "message": "Enter your e-mail adres and we will send you a token" })})
 	// The POST page will sign a JWT and send it via the mail
 	.post((req, res) => {
-		let token = jwt.sign({ email: process.env.JWTEMAIL }, privateKey, { expiresIn: "1m", algorithm: "HS512" })
+		let token = jwt.sign({ email: process.env.JWTEMAIL }, privateKey, { expiresIn: expTime, algorithm: "HS512" })
 		let mailOptions = { // Nodemailer email options containing the email header and body.
 			from: "info@dewekker.dev",
 			to: process.env.JWTEMAIL,
@@ -91,20 +100,27 @@ app.route("/login")
 				console.log(err)
 				res.json({ "message": "Something went wrong..." })
 			} else {
-				console.log("A token has been sent")
+				console.log(`A token has been sent at ${dateFormat(Date.now())}`)
 				res.json({ "message": "Token has been sent via mail" })
 			}
 		})})
 
 // GET endpoint for the cookie you've received in the mail.
 app.get("/jwt/:token", (req, res) => {
+	let cookieDate = new Date(Date.now() + 1000 * expTime)
+	console.log(`This cookie is valid until ${dateFormat(cookieDate)}`)
 	res.cookie(
 		"token",
 		req.params.token, {
-			maxAge: 1000 * 60 * 1,
+			expires: cookieDate,
 			// secure: true,
 			httpOnly: true 
 		}).redirect(301, "/")
+})
+
+// GET endpoint to clear the set cookie.
+app.get("/logout", (req, res) => {
+	res.clearCookie("token").redirect(301, "/")
 })
 
 // Run the server.
